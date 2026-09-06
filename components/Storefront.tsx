@@ -11,6 +11,7 @@ import {
   whyMakhanaFaq
 } from "@/data/store";
 import { FaqAccordion } from "@/components/FaqAccordion";
+import { HeroFlavourShowcase } from "@/components/HeroFlavourShowcase";
 import { PackShot } from "@/components/PackShot";
 import { ProductCard } from "@/components/ProductCard";
 import { ShopFilters } from "@/components/ShopFilters";
@@ -68,9 +69,7 @@ export function HomePageContent() {
             </div>
             <div className="stats"><span><b>25 g</b>classic pack</span><span><b>Rs. 59</b>single pack</span><span><b>Soon</b>launch updates</span></div>
           </div>
-          <div className="fan" aria-label="Khao Better makhana packs">
-            {catalog.map((product, index) => <PackShot key={product.id} id={product.id} className={`fan-pack fan-${index}`} />)}
-          </div>
+          <HeroFlavourShowcase />
         </div>
         <TrustBar />
       </section>
