@@ -9,7 +9,9 @@ const learnLinks = [
   ["Blog", "/blog"],
   ["Makhana & Weight Loss", "/blog/makhana-weight-loss"],
   ["Makhana Nutrition", "/blog/makhana-nutrition-facts"],
-  ["Makhana Comparison", "/blog/makhana-vs-popcorn-vs-chips"]
+  ["Makhana Comparison", "/blog/makhana-vs-popcorn-vs-chips"],
+  ["Office Snacks", "/office-snacks"],
+  ["Student Snacks", "/student-snacks"]
 ];
 
 export function SiteHeader() {
