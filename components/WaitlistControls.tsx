@@ -3,11 +3,24 @@
 import { FormEvent, useState } from "react";
 import { Product } from "@/data/store";
 import { PackShot } from "@/components/PackShot";
+import { trackEvent } from "@/lib/analytics";
 
 export function WaitlistButton({ product, className, children }: { product: Product; className?: string; children: React.ReactNode }) {
   const [open, setOpen] = useState(false);
   const [notice, setNotice] = useState("");
   const [phoneError, setPhoneError] = useState("");
+
+  const openModal = () => {
+    trackEvent("waitlist_cta_click", {
+      product_id: product.id,
+      product_status: product.status
+    });
+    setOpen(true);
+    trackEvent("waitlist_modal_open", {
+      product_id: product.id,
+      product_status: product.status
+    });
+  };
 
   const submit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -21,12 +34,16 @@ export function WaitlistButton({ product, className, children }: { product: Prod
     }
 
     setPhoneError("");
+    trackEvent("waitlist_submit_attempt", {
+      product_id: product.id,
+      product_status: product.status
+    });
     setNotice("Thanks for your interest. Khao Better will share launch updates when online signup opens fully.");
   };
 
   return (
     <>
-      <button className={className} onClick={() => setOpen(true)}>{children}</button>
+      <button className={className} onClick={openModal}>{children}</button>
       {open ? (
         <>
           <div className="overlay" onClick={() => setOpen(false)} />

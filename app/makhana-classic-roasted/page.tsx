@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ClassicProductViewTracker } from "@/components/ClassicProductViewTracker";
 import { ClassicRoastedContent, StorefrontShell } from "@/components/Storefront";
 import { absoluteUrl } from "@/lib/site";
 
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <StorefrontShell>
+      <ClassicProductViewTracker />
       <ClassicRoastedContent />
     </StorefrontShell>
   );
