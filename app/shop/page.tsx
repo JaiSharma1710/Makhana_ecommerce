@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
 import { ShopPageContent, StorefrontShell } from "@/components/Storefront";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Roasted Makhana Flavours | Khao Better",
   description:
     "Explore Khao Better roasted makhana flavours. Classic Roasted is currently out of stock, with more flavours coming soon.",
   alternates: {
-    canonical: "/shop"
+    canonical: absoluteUrl("/shop")
   },
   openGraph: {
     title: "Roasted Makhana Flavours | Khao Better",
     description:
       "Explore Khao Better roasted makhana flavours. Classic Roasted is currently out of stock, with more flavours coming soon.",
-    url: "https://khaobetter.shop/shop"
+    url: absoluteUrl("/shop")
   }
 };
 

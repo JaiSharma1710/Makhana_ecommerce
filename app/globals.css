@@ -196,6 +196,11 @@ h1, h2, h3 { font-family: Fredoka, sans-serif; }
 .combo-strip p { margin: 4px 0 0; color: rgba(255,244,229,.7); }
 .combo-strip > b { color: #FFC928; font-family: Fredoka, sans-serif; font-size: 30px; }
 .combo-strip a, .combo-strip button { background: #F26A2E; color: #fff; border: 0; border-radius: 999px; padding: 14px 26px; font-weight: 800; }
+.shop-copy { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 26px; }
+.shop-copy > div, .story-copy, .journal-guide section { background: #FFF4E5; border: 1px solid rgba(90,50,31,.1); border-radius: 24px; padding: 26px; }
+.shop-copy h2, .story-copy h2, .journal-guide h2 { margin: 0 0 12px; color: #5A321F; font-size: 24px; line-height: 1.12; }
+.shop-copy p, .story-copy p, .journal-guide p { color: #5c4131; font-size: 15.5px; line-height: 1.68; }
+.shop-copy a, .journal-guide a { color: #F26A2E; font-weight: 800; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
 .pdp { grid-template-columns: 1fr 1fr; gap: 48px; }
 .pdp-image { position: sticky; top: 96px; display: flex; align-items: center; justify-content: center; min-height: 520px; background: #FFF4E5; border: 1px solid rgba(90,50,31,.1); border-radius: 28px; padding: 40px; }
 .pdp-image .pack-shot { height: 440px; }
@@ -252,6 +257,7 @@ h1, h2, h3 { font-family: Fredoka, sans-serif; }
 .promise-card > div > b { width: 22px; height: 22px; border-radius: 50%; background: #2E7D32; color: #fff; display: grid; place-items: center; flex: none; font-size: 12px; }
 .promise-card strong, .promise-card small { display: block; color: #5A321F; }
 .promise-card small { color: #7a5b46; line-height: 1.55; }
+.story-copy { margin-top: 30px; }
 .numbers { background: #5A321F; border-radius: 26px; padding: 34px; }
 .numbers > div { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
 .numbers span { color: rgba(255,244,229,.7); }
@@ -300,6 +306,7 @@ footer a { display: block; color: rgba(255,244,229,.72); margin-top: 9px; font-s
 .featured-article strong, .article-card strong { display: inline-flex; margin-top: 12px; color: #FFC928; font-weight: 800; }
 .blog-chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 28px 0; }
 .blog-chips span { border: 1.5px solid rgba(90,50,31,.16); border-radius: 999px; background: #FFF4E5; padding: 8px 14px; color: #5A321F; font-size: 13px; font-weight: 800; }
+.journal-guide { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin: 0 0 30px; }
 .article-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 .article-grid.compact { grid-template-columns: repeat(2, 1fr); }
 .article-card { display: flex; flex-direction: column; min-height: 260px; background: #FFF4E5; border: 1px solid rgba(90,50,31,.1); border-radius: 22px; padding: 26px; transition: transform .22s ease, box-shadow .22s ease; }
@@ -342,7 +349,7 @@ footer a { display: block; color: rgba(255,244,229,.72); margin-top: 9px; font-s
   .hero-visual { --hero-enter-x: 54px; --hero-enter-y: 10px; --hero-enter-rotate: 4deg; --hero-overshoot-x: -8px; --hero-exit-x: -54px; --hero-exit-y: 10px; --hero-exit-rotate: -4deg; justify-self: center; width: min(100%, 430px); height: clamp(300px, 78vw, 390px); margin-top: 2px; overflow: hidden; }
   .hero-flavour { inset: -1% -4%; }
   .hero-flavour img { object-position: center; }
-  .trust-grid, .nutri-grid, .info-grid, .related, .benefit-grid, .nutrition-tables, .combo-table { grid-template-columns: 1fr; gap: 12px; }
+  .trust-grid, .nutri-grid, .info-grid, .related, .benefit-grid, .nutrition-tables, .combo-table, .shop-copy, .journal-guide { grid-template-columns: 1fr; gap: 12px; }
   .product-grid { grid-template-columns: 1fr; gap: 14px; }
   .section { padding: 42px 0; }
   .section h2, .page-title { font-size: 28px; }
@@ -382,7 +389,7 @@ footer a { display: block; color: rgba(255,244,229,.72); margin-top: 9px; font-s
   .hero-grid { grid-template-columns: 1fr; min-height: 0; gap: 28px; padding-top: 36px; }
   .hero-visual { --hero-enter-x: 78px; --hero-overshoot-x: -10px; --hero-exit-x: -78px; justify-self: center; width: min(100%, 680px); height: clamp(440px, 62vw, 560px); overflow: hidden; }
   .hero-flavour img { object-position: center; }
-  .product-grid, .related, .benefit-grid, .combo-table, .article-grid { grid-template-columns: repeat(2, 1fr); }
+  .product-grid, .related, .benefit-grid, .combo-table, .article-grid, .journal-guide { grid-template-columns: repeat(2, 1fr); }
   .info-grid { grid-template-columns: repeat(2, 1fr); }
   .shop-layout, .pdp, .two-col { grid-template-columns: 1fr; }
   .pdp-image { position: static; min-height: 420px; }

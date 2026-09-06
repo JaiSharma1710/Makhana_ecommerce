@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { absoluteUrl, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 export const viewport: Viewport = {
@@ -7,12 +8,12 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://khaobetter.shop"),
+  metadataBase: new URL(SITE_URL),
   title: "Khao Better | Roasted Makhana Launching Soon",
   description:
     "Khao Better is a pre-launch Indian roasted makhana brand. Join the waitlist for Classic Roasted first-batch updates and future flavour launch news.",
   alternates: {
-    canonical: "/"
+    canonical: absoluteUrl("/")
   },
   robots: {
     index: true,
@@ -25,18 +26,18 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "/",
+    url: absoluteUrl("/"),
     siteName: "Khao Better",
     title: "Khao Better | Roasted Makhana Launching Soon",
     description:
       "A pre-launch Indian roasted makhana brand preparing Classic Roasted and more flavours.",
-    images: [{ url: "/assets/p-classic.png", width: 1122, height: 1402, alt: "Khao Better Classic Roasted makhana pack" }]
+    images: [{ url: absoluteUrl("/assets/p-classic.png"), width: 1122, height: 1402, alt: "Khao Better Classic Roasted makhana pack" }]
   },
   twitter: {
     card: "summary_large_image",
     title: "Khao Better | Roasted Makhana Launching Soon",
     description: "Join the Khao Better waitlist for roasted makhana launch updates.",
-    images: ["/assets/p-classic.png"]
+    images: [absoluteUrl("/assets/p-classic.png")]
   }
 };
 

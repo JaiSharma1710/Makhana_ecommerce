@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
-
-const siteUrl = "https://khaobetter.shop";
+import { absoluteUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date("2026-09-06");
@@ -17,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   return routes.map((route) => ({
-    url: route.path === "/" ? `${siteUrl}/` : `${siteUrl}${route.path}`,
+    url: absoluteUrl(route.path),
     lastModified,
     changeFrequency: "weekly",
     priority: route.priority
