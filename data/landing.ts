@@ -83,7 +83,7 @@ export const landingPages: Record<LandingSlug, LandingPageData> = {
         heading: "Healthy Tea-Time Snacks for Office in India",
         body: [
           "Healthy tea time snacks for office India do not have to fight chai culture. They simply need to replace the automatic biscuit plate sometimes. Roasted makhana, chana, khakhra, fruit or a small nut portion can all work with tea.",
-          "The goal is not guilt free snacks for desk job employees as a slogan. The goal is a snack that feels enjoyable, does not make a mess at your desk, and still leaves you comfortable for the rest of the workday. Students planning long study days can also use the same logic in the Khao Better guide to healthy snacks for students."
+          "The goal is not guilt free snacks for desk job employees as a slogan. The goal is a snack that feels enjoyable, does not make a mess at your desk, and still leaves you comfortable for the rest of the workday. For local search context, see the Khao Better guide to healthy office snacks in Delhi NCR. Students planning long study days can also use the same logic in the Khao Better guide to healthy snacks for students."
         ]
       }
     ],
@@ -99,6 +99,7 @@ export const landingPages: Record<LandingSlug, LandingPageData> = {
       { href: "/why-makhana", label: "What is roasted makhana?" },
       { href: "/blog/makhana-nutrition-facts", label: "Khao Better makhana nutrition facts" },
       { href: "/blog/makhana-vs-popcorn-vs-chips", label: "Makhana vs popcorn vs chips" },
+      { href: "/delhi", label: "healthy office snacks in Delhi NCR" },
       { href: "/student-snacks", label: "Healthy snacks for students" }
     ]
   },
