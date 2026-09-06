@@ -1,0 +1,25 @@
+import type { MetadataRoute } from "next";
+
+const siteUrl = "https://khaobetter.shop";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const lastModified = new Date("2026-09-06");
+  const routes = [
+    { path: "/", priority: 1 },
+    { path: "/shop", priority: 0.8 },
+    { path: "/why-makhana", priority: 0.7 },
+    { path: "/our-story", priority: 0.6 },
+    { path: "/makhana-classic-roasted", priority: 0.8 },
+    { path: "/blog", priority: 0.7 },
+    { path: "/blog/makhana-weight-loss", priority: 0.7 },
+    { path: "/blog/makhana-vs-popcorn-vs-chips", priority: 0.7 },
+    { path: "/blog/makhana-nutrition-facts", priority: 0.7 }
+  ];
+
+  return routes.map((route) => ({
+    url: route.path === "/" ? `${siteUrl}/` : `${siteUrl}${route.path}`,
+    lastModified,
+    changeFrequency: "weekly",
+    priority: route.priority
+  }));
+}

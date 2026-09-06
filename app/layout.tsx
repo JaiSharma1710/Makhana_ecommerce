@@ -7,10 +7,10 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://khaobetter.in"),
-  title: "Roasted Makhana Online - Khao Better | Fox Nuts, Never Fried | Rs 49",
+  metadataBase: new URL("https://khaobetter.shop"),
+  title: "Khao Better | Roasted Makhana Launching Soon",
   description:
-    "Buy roasted makhana online from Khao Better. Dry-roasted Bihar fox nuts in six flavours, 113 kcal and 2.6 g fibre per 25 g pack, no added sugar, 0 g trans fat. Classic Roasted Rs 49. Free shipping over Rs 299.",
+    "Khao Better is a pre-launch Indian roasted makhana brand. Join the waitlist for Classic Roasted first-batch updates and future flavour launch news.",
   alternates: {
     canonical: "/"
   },
@@ -27,15 +27,15 @@ export const metadata: Metadata = {
     type: "website",
     url: "/",
     siteName: "Khao Better",
-    title: "Roasted Makhana Online - Khao Better | Fox Nuts, Never Fried",
+    title: "Khao Better | Roasted Makhana Launching Soon",
     description:
-      "Dry-roasted makhana from Bihar in six flavours. 113 kcal, 2.6 g fibre and no added sugar per 25 g pack. Classic Roasted Rs 49, free shipping over Rs 299.",
+      "A pre-launch Indian roasted makhana brand preparing Classic Roasted and more flavours.",
     images: [{ url: "/assets/p-classic.png", width: 1122, height: 1402, alt: "Khao Better Classic Roasted makhana pack" }]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Roasted Makhana Online - Khao Better",
-    description: "Roasted, never fried. Six flavours of Bihar makhana, 25 g packs from Rs 49.",
+    title: "Khao Better | Roasted Makhana Launching Soon",
+    description: "Join the Khao Better waitlist for roasted makhana launch updates.",
     images: ["/assets/p-classic.png"]
   }
 };
