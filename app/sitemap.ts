@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { absoluteUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date("2026-09-06");
+  const lastModified = new Date("2026-09-07");
   const routes = [
     { path: "/", priority: 1 },
     { path: "/shop", priority: 0.8 },
@@ -15,7 +15,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/blog", priority: 0.7 },
     { path: "/blog/makhana-weight-loss", priority: 0.7 },
     { path: "/blog/makhana-vs-popcorn-vs-chips", priority: 0.7 },
-    { path: "/blog/makhana-nutrition-facts", priority: 0.7 }
+    { path: "/blog/makhana-nutrition-facts", priority: 0.7 },
+    { path: "/privacy-policy", priority: 0.3 }
   ];
 
   return routes.map((route) => ({
