@@ -113,8 +113,10 @@ export function WaitlistButton({ product, className, children }: { product: Prod
             <div className="drawer-items">
               <div className="empty">
                 <PackShot id={product.id} small />
-                <h3>{product.name}</h3>
-                <p>{product.status === "out-of-stock" ? "We'll let you know when Khao Better is ready." : "This flavour is coming soon. We'll share updates closer to launch."}</p>
+                <div className="empty-copy">
+                  <h3>{product.name}</h3>
+                  <p>{product.status === "out-of-stock" ? "We'll let you know when Khao Better is ready." : "This flavour is coming soon. We'll share updates closer to launch."}</p>
+                </div>
               </div>
               <form className={`notify-form${status === "success" ? " is-success" : ""}`} onSubmit={submit}>
                 {status === "success" ? (

@@ -205,10 +205,32 @@ export function OurStoryContent() {
 }
 
 function Footer() {
-  const cols = [
-    ["Flavours", ["/shop", "Shop"], ["/makhana-classic-roasted", "Classic Roasted"]],
-    ["Learn", ["/why-makhana", "Why Makhana"], ["/blog", "Blog"], ["/blog/makhana-nutrition-facts", "Nutrition"], ["/office-snacks", "Office Snacks"], ["/student-snacks", "Student Snacks"], ["/delhi", "Delhi NCR"], ["/our-story", "Our Story"]],
-    ["Launch", ["/shop", "Coming Soon Flavours"], ["/makhana-classic-roasted", "Join Classic Waitlist"]]
-  ];
-  return <footer><div className="container footer-grid"><div><img src="/assets/kb-logo.png" alt="Khao Better" /><p>A better snack for everyday. Khao Better is preparing roasted makhana for launch.</p></div>{cols.map((col) => <div key={col[0] as string}><h3>{col[0]}</h3>{col.slice(1).map((item) => Array.isArray(item) ? <Link href={item[0]} key={item[1]}>{item[1]}</Link> : null)}</div>)}<div><h3>Join the waitlist</h3><p>We'll let you know when Khao Better is ready.</p><div className="subscribe"><WaitlistButton product={catalog[0]}>Join the waitlist</WaitlistButton></div></div></div><div className="container footer-bottom"><span>© 2026 Khao Better</span><span><Link href="/why-makhana">Why Makhana</Link> · <Link href="/our-story">Our Story</Link> · <Link href="/privacy-policy">Privacy Policy</Link></span></div></footer>;
+  const exploreLinks = [["/shop", "Shop"], ["/why-makhana", "Why Makhana"], ["/blog", "Blog"], ["/our-story", "Our Story"]];
+
+  return (
+    <footer>
+      <div className="container footer-main">
+        <div className="footer-brand">
+          <img src="/assets/kb-logo.png" alt="Khao Better" />
+          <p>A better snack for everyday.</p>
+          <small>Roasted makhana for everyday snacking.</small>
+        </div>
+        <nav className="footer-explore" aria-label="Footer navigation">
+          <h3>Explore</h3>
+          <div className="footer-links">
+            {exploreLinks.map(([href, label]) => <Link href={href} key={href}>{label}</Link>)}
+          </div>
+        </nav>
+        <div className="footer-waitlist">
+          <h3>Join the Waitlist</h3>
+          <p>We'll let you know when Khao Better is ready.</p>
+          <WaitlistButton product={catalog[0]} className="footer-cta">Join the Waitlist</WaitlistButton>
+        </div>
+      </div>
+      <div className="container footer-bottom">
+        <span>© 2026 Khao Better</span>
+        <Link href="/privacy-policy">Privacy Policy</Link>
+      </div>
+    </footer>
+  );
 }

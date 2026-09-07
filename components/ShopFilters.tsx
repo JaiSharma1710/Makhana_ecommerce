@@ -16,16 +16,18 @@ export function ShopFilters() {
           <button onClick={() => setFilter("")}>Clear all</button>
         </div>
         <strong>Flavour</strong>
-        {catalog.map((product) => (
-          <button
-            key={product.id}
-            className={filter === product.id ? "filter active" : "filter"}
-            onClick={() => setFilter(filter === product.id ? "" : product.id)}
-          >
-            <i style={{ background: product.tint }} />
-            {product.name}
-          </button>
-        ))}
+        <div className="filter-options">
+          {catalog.map((product) => (
+            <button
+              key={product.id}
+              className={filter === product.id ? "filter active" : "filter"}
+              onClick={() => setFilter(filter === product.id ? "" : product.id)}
+            >
+              <i style={{ background: product.tint }} />
+              {product.name}
+            </button>
+          ))}
+        </div>
       </aside>
       <div>
         <div className="shop-meta">
