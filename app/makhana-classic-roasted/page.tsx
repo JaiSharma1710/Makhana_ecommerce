@@ -19,8 +19,33 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
+  const productUrl = absoluteUrl("/makhana-classic-roasted");
+  const productJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "Classic Roasted Makhana",
+    brand: {
+      "@type": "Brand",
+      name: "Khao Better"
+    },
+    image: absoluteUrl("/assets/p-classic.png"),
+    url: productUrl,
+    size: "25 g",
+    offers: {
+      "@type": "Offer",
+      price: "59",
+      priceCurrency: "INR",
+      availability: "https://schema.org/OutOfStock",
+      url: productUrl
+    }
+  };
+
   return (
     <StorefrontShell>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd).replace(/</g, "\\u003c") }}
+      />
       <ClassicProductViewTracker />
       <ClassicRoastedContent />
     </StorefrontShell>
