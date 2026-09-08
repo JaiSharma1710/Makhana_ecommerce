@@ -3,15 +3,25 @@
 import Link from "next/link";
 import { useState } from "react";
 import { catalog } from "@/data/store";
+import { categoryUrl, populatedBlogCategories } from "@/lib/blog-posts";
 import { WaitlistButton } from "@/components/WaitlistControls";
 
-const learnLinks = [
-  ["Blog", "/blog"],
-  ["Makhana & Weight Loss", "/blog/makhana-weight-loss"],
-  ["Makhana Nutrition", "/blog/makhana-nutrition-facts"],
-  ["Makhana Comparison", "/blog/makhana-vs-popcorn-vs-chips"],
-  ["Office Snacks", "/office-snacks"],
-  ["Student Snacks", "/student-snacks"]
+const exploreSections = [
+  {
+    label: "Learn / Journal",
+    links: [
+      ["Journal", "/blog"],
+      ["Makhana 101", "/why-makhana"],
+      ...populatedBlogCategories.map((category) => [category.label, categoryUrl(category.slug)])
+    ]
+  },
+  {
+    label: "Everyday Guides",
+    links: [
+      ["Office Snacks", "/office-snacks"],
+      ["Student Snacks", "/student-snacks"]
+    ]
+  }
 ];
 
 export function SiteHeader() {
@@ -47,8 +57,13 @@ export function SiteHeader() {
                   setLearnOpen(false);
                 }
               }}>
-                {learnLinks.map(([label, href]) => (
-                  <Link href={href} key={href} onClick={() => setLearnOpen(false)}>{label}</Link>
+                {exploreSections.map((section) => (
+                  <div className="learn-panel-section" key={section.label}>
+                    <span className="learn-panel-label">{section.label}</span>
+                    {section.links.map(([label, href]) => (
+                      <Link href={href} key={href} onClick={() => setLearnOpen(false)}>{label}</Link>
+                    ))}
+                  </div>
                 ))}
               </div>
             ) : null}
@@ -61,9 +76,13 @@ export function SiteHeader() {
         <nav className="mobile-menu" aria-label="Mobile navigation">
           <Link href="/shop" onClick={() => setMenuOpen(false)}>Shop</Link>
           <Link href="/why-makhana" onClick={() => setMenuOpen(false)}>Why Makhana</Link>
-          <span className="mobile-menu-label">Explore</span>
-          {learnLinks.map(([label, href]) => (
-            <Link href={href} key={href} onClick={() => setMenuOpen(false)}>{label}</Link>
+          {exploreSections.map((section) => (
+            <div className="mobile-menu-section" key={section.label}>
+              <span className="mobile-menu-label">{section.label}</span>
+              {section.links.map(([label, href]) => (
+                <Link href={href} key={href} onClick={() => setMenuOpen(false)}>{label}</Link>
+              ))}
+            </div>
           ))}
           <Link href="/our-story" onClick={() => setMenuOpen(false)}>Our Story</Link>
           <WaitlistButton product={catalog[0]}>Join Waitlist</WaitlistButton>

@@ -1,16 +1,7 @@
 import { classicNutrition100g, classicNutrition25g } from "@/data/store";
+import { blogPostIndex, BlogPost, BlogSlug } from "@/lib/blog-posts";
 
-export type BlogSlug = "makhana-weight-loss" | "makhana-vs-popcorn-vs-chips" | "makhana-nutrition-facts";
-
-export type BlogArticle = {
-  slug: BlogSlug;
-  category: string;
-  title: string;
-  h1: string;
-  description: string;
-  excerpt: string;
-  readTime: string;
-  primaryKeyword: string;
+export type BlogArticle = BlogPost & {
   sections: Array<{
     heading: string;
     body: string[];
@@ -22,16 +13,7 @@ export type BlogArticle = {
 
 export const blogArticles: BlogArticle[] = [
   {
-    slug: "makhana-weight-loss",
-    category: "Nutrition",
-    title: "How Much Makhana Can You Eat Daily for Weight Loss?",
-    h1: "How Much Makhana Can You Eat in a Day for Weight Loss?",
-    description:
-      "A practical guide to makhana portions, calories and preparation. See how a 25-35 g roasted makhana serving can fit into an everyday eating plan.",
-    excerpt:
-      "A careful guide to roasted makhana portions, calories, late-night snacking and preparation choices for people managing their everyday eating plan.",
-    readTime: "7 min read",
-    primaryKeyword: "how much makhana can i eat in a day for weight loss",
+    ...blogPostIndex["makhana-weight-loss"],
     sections: [
       {
         heading: "The Short Answer",
@@ -122,16 +104,7 @@ export const blogArticles: BlogArticle[] = [
     ]
   },
   {
-    slug: "makhana-vs-popcorn-vs-chips",
-    category: "Comparison",
-    title: "Makhana vs Popcorn vs Chips: Which Is Healthier?",
-    h1: "Makhana vs Popcorn vs Chips: Which Is Actually Healthier?",
-    description:
-      "Compare roasted makhana, popcorn and potato chips by preparation, portion size, convenience and everyday snacking use.",
-    excerpt:
-      "A practical comparison of roasted makhana, popcorn and chips based on preparation, portion control, office use and label-reading.",
-    readTime: "6 min read",
-    primaryKeyword: "makhana vs popcorn which is healthier for weight loss",
+    ...blogPostIndex["makhana-vs-popcorn-vs-chips"],
     sections: [
       {
         heading: "The Quick Answer",
@@ -209,16 +182,7 @@ export const blogArticles: BlogArticle[] = [
     ]
   },
   {
-    slug: "makhana-nutrition-facts",
-    category: "Nutrition",
-    title: "Roasted Makhana Nutrition Facts & Calories | Khao Better",
-    h1: "Roasted Makhana Nutrition Facts: Calories, Protein, Fibre & More",
-    description:
-      "See roasted makhana calories per 30 g serving plus Khao Better Classic nutrition per 25 g and 100 g, including protein, fibre and fat.",
-    excerpt:
-      "A clear nutrition reference for Khao Better Classic Roasted, with 25 g, 30 g, 50 g and 100 g calculations.",
-    readTime: "6 min read",
-    primaryKeyword: "roasted makhana calories per 30g serving",
+    ...blogPostIndex["makhana-nutrition-facts"],
     sections: [
       {
         heading: "Roasted Makhana Calories per 30 g Serving",
@@ -307,7 +271,3 @@ export const blogIndex = blogArticles.reduce<Record<BlogSlug, BlogArticle>>((acc
   acc[article.slug] = article;
   return acc;
 }, {} as Record<BlogSlug, BlogArticle>);
-
-export function articleUrl(slug: BlogSlug) {
-  return `/blog/${slug}`;
-}

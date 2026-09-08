@@ -22,41 +22,47 @@ export const landingPages: Record<LandingSlug, LandingPageData> = {
   "office-snacks": {
     slug: "office-snacks",
     eyebrow: "Desk snacking",
-    h1: "Best Healthy Office Snacks to Keep in Your Desk Drawer in India",
-    title: "Best Healthy Office Snacks for Your Desk Drawer | India",
+    h1: "Best Healthy Snacks to Keep in Your Office Drawer in India",
+    title: "Best Healthy Office Drawer Snacks in India | Khao Better",
     description:
-      "Eight practical healthy office snacks for Indian desk jobs, from roasted makhana and chana to nuts and fruit, plus what to look for on the label.",
+      "Practical office drawer snacks for Indian workdays, with storage, portion, mess and label tips for planning the 4–7 PM hunger window.",
     intro: [
-      "The Indian office snack problem usually arrives between 4 and 5 pm. Lunch is behind you, dinner is far away, chai is nearby, and biscuits, chips, samosa or namkeen start looking like the easiest answer.",
-      "The best healthy office snacks in India are not complicated. They are snacks that can sit in a desk drawer, survive a commute, avoid mess on a keyboard, and give you enough portion control that the break does not become an accidental meal."
+      "For many Indian desk jobs, the difficult snack decision arrives between 4 and 7 pm. Lunch is behind you, dinner may still be hours away, chai is nearby, and biscuits, chips, samosa or namkeen can become the automatic answer.",
+      "The best healthy snacks to keep in an office drawer are practical before anything else: easy to store safely at your desk when the packaging and storage instructions allow it, easy to portion, low-mess and compact enough for a desk or work bag. Fresh food can be part of the rotation too, but it needs a separate same-day plan."
     ],
     sections: [
       {
-        heading: "Why Most Office Snacks Fail You",
+        heading: "What Makes a Good Desk-Drawer Snack?",
         body: [
-          "Office snacks fail when they solve convenience but ignore how people actually work. A fried snack can feel perfect for two minutes and then feel heavy during the next call. Biscuits are easy with tea, but many people eat them because they are available, not because they are satisfying.",
-          "Mess matters too. Snacks that leave oil, masala dust or crumbs on your desk are harder to eat during a workday. Portion control matters even more. If a packet stays open beside your laptop, 5 pm snack cravings can turn into repeated bites without much attention.",
-          "For working professionals, healthy office snacks should be easy to portion, simple to store, and enjoyable enough that they do not feel like punishment. That is the useful middle ground between strict diet food and the default office snack pile."
+          "A useful drawer snack does not require a fridge, plate or lengthy preparation. It should stay sealed until needed, fit the storage instructions on its label and be easy to close again if the pack contains more than one portion. Shelf-stable does not mean safe forever, so check the best-before date and discard damaged, stale or damp food.",
+          "Portionability matters because work can make eating automatic. A small pack, a reusable container or a bowl gives the snack a clear stopping point. Minimal oil, loose powder and crumbs also make a difference when you are eating near a keyboard, documents or shared equipment."
         ]
       },
       {
-        heading: "8 Healthy Office Snacks That Actually Work at an Indian Desk",
+        heading: "8 Practical Office Snack Ideas for an Indian Desk",
         cards: [
-          { title: "Roasted makhana", body: ["Roasted makhana, also called fox nuts or phool makhana, is light, crunchy and desk-friendly. Khao Better Classic Roasted Makhana is pre-launch, shown as a 25 g pack priced at Rs. 59 and currently out of stock, so the site is for waitlist interest rather than ordering. For people asking makhana vs chips which is better for office snacking, the honest answer is to compare portion, preparation and label rather than assume every packet is the same."] },
-          { title: "Roasted chana", body: ["Roasted chana is compact, affordable and easy to keep in a drawer. It works well when you want a crunchy snack with more bite than biscuits. Choose simpler salted or plain versions when possible, and pour a small bowl instead of eating directly from a large pouch."] },
-          { title: "Almonds", body: ["Almonds are convenient and portable, but portion size is important because nuts are energy-dense. A small handful can work well during a desk job. Keep them in a small container so the serving is decided before the workday gets busy."] },
-          { title: "Roasted peanuts", body: ["Roasted peanuts are familiar, budget-friendly and satisfying. They can be a useful alternative to fried namkeen when portioned carefully. Pick packs with clear ingredients and watch sodium if you snack on them daily."] },
-          { title: "Dark chocolate", body: ["Dark chocolate can satisfy a sweet craving without turning tea time into a full dessert break. Keep it to a small square or two and treat it as a flavour note, not the whole snack. It pairs well with nuts or fruit."] },
-          { title: "Fresh fruit", body: ["Bananas, apples, oranges and guavas are practical office snacks when storage allows. They are not drawer snacks for weeks, but they work well for the day. Fruit is also one of the cleanest answers to what to snack on during work without gaining weight, because it brings freshness and a clear portion."] },
-          { title: "Khakhra", body: ["Khakhra is crisp, flat and easy to carry. It gives the crunch many people want with chai, and it can be less messy than chips. Flavoured khakhra varies a lot, so check oil, sodium and ingredient lists."] },
-          { title: "Trail mix", body: ["Trail mix can be excellent or chaotic depending on what is inside. A mix of nuts, seeds and a little dried fruit can work; a mix loaded with sweet pieces can become candy in disguise. Keep the portion small and pre-packed."] }
+          { title: "Roasted makhana", body: ["Roasted makhana, also called fox nuts or phool makhana, offers a light crunch and is easy to divide into a small container. Preparation matters: plain or lightly seasoned versions can differ from heavily coated ones, so compare the actual label rather than treating every makhana pack as identical. Khao Better Classic Roasted is a 25 g pack priced at ₹59 and works out to approximately 113 kcal per pack based on its nutrition panel. It is currently out of stock during pre-launch."] },
+          { title: "Roasted chana", body: ["Roasted chana is compact, sturdy in a work bag and simple to portion. Plain and seasoned versions can differ in sodium and ingredients. If you buy a larger pouch, separate one desk serving instead of leaving the whole pouch open beside the laptop."] },
+          { title: "Nuts", body: ["Almonds, cashews or mixed nuts travel well and need no preparation, but they are energy-dense. A small container is more useful than an unrestricted jar because it turns a vague handful into a deliberate portion."] },
+          { title: "Roasted peanuts", body: ["Roasted peanuts are familiar and widely available, with a denser bite than airy snacks. Salted, masala and coated versions vary, so check sodium, added ingredients and serving size. People with peanut allergies should choose another option and avoid shared-container cross-contact."] },
+          { title: "Simple popcorn", body: ["Plain or simply seasoned popcorn can work when you want a high-volume crunchy snack, but butter, caramel and rich seasoning change the comparison. Prepared packs are convenient for a drawer; freshly made popcorn is more practical where an office pantry allows it."] },
+          { title: "Fresh fruit", body: ["Bananas, apples, oranges and guavas can add a fresh option to the workday. They belong in a daily bag or suitable office storage rather than a drawer for extended periods. Choose fruit you can carry without bruising and wash or peel it appropriately before eating."] },
+          { title: "Khakhra", body: ["Khakhra is flat, portable and easy to pair with tea. It can still shed crumbs, and flavoured versions vary in oil, sodium and ingredients. Breaking a larger piece into a container before the workday makes it easier to eat neatly."] },
+          { title: "A simple trail mix", body: ["A mix of nuts, seeds and a small amount of dried fruit is convenient when you want variety in one container. Ready-made mixes can include sweet pieces, fried additions or generous seasoning, so inspect the ingredient list and pre-portion the mix before storing it at your desk."] }
         ]
       },
       {
-        heading: "What to Look For on the Label",
+        heading: "Planning for the 4-7 PM Office Hunger Window",
         body: [
-          "Start with serving size. A snack can look reasonable per serving while the actual packet contains multiple servings. Then look at added sugar, total fat, fibre, protein, ingredients and sodium.",
-          "Low calorie snacks for office are useful only when the portion is realistic. Protein snacks for office can help some people feel more satisfied, but the label still matters. A healthy alternative to biscuits at office should be easy to understand, not just wrapped in healthy-sounding words."
+          "The lunch-to-dinner gap can be long, especially when meetings run late or the journey home starts after work. Keeping one shelf-stable option available means the decision is made while you are calm, not only after you become very hungry. It is a planning tool, not a promise that one food will control appetite.",
+          "Before eating, move one portion out of a large pack and put the remainder away. Then take a short break if possible instead of grazing through calls. If a small crunchy snack is consistently not enough on long days, plan a more substantial option rather than repeatedly opening extra packets."
+        ]
+      },
+      {
+        heading: "A Quick Packaged-Snack Label Check",
+        body: [
+          "Start with serving size and compare it with the amount you will actually eat. A packet may contain more than one serving, so a per-serving number is only useful when it matches your portion. Check calories in that context rather than using the smallest printed number as the whole story.",
+          "Next look at added sugar, sodium, total fat, fibre and protein, then read the ingredient list and preparation description. These details work together: one low number does not automatically make a food healthy, and one higher number does not explain the whole product."
         ]
       },
       {
@@ -73,22 +79,21 @@ export const landingPages: Record<LandingSlug, LandingPageData> = {
         ]
       },
       {
-        heading: "Building a Week of Desk Snacks",
+        heading: "How to Build a Simple Office Snack Rotation",
         body: [
-          "A practical Monday to Friday rotation prevents snack boredom. Monday can be roasted chana, Tuesday fruit, Wednesday roasted makhana, Thursday nuts with a square of dark chocolate, and Friday khakhra or a small trail mix.",
-          "For healthy snacks for work from home, the same rotation works if you keep the snack away from the kitchen counter. Decide the portion, sit back at your desk, and make the snack a real break rather than background eating."
+          "Use three roles instead of buying many similar packets: one crunchy shelf-stable option, one fresh option when practical and one more substantial choice for unusually long days. For example, keep roasted chana in the drawer, bring fruit on selected days and plan bread with peanut butter or another suitable option when dinner will be late."
         ]
       },
       {
         heading: "Healthy Tea-Time Snacks for Office in India",
         body: [
-          "Healthy tea time snacks for office India do not have to fight chai culture. They simply need to replace the automatic biscuit plate sometimes. Roasted makhana, chana, khakhra, fruit or a small nut portion can all work with tea.",
-          "The goal is not guilt free snacks for desk job employees as a slogan. The goal is a snack that feels enjoyable, does not make a mess at your desk, and still leaves you comfortable for the rest of the workday. For local search context, see the Khao Better guide to healthy office snacks in Delhi NCR. Students planning long study days can also use the same logic in the Khao Better guide to healthy snacks for students."
+          "Tea-time planning does not require abandoning chai or declaring familiar snacks forbidden. It means choosing deliberately instead of reaching for the same biscuit plate every day. Roasted makhana, chana, khakhra, fruit, simple popcorn or a measured nut portion can each fill a different role.",
+          "For local workday and commute context, see the Khao Better guide to healthy office snacks in Delhi NCR. Students planning long study days can use the related Khao Better guide to healthy snacks for students."
         ]
       }
     ],
     faqs: [
-      ["What are healthy office snacks in India?", "Useful healthy office snacks in India include roasted makhana, roasted chana, nuts, fruit, khakhra, peanuts, dark chocolate and simple trail mix."],
+      ["What are healthy office snacks in India?", "Useful office options include roasted makhana, roasted chana, nuts, fruit, khakhra, peanuts, simple popcorn and a portioned trail mix."],
       ["What should I snack on during work without gaining weight?", "No snack guarantees weight control. Choose a clear portion, read the label, and pick snacks that fit your full day instead of eating from an open packet."],
       ["Is makhana a healthy tea-time snack for office?", "Roasted makhana can work well at tea time because it is crunchy and easy to portion. Check the exact product label and seasoning."],
       ["What snacks do not make a mess at your desk?", "Roasted makhana, roasted chana, nuts, whole fruit and neatly packed khakhra are usually easier to manage than oily chips or crumbly biscuits."],
@@ -109,39 +114,39 @@ export const landingPages: Record<LandingSlug, LandingPageData> = {
     h1: "Healthy Snacks for Hostel Students Under ₹100",
     title: "Healthy Snacks for Hostel Students Under ₹100 | Khao Better",
     description:
-      "Ten practical healthy hostel snacks under ₹100 with no cooking required, plus study-session and late-night snack ideas for Indian students.",
+      "Practical hostel snacks for a ₹100 budget, including no-cooking options, storage guidance and study-session planning for Indian students.",
     intro: [
-      "Hostel snacks have to survive real student life: no full kitchen, limited budget, late-night study sessions, shared rooms, exam stress, and sometimes no fridge. The best healthy snacks for hostel students under 100 rupees are practical before they are fancy.",
-      "This guide focuses on cheap healthy snacks for students in India that need little or no cooking, fit small rooms, and help you avoid depending only on fried packets or sugary options during exams."
+      "Hostel snacks have to fit real student life: a limited budget, little kitchen access, shared rooms, classes, travel to the library and sometimes no fridge. The best healthy snacks for hostel students under ₹100 are practical before they are fancy.",
+      "₹100 is a planning limit, not a promise that every item or pack costs the same everywhere. Local prices vary by city, shop, brand, season and pack size, so compare what one purchase provides and choose options that fit your own hostel setup."
     ],
     sections: [
-      { heading: "What Makes a Good Hostel Snack", body: ["A good hostel snack should be affordable, easy to store, low-mess, portable and simple to portion. No cooking snacks for hostel life are especially useful because access to induction plates, pans or clean counters is not guaranteed.", "Long shelf life snacks for hostel rooms should also be easy to close and keep away from moisture. If a snack needs refrigeration, like curd, treat it as a same-day option only when a fridge is actually available. Prices below are typical Indian ranges and vary by city, store and pack size."] },
+      { heading: "What Makes a Snack Hostel-Friendly?", body: ["A useful hostel snack should fit the available budget and storage, travel easily between the room, class and library, and need little preparation. A clear serving size helps when space is tight and large open packets are easy to keep eating from.", "Shelf-stable foods are useful where refrigeration is unavailable, but they still need sealed storage and attention to the pack's instructions and best-before date. Fresh fruit is a buy-for-now option, while curd and other chilled foods should only be kept where reliable refrigeration is available."] },
       {
-        heading: "10 Healthy Hostel Snacks Under Rs. 100",
+        heading: "10 Affordable Hostel Snack Ideas for a ₹100 Budget",
         cards: [
-          { title: "Roasted makhana", body: ["Roasted makhana is light, crunchy and useful for exam time snacks. Khao Better Classic Roasted is listed at Rs. 59 for a 25 g pack, but it is pre-launch and currently out of stock, so students can only join the waitlist for now. Makhana for students exam snack works best when the pack is portioned before studying."] },
-          { title: "Roasted chana", body: ["Roasted chana often fits Rs. 20-60 depending on pack size. It is shelf-stable, filling and easy to carry to class or the library."] },
-          { title: "Peanuts", body: ["Roasted peanuts are common budget snacks under 100 rupees. Choose a small pack and avoid making a large jar your default study companion."] },
-          { title: "Bananas", body: ["Bananas are usually cheap, easy to find and require no cooking. Buy one or two at a time so they do not over-ripen in the room."] },
-          { title: "Apples", body: ["Apples cost more than bananas but travel well and do not need a fridge for short periods. They are a clean snack for classes or commutes."] },
-          { title: "Khakhra", body: ["Khakhra is crisp, flat and hostel-friendly. Many packs fit under Rs. 100, but flavouring and oil levels vary, so read labels."] },
-          { title: "Peanut butter with bread", body: ["A small peanut butter serving with bread can work when you need something more filling. Store it cleanly and keep portions sensible."] },
-          { title: "Plain popcorn", body: ["Plain popcorn can be a useful study snack India option if you have access to a simple prepared pack. Buttered or caramel versions change the equation."] },
-          { title: "Trail mix", body: ["Trail mix can fit under Rs. 100 in small packs. Look for nuts, seeds and dried fruit rather than chocolate-heavy mixes."] },
-          { title: "Curd where refrigeration is available", body: ["Curd is practical only where refrigeration is available. Buy it fresh, eat it the same day, and do not store it unrefrigerated in a hostel room."] }
+          { title: "Roasted makhana", body: ["Roasted makhana is portable, crunchy and easy to pre-portion for a study session. Khao Better Classic Roasted is ₹59 for a 25 g pack. It is currently out of stock during pre-launch, so the site offers waitlist updates rather than ordering. The Makhana nutrition facts guide explains the Classic nutrition data and portion calculations."] },
+          { title: "Roasted chana", body: ["Roasted chana is shelf-stable and sturdy enough for a class or library bag. Compare pack sizes and seasoning rather than assuming the largest packet is the best value, then move one serving into a smaller container."] },
+          { title: "Peanuts", body: ["Peanuts need no cooking and can be bought in different pack sizes. They are energy-dense, so portioning matters. Check seasoning and allergens, especially in a shared room where someone may need to avoid peanuts."] },
+          { title: "Bananas or seasonal fruit", body: ["Fruit needs no cooking and gives the snack kit a fresh option. Buy an amount you can eat before it bruises or ripens, and choose what offers good value locally."] },
+          { title: "Oats when preparation is available", body: ["Oats can be practical when the hostel permits a kettle or provides a microwave and clean bowl. They are not a no-cooking option, so check the facilities first and follow the preparation instructions rather than improvising with unsuitable appliances."] },
+          { title: "Bread with peanut butter", body: ["Bread with a measured amount of peanut butter can be more substantial than a handful of crunchy snacks. Check storage directions, use clean utensils and consider how quickly the bread will be used in the local weather."] },
+          { title: "Khakhra", body: ["Khakhra is flat, portable and ready to eat. It can create crumbs in bed or near notes, and recipes vary in oil, sodium and ingredients, so keep it sealed and compare labels."] },
+          { title: "Simple homemade trail mix", body: ["Combining small amounts of nuts, seeds or dried fruit lets you control the mix instead of paying for ingredients you do not want. Keep the portion modest, avoid adding several sweet components and store it in a clean sealed container."] },
+          { title: "Plain popcorn", body: ["A simply prepared or packaged popcorn option can provide plenty of crunch for a study session. Butter, caramel and heavy seasoning change the product, so check preparation and serving size rather than treating all popcorn as equivalent."] },
+          { title: "Curd where refrigeration is reliable", body: ["Curd can be a fresh option only when reliable refrigeration is available. Buy an appropriate portion, follow the label's storage instructions and do not keep it unrefrigerated in a hostel room."] }
         ]
       },
-      { heading: "Study Snacks That Don't Make You Sleepy", body: ["Study snacks that don't make you sleepy are usually lighter, portioned and not extremely oily or sugary. Heavy fried meals can make some students feel sluggish, especially late at night, though everyone responds differently.", "For healthy snacks for students during exams, choose something you can eat slowly without making your notes oily: roasted chana, fruit, roasted makhana, plain popcorn or a small nut portion."] },
-      { heading: "Best Snacks to Keep in a Hostel Room Without a Fridge", body: ["The best snacks to keep in hostel room without fridge include roasted chana, peanuts, makhana, khakhra, plain popcorn packs, trail mix and whole fruit that can sit safely for a short period.", "Avoid stocking too many open packets. Use clips, airtight boxes or single-serve packs where possible, because hostel rooms can be humid and shared storage is rarely perfect."] },
-      { heading: "Late-Night Study Snacking", body: ["A late night study snack healthy India plan should be boring in the best way: water nearby, a clear portion, and no open family pack beside the laptop. If you drink tea or coffee, be careful with timing so it does not disturb sleep.", "Keep late snacks lighter than dinner. A small fruit, roasted makhana, roasted chana or plain popcorn can feel better than a heavy fried snack during a long revision block."] },
-      { heading: "Exam-Time Snack Planning", body: ["Plan exam snacks before the week begins. Keep two shelf-stable options in the room, one fresh option for the day, and one small comfort snack so you are not ordering food every night.", "For example: chana for library days, bananas before morning exams, roasted makhana for evening revision, and khakhra when you want crunch with tea. This keeps snacks for college students India realistic instead of perfect on paper."] }
+      { heading: "Compare Cost per Serving, Not Just Pack Price", body: ["A low sticker price can be misleading if the packet provides very little food, while a larger purchase may be poor value if it goes stale before you finish it. Check the stated net quantity and serving size, then estimate how many realistic snack portions you will use.", "Value also includes waste. Fruit that overripens or a large open pouch that turns stale has not saved money, so start with a manageable quantity."] },
+      { heading: "No-Fridge and No-Cooking Options", body: ["Roasted chana, peanuts, roasted makhana, khakhra, packaged simple popcorn and sealed trail mix are shelf-stable choices when their labels permit room-temperature storage. Whole fruit can work as a fresh short-term option, but it should be checked regularly and eaten before it spoils.", "Oats require suitable preparation, and curd requires refrigeration. Bread and opened spreads need attention to their own storage directions and the local room conditions. Keeping these categories separate prevents a convenient snack list from becoming unsafe storage advice."], table: [["Hostel setup", "Practical examples", "What to check"], ["No fridge, no cooking", "Roasted chana, makhana, peanuts, khakhra", "Seal after opening; follow the label"], ["Fresh, same-day planning", "Bananas or seasonal fruit", "Buy manageable quantities; check condition"], ["Kettle or microwave available", "Oats", "Hostel rules and preparation instructions"], ["Reliable fridge available", "Curd", "Keep chilled as directed on the pack"]] },
+      { heading: "Practical Exam and Late-Night Study Snacks", body: ["A study-session snack should be easy to portion and eat without covering notes or a keyboard in oil and crumbs. Roasted chana, fruit, roasted makhana, plain popcorn or a measured nut portion are practical choices. These are practical study-session options, but no snack can guarantee that you won't feel sleepy.", "Put one serving in a bowl or container before opening your notes. Keeping a family pack beside the laptop makes repeated eating easy to miss. Keep water nearby as well, and treat caffeinated drinks separately because their timing may affect sleep."] },
+      { heading: "A Simple Hostel Snack Kit", body: ["Start with three to five staples rather than a crowded shelf: one crunchy roasted option, one nut or seed option if allergies permit, one fresh fruit bought in small quantities, one more substantial choice such as oats or bread with peanut butter, and one comfort snack you genuinely enjoy.", "For example, roasted chana can cover library days, bananas can be bought for the next morning, oats can stay reserved for days when preparation is available and khakhra can provide an occasional tea-time crunch. The exact kit should reflect storage, budget and hostel rules."] }
     ],
     faqs: [
-      ["What are healthy snacks for hostel students under 100 rupees?", "Roasted chana, peanuts, bananas, khakhra, plain popcorn, small trail mix packs and roasted makhana can often fit under Rs. 100, depending on city and store."],
+      ["What are practical snacks for hostel students with a ₹100 budget?", "Compare local prices and portions for roasted chana, peanuts, seasonal fruit, khakhra, simple popcorn, homemade trail mix and roasted makhana. Prices vary by city, shop, brand and pack size."],
       ["What snacks can I keep in a hostel room without a fridge?", "Roasted chana, peanuts, makhana, khakhra, plain popcorn and sealed trail mix are practical no-fridge snacks."],
-      ["Is makhana good for students during exams?", "Roasted makhana can be a useful exam snack when portioned clearly. It is crunchy, light and easy to keep near a study desk."],
+      ["Is makhana good for students during exams?", "Roasted makhana can be a useful exam snack when portioned clearly. It is crunchy, easy to portion and simple to keep near a study desk."],
       ["Can I order Khao Better makhana now?", "Khao Better is pre-launch. Classic Roasted is currently out of stock, and the site is for waitlist interest only."],
-      ["What should I avoid during late-night studying?", "Avoid very heavy fried snacks or large sugary portions if they make you feel sluggish. Choose a smaller, planned snack and keep water nearby."]
+      ["How should I plan a late-night study snack?", "Pre-portion a practical snack, keep water nearby and avoid leaving a large open packet beside your study space. No snack is guaranteed to prevent sleepiness."]
     ],
     links: [
       { href: "/makhana-classic-roasted", label: "Classic Roasted Makhana" },
@@ -154,30 +159,31 @@ export const landingPages: Record<LandingSlug, LandingPageData> = {
   delhi: {
     slug: "delhi",
     eyebrow: "Delhi NCR snacks",
-    h1: "Healthy Evening Snacks for Delhi NCR Office Workers",
-    title: "Healthy Evening Snacks for Delhi NCR Office Workers | Khao Better",
+    h1: "Low-Calorie Evening Snacks for Office Workers in Delhi",
+    title: "Low-Calorie Snacks for Delhi Office Workers | Khao Better",
     description:
-      "Explore better 5 pm snack ideas for Delhi, Gurugram and Noida offices, including roasted makhana. Khao Better is pre-launch; join the Delhi NCR waitlist.",
+      "Practical lower-calorie evening snack ideas for Delhi NCR workdays, with portion, preparation, office-drawer and commute guidance.",
     intro: [
-      "Delhi NCR office snacking has its own rhythm. Around 5 pm, chai appears, meetings slow down for a moment, and samosa, biscuits, namkeen or chips become the easy answer in Connaught Place, Nehru Place, Saket, Dwarka, Gurugram Cyber City, Noida Sector 62, Ghaziabad and Faridabad.",
-      "This page is for people searching healthy snacks Delhi NCR, roasted makhana Delhi, or a low calorie evening snack for office workers in Delhi. Khao Better is currently pre-launch, so we are not yet offering active makhana delivery in Delhi NCR."
+      "A low-calorie evening snack for office workers in Delhi is not one universal food. The calories depend on the portion, recipe and preparation, so a useful choice starts with the actual serving and label rather than a healthy-sounding category name.",
+      "Delhi NCR workdays can place a long gap between lunch and dinner, especially when an evening commute follows the final meeting. A planned desk or bag snack can be easier to manage than waiting until the journey home to decide. This guide covers practical options for Delhi, Gurugram and Noida workdays."
     ],
     sections: [
-      { heading: "The 5 PM Problem in a Delhi Office", body: ["The 5 pm snack is emotional as much as practical. People want a break, something crunchy, and something that fits chai. That is why evening snacks Delhi office searches often lead to samosa, biscuits, namkeen and chips.", "Those snacks are popular for good reasons: they are familiar, available, affordable and satisfying. The question is not how to erase them. The question is how to add better swaps for days when you want crunch without feeling weighed down."] },
-      { heading: "What Delhi Offices Usually Snack On", body: ["Samosa works because it is hot and filling. Biscuits work because they live beside tea. Namkeen works because it is shareable. Chips work because they are crunchy and easy to find.", "A better office snack plan respects that culture. It should still feel like a snack, not a lecture. For many teams, the useful shift is adding roasted makhana, chana, nuts, fruit or khakhra into the rotation."] },
+      { heading: "Why the Evening Snack Matters in a Delhi Workday", body: ["The evening snack often sits between two different parts of the day: the last working hours and the trip home. Someone eating at a desk may prioritise low mess, while someone heading for the Metro, a cab or a car needs a pack that closes securely and can be eaten without preparation.", "Chai, samosa, biscuits, namkeen and chips remain familiar because they are convenient and enjoyable. The aim is not to declare them forbidden. It is to keep additional choices available for days when you want a smaller portion, a different preparation or something easier to carry."] },
+      { heading: "What Does Low-Calorie Mean for an Evening Snack?", body: ["Whether an evening snack is low in calories depends on the portion, recipe and preparation. A small serving of an energy-dense food and a large serving of a lighter food are different choices, and oil, frying, butter, sugar coatings and seasoning can change the final product.", "Use the serving size and calories on packaged-food labels, then compare that serving with what you intend to eat. For unpackaged food, keep the portion visible and avoid treating words such as roasted or baked as a complete nutrition assessment.", "Calories are only one part of a useful choice. Ingredients, added sugar, sodium, fat, fibre and protein may also matter depending on the product and your needs. No single number creates an automatic health ranking."] },
       {
-        heading: "Better Swaps That Still Feel Like a Snack",
+        heading: "Practical Evening Snack Options",
         cards: [
-          { title: "Roasted makhana", body: ["Roasted makhana gives a light crunch and is easy to portion for desk breaks. It is also known as fox nuts or phool makhana."] },
-          { title: "Roasted chana", body: ["Roasted chana is affordable, shelf-stable and familiar across Indian snack routines."] },
-          { title: "Nuts", body: ["Almonds or peanuts can work when portions are small and decided before snacking."] },
-          { title: "Fruit", body: ["Bananas, apples and oranges bring freshness into an office snack routine."] },
-          { title: "Khakhra", body: ["Khakhra keeps the crunch and chai pairing, while still needing label checks for oil and sodium."] }
+          { title: "Roasted makhana", body: ["Roasted makhana, or fox nuts, provides an airy crunch and is easy to divide into a desk portion. Oil and seasoning vary between products, so use the pack label when comparing it with chips, namkeen or popcorn."] },
+          { title: "Roasted chana", body: ["Roasted chana is compact and shelf-stable when stored as directed. It has a denser bite than makhana and travels well, but salted and masala versions can differ in sodium and ingredients."] },
+          { title: "Nuts or peanuts", body: ["Nuts and peanuts take little space in a work bag, but they are energy-dense and easy to over-pour. Decide a portion before leaving the office and account for allergy needs in shared spaces."] },
+          { title: "Whole fruit", body: ["Bananas, apples, oranges or other practical seasonal fruit can provide a fresh contrast to packaged snacks. Carry fruit that can handle the journey, check its condition and avoid leaving it in a drawer for extended periods."] },
+          { title: "Khakhra", body: ["Khakhra pairs naturally with tea and fits flat in a bag. Recipes vary, so compare serving size, oil, sodium and ingredients. A container can prevent breakage and keep crumbs out of the bag."] },
+          { title: "Simple popcorn", body: ["Plain or simply seasoned popcorn can be a portable crunchy option. Butter, caramel and heavy coatings change the comparison, and a loose open bag may be awkward during a commute, so packaging matters."] }
         ]
       },
-      { heading: "Roasted Makhana in Delhi NCR", body: ["Roasted makhana fits office desks because it is light, crunchy and easy to understand. If you are wondering where to buy roasted makhana online in Delhi, Khao Better is not the checkout answer yet; it is a pre-launch brand collecting waitlist interest.", "For people comparing buy flavoured roasted makhana online Delhi NCR options, read the label carefully. Flavouring, oil and sodium can change the snack. Khao Better Classic Roasted is listed as a 25 g pack at Rs. 59, currently out of stock."] },
-      { heading: "Khao Better Delhi NCR Launch Status", body: ["Khao Better is pre-launch. We are currently collecting interest and waitlist signups from snackers who want launch updates.", "That includes people in Delhi, Gurugram, Noida, Ghaziabad and Faridabad, but this is not an active delivery promise. We are not publishing serviceable pincodes, delivery dates or makhana delivery Delhi timelines in this task."] },
-      { heading: "Snacks for Delhi Office Teams", body: ["Healthy snack delivery for offices in Delhi NCR and makhana suppliers for offices Gurgaon are real search needs, but Khao Better is not claiming corporate supply today. Office teams can still use the idea: rotate lighter crunchy snacks into the pantry instead of relying only on samosa and biscuits.", "For an alternative to samosa at 5 pm Delhi office, try roasted makhana, roasted chana, fruit bowls, nuts, khakhra or plain popcorn. The best option is the one your team will actually eat and portion sensibly."] },
+      { heading: "Office Drawer vs Commute Snacks", body: ["A desk drawer favours sealed foods that tolerate room-temperature storage as directed. A commute snack needs the same storage care plus packaging that will not leak, scatter crumbs or be difficult to close after eating.", "Fresh fruit may suit the office when bought for the day, while roasted chana, makhana or nuts can be easier to carry home. Hot foods can be enjoyable at tea time but are usually less convenient once the commute starts. Choose for the moment instead of expecting one snack to do every job."], table: [["Situation", "Useful options", "Practical check"], ["Desk drawer", "Roasted chana, makhana, nuts", "Keep sealed; check serving and best-before date"], ["Work bag or commute", "Whole fruit, sealed roasted snacks, khakhra", "Avoid crushing, leaks and open packets"], ["Office pantry", "Freshly prepared popcorn or suitable fresh food", "Use available preparation and safe storage"], ["Shared team snack", "Portioned bowls or individual servings", "Consider allergens, mess and shared handling"]] },
+      { heading: "Portion and Preparation Change the Comparison", body: ["Roasted, fried, baked and coated snacks can have very different recipes even when the base ingredient sounds similar. Compare products using realistic portions, and remember that ghee, oil, cheese powders, caramel or other coatings can change calories, fat, sugar and sodium.", "A smaller pack can make the stopping point obvious, while a large shared packet may need bowls or containers. That can make portioning easier, but it does not mean the food itself guarantees weight control.", "For a broader workday framework, the Healthy office snacks in India guide covers drawer storage, label reading and snack rotation beyond the Delhi NCR context."] },
+      { heading: "Roasted Makhana and Khao Better in Delhi NCR", body: ["People looking for roasted makhana in Delhi can compare products by portion, preparation and label. Khao Better Classic Roasted is a 25 g pack priced at ₹59 and is approximately 113 kcal per pack based on its nutrition panel. It is roasted rather than deep-fried.", "Khao Better is still pre-launch and Classic Roasted is currently out of stock, so the site currently offers waitlist updates rather than ordering or delivery."] },
       { heading: "Delhi NCR Areas Mentioned", chips: ["Connaught Place", "Nehru Place", "Saket", "Dwarka", "Gurugram Cyber City", "Noida Sector 62", "Ghaziabad", "Faridabad"] }
     ],
     faqs: [

@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { articleUrl, blogPosts } from "@/lib/blog-posts";
 import { absoluteUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -13,13 +14,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/student-snacks", priority: 0.7 },
     { path: "/delhi", priority: 0.6 },
     { path: "/blog", priority: 0.7 },
-    { path: "/blog/makhana-weight-loss", priority: 0.7 },
-    { path: "/blog/makhana-vs-popcorn-vs-chips", priority: 0.7 },
-    { path: "/blog/makhana-nutrition-facts", priority: 0.7 },
     { path: "/privacy-policy", priority: 0.3 }
   ];
+  const articleRoutes = blogPosts.map((article) => ({
+    path: articleUrl(article.slug),
+    priority: 0.7
+  }));
 
-  return routes.map((route) => ({
+  return [...routes, ...articleRoutes].map((route) => ({
     url: absoluteUrl(route.path),
     lastModified,
     changeFrequency: "weekly",

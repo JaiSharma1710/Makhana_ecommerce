@@ -42,14 +42,14 @@ export function LandingPageContent({ page }: { page: LandingPageData }) {
             <h2>{section.heading}</h2>
             {section.body?.map((paragraph) => <p key={paragraph}>{renderLinks(paragraph, page.links)}</p>)}
             {section.cards ? (
-              <div className="landing-card-grid">
+              <ol className="landing-card-grid landing-card-list">
                 {section.cards.map((card) => (
-                  <article className="landing-card" key={card.title}>
+                  <li className="landing-card" key={card.title}>
                     <h3>{card.title}</h3>
                     {card.body.map((paragraph) => <p key={paragraph}>{renderLinks(paragraph, page.links)}</p>)}
-                  </article>
+                  </li>
                 ))}
-              </div>
+              </ol>
             ) : null}
             {section.table ? <LandingTable rows={section.table} /> : null}
             {section.chips ? <div className="location-chips">{section.chips.map((chip) => <span key={chip}>{chip}</span>)}</div> : null}

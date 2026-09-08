@@ -1,9 +1,25 @@
 import Link from "next/link";
-import { articleUrl, blogArticles, BlogArticle, BlogSlug } from "@/data/blog";
+import { BlogArticle } from "@/data/blog";
+import {
+  articleUrl,
+  blogPosts,
+  BlogCategorySlug,
+  BlogPost,
+  BlogSlug,
+  categoryUrl,
+  populatedBlogCategories,
+  relatedBlogPosts
+} from "@/lib/blog-posts";
 import { absoluteUrl } from "@/lib/site";
 
 export function BlogHubContent() {
-  const featured = blogArticles[0];
+  const featured = blogPosts.find((article) => article.featured) ?? blogPosts[0];
+  const categoryAnchorByArticle = new Map<BlogSlug, BlogCategorySlug>();
+
+  populatedBlogCategories.forEach((category) => {
+    const firstArticle = blogPosts.find((article) => article.category === category.label);
+    if (firstArticle) categoryAnchorByArticle.set(firstArticle.slug, category.slug);
+  });
 
   const hubJsonLd = {
     "@context": "https://schema.org",
@@ -20,7 +36,7 @@ export function BlogHubContent() {
         <div className="container">
           <div className="eyebrow">Khao Better Journal</div>
           <h1>Better Snacking, Explained</h1>
-          <p>The Khao Better Journal covers makhana, roasted fox nuts, nutrition, everyday snacking, practical comparisons and snack contexts for office workers and students. It is built to help you understand the snack before Khao Better launches.</p>
+          <p>The Khao Better Journal covers makhana, roasted fox nuts, nutrition, everyday snacking, practical comparisons and snack contexts for <Link href="/office-snacks">office workers</Link> and <Link href="/student-snacks">students</Link>. It is built to help you understand the snack before Khao Better launches.</p>
         </div>
       </section>
       <section className="section">
@@ -32,9 +48,9 @@ export function BlogHubContent() {
             <strong>{featured.readTime} - Open guide</strong>
           </Link>
           <div className="blog-chips" aria-label="Blog categories">
-            <span>Nutrition</span>
-            <span>Comparison</span>
-            <span>Everyday Snacking</span>
+            {populatedBlogCategories.map((category) => (
+              <Link href={categoryUrl(category.slug)} key={category.slug}>{category.label}</Link>
+            ))}
           </div>
           <div className="journal-guide">
             <section>
@@ -45,7 +61,7 @@ export function BlogHubContent() {
             <section>
               <h2>Choosing a snack</h2>
               <p>Many readers arrive here while comparing makhana with familiar crunchy snacks. The <Link href="/blog/makhana-vs-popcorn-vs-chips">makhana, popcorn and chips comparison</Link> looks at preparation, portion control, desk snacking and label-reading without inventing competitor nutrition numbers.</p>
-              <p>That practical lens matters for everyday snacking. A snack can be roasted, fried, plain, buttery, sweet or heavily seasoned, and those details change how it fits into a normal day.</p>
+              <p>That practical lens matters for everyday snacking. A snack can be roasted, fried, plain, buttery, sweet or heavily seasoned, and those details change how it fits into a normal day. The <Link href="/delhi">Delhi NCR evening-snack guide</Link> applies the same thinking to the office-to-commute gap.</p>
             </section>
             <section>
               <h2>Portions and everyday eating</h2>
@@ -59,8 +75,8 @@ export function BlogHubContent() {
             </section>
           </div>
           <div className="article-grid">
-            {blogArticles.map((article) => (
-              <ArticleCard article={article} key={article.slug} />
+            {blogPosts.map((article) => (
+              <ArticleCard article={article} anchorId={categoryAnchorByArticle.get(article.slug)} key={article.slug} />
             ))}
           </div>
         </div>
@@ -70,7 +86,7 @@ export function BlogHubContent() {
 }
 
 export function BlogArticleContent({ article }: { article: BlogArticle }) {
-  const related = blogArticles.filter((item) => item.slug !== article.slug);
+  const related = relatedBlogPosts(article.slug);
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -131,7 +147,7 @@ export function BlogArticleContent({ article }: { article: BlogArticle }) {
             </section>
           ))}
           <section>
-            <h2>{article.category === "Comparison" ? "Comparison FAQs" : article.slug === "makhana-weight-loss" ? "Makhana Weight-Loss FAQs" : "Makhana Nutrition FAQs"}</h2>
+            <h2>{article.category === "Comparisons" ? "Comparison FAQs" : article.slug === "makhana-weight-loss" ? "Makhana Weight-Loss FAQs" : "Makhana Nutrition FAQs"}</h2>
             <div className="article-faqs">
               {article.faqs.map(([question, answer]) => (
                 <div className="faq static-faq" key={question}>
@@ -148,9 +164,9 @@ export function BlogArticleContent({ article }: { article: BlogArticle }) {
   );
 }
 
-function ArticleCard({ article }: { article: BlogArticle }) {
+function ArticleCard({ article, anchorId }: { article: BlogPost; anchorId?: BlogCategorySlug }) {
   return (
-    <Link className="article-card" href={articleUrl(article.slug)}>
+    <Link className="article-card" href={articleUrl(article.slug)} id={anchorId}>
       <span>{article.category}</span>
       <h2>{article.h1}</h2>
       <p>{article.excerpt}</p>
@@ -175,7 +191,7 @@ function ResponsiveTable({ rows }: { rows: string[][] }) {
   );
 }
 
-function RelatedArticles({ articles }: { articles: BlogArticle[] }) {
+function RelatedArticles({ articles }: { articles: readonly BlogPost[] }) {
   return (
     <section className="related-articles">
       <h2>Related Khao Better Guides</h2>
