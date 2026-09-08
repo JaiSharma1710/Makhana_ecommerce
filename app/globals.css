@@ -28,7 +28,7 @@ a { color: inherit; text-decoration: none; }
 
 .site { min-height: 100vh; background: #EFE6D8; }
 .container { width: 100%; max-width: 1440px; margin: 0 auto; padding: 0 56px; }
-.shell { width: 100%; margin: 0 auto; background: #EFE6D8; position: relative; overflow: hidden; }
+.shell { width: 100%; margin: 0 auto; background: #EFE6D8; position: relative; overflow: clip; }
 .mobile-shell { width: 420px; max-width: 100%; border: 10px solid #241206; border-radius: 40px; box-shadow: 0 30px 70px rgba(40,20,10,.35); }
 .device-toggle { position: fixed; right: 16px; bottom: 16px; z-index: 80; display: flex; gap: 6px; background: #3A1E10; padding: 6px; border-radius: 999px; box-shadow: 0 10px 30px rgba(0,0,0,.28); }
 .device-toggle button { border: 0; border-radius: 999px; background: transparent; color: #fff; padding: 7px 15px; font-size: 12px; font-weight: 800; }

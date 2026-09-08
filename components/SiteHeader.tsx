@@ -39,7 +39,7 @@ export function SiteHeader() {
               onClick={() => setLearnOpen(!learnOpen)}
               onFocus={() => setLearnOpen(true)}
             >
-              Learn
+              Explore
             </button>
             {learnOpen ? (
               <div className="learn-panel" onBlur={(event) => {
@@ -61,7 +61,7 @@ export function SiteHeader() {
         <nav className="mobile-menu" aria-label="Mobile navigation">
           <Link href="/shop" onClick={() => setMenuOpen(false)}>Shop</Link>
           <Link href="/why-makhana" onClick={() => setMenuOpen(false)}>Why Makhana</Link>
-          <span className="mobile-menu-label">Learn</span>
+          <span className="mobile-menu-label">Explore</span>
           {learnLinks.map(([label, href]) => (
             <Link href={href} key={href} onClick={() => setMenuOpen(false)}>{label}</Link>
           ))}
