@@ -375,6 +375,7 @@ footer a:hover { color: #FFF4E5; }
 .article-body h3 { margin: 0 0 8px; color: #5A321F; font-size: 20px; }
 .article-body p { color: #5c4131; font-size: 17px; line-height: 1.78; }
 .article-body a { color: #F26A2E; font-weight: 800; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.article-body .article-card { text-decoration: none; }
 .key-takeaway { margin: 24px 0; background: #FFF4E5; border: 1px solid rgba(90,50,31,.12); border-left: 6px solid #F26A2E; border-radius: 18px; padding: 22px; }
 .key-takeaway strong { color: #F26A2E; text-transform: uppercase; letter-spacing: .08em; font-size: 12px; }
 .key-takeaway p { margin: 8px 0 0; }
