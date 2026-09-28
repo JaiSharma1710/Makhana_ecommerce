@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { catalog } from "@/data/store";
@@ -37,7 +38,7 @@ export function SiteHeader() {
           <span />
         </button>
         <Link className="logo-link" href="/" aria-label="Khao Better home">
-          <img src="/assets/kb-logo.png" alt="Khao Better" />
+          <Image src="/assets/kb-logo.png" alt="Khao Better" width={945} height={573} sizes="74px" loading="eager" />
         </Link>
         <nav className="nav" aria-label="Primary navigation">
           <Link href="/shop">Shop</Link>

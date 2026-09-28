@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const flavours = [
   {
@@ -42,7 +42,13 @@ export function HeroFlavourShowcase() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [phase, setPhase] = useState<Phase>("enter");
   const [reducedMotion, setReducedMotion] = useState(false);
+  const [visibleLoaded, setVisibleLoaded] = useState(false);
+  const [preloadNext, setPreloadNext] = useState(false);
+  const [nextReady, setNextReady] = useState(false);
+  const [hasRotated, setHasRotated] = useState(false);
+  const cycleStartedAt = useRef(0);
   const active = flavours[activeIndex];
+  const next = flavours[(activeIndex + 1) % flavours.length];
 
   useEffect(() => {
     if (reducedMotion) {
@@ -51,19 +57,42 @@ export function HeroFlavourShowcase() {
       return;
     }
 
-    const enterTimer = window.setTimeout(() => setPhase("active"), 820);
-    const exitTimer = window.setTimeout(() => setPhase("exit"), 4550);
+    cycleStartedAt.current = window.performance.now();
+  }, [activeIndex, reducedMotion]);
+
+  useEffect(() => {
+    if (!visibleLoaded || reducedMotion) return;
+
+    const requestIdle = window.requestIdleCallback;
+    if (requestIdle) {
+      const idleId = requestIdle(() => setPreloadNext(true), { timeout: 1200 });
+      return () => window.cancelIdleCallback(idleId);
+    }
+
+    const timer = window.setTimeout(() => setPreloadNext(true), 900);
+    return () => window.clearTimeout(timer);
+  }, [activeIndex, reducedMotion, visibleLoaded]);
+
+  useEffect(() => {
+    if (!nextReady || reducedMotion) return;
+
+    const elapsed = window.performance.now() - cycleStartedAt.current;
+    const exitDelay = Math.max(0, 4550 - elapsed);
+    const exitTimer = window.setTimeout(() => setPhase("exit"), exitDelay);
     const nextTimer = window.setTimeout(() => {
-      setActiveIndex((current) => (current + 1) % flavours.length);
+      setHasRotated(true);
+      setVisibleLoaded(false);
+      setPreloadNext(false);
+      setNextReady(false);
       setPhase("enter");
-    }, 5080);
+      setActiveIndex((current) => (current + 1) % flavours.length);
+    }, exitDelay + 530);
 
     return () => {
-      window.clearTimeout(enterTimer);
       window.clearTimeout(exitTimer);
       window.clearTimeout(nextTimer);
     };
-  }, [activeIndex, reducedMotion]);
+  }, [nextReady, reducedMotion]);
 
   useEffect(() => {
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -74,27 +103,41 @@ export function HeroFlavourShowcase() {
     return () => media.removeEventListener("change", updatePreference);
   }, []);
 
-  useEffect(() => {
-    if (reducedMotion) return;
-
-    const next = flavours[(activeIndex + 1) % flavours.length];
-    const preload = new window.Image();
-    preload.src = next.src;
-  }, [activeIndex, reducedMotion]);
-
   return (
     <div className="hero-visual" aria-label="Khao Better roasted makhana flavours">
-      <div className={`hero-flavour hero-flavour-${phase}`} key={active.src}>
+      <div className={`hero-flavour hero-flavour-${phase}`}>
         <div className="hero-flavour-lift">
           <Image
             src={active.src}
             alt={active.alt}
-            fill
-            priority={activeIndex === 0}
+            width={1254}
+            height={1254}
+            preload={activeIndex === 0 && !hasRotated}
+            fetchPriority={activeIndex === 0 && !hasRotated ? "high" : "auto"}
             sizes="(max-width: 760px) 100vw, (max-width: 1180px) 52vw, 760px"
+            onLoad={() => {
+              setVisibleLoaded(true);
+              if (activeIndex > 0) {
+                window.setTimeout(() => setPhase("active"), 820);
+              }
+            }}
           />
         </div>
       </div>
+      {preloadNext && !reducedMotion ? (
+        <Image
+          className="hero-flavour-preload"
+          src={next.src}
+          alt=""
+          aria-hidden="true"
+          width={1254}
+          height={1254}
+          sizes="(max-width: 760px) 100vw, (max-width: 1180px) 52vw, 760px"
+          loading="eager"
+          fetchPriority="low"
+          onLoad={() => setNextReady(true)}
+        />
+      ) : null}
     </div>
   );
 }

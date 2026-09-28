@@ -1,8 +1,21 @@
 import type { Metadata, Viewport } from "next";
+import { Fredoka, Hanken_Grotesk } from "next/font/google";
 import Script from "next/script";
 import { GA_MEASUREMENT_ID } from "@/lib/analytics";
 import { absoluteUrl, SITE_URL } from "@/lib/site";
 import "./globals.css";
+
+const hankenGrotesk = Hanken_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-hanken-grotesk",
+  display: "swap"
+});
+
+const fredoka = Fredoka({
+  subsets: ["latin"],
+  variable: "--font-fredoka",
+  display: "swap"
+});
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -64,7 +77,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${hankenGrotesk.variable} ${fredoka.variable}`}>
         {children}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}

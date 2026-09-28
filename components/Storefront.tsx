@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   catalog,
@@ -134,7 +135,7 @@ function Steps() {
 }
 
 function Combo() {
-  return <section className="section"><div className="container"><div className="combo"><div><span>Launching soon</span><h2>Classic Roasted First Batch</h2><p>Classic Roasted is not available for purchase yet. Join the launch list and we'll let you know when the first batch becomes available.</p><div className="combo-price"><b>Out of stock</b><small>Rs. 59 per 25 g pack</small></div><div className="hero-actions"><WaitlistButton product={catalog[0]} className="primary">Join the waitlist</WaitlistButton><Link className="secondary" href="/makhana-classic-roasted">Classic Roasted details</Link></div></div><div className="combo-packs">{[0, 1, 2].map((index) => <PackShot key={index} id="classic" />)}</div></div></div></section>;
+  return <section className="section"><div className="container"><div className="combo"><div><span>Launching soon</span><h2>Classic Roasted First Batch</h2><p>Classic Roasted is not available for purchase yet. Join the launch list and we'll let you know when the first batch becomes available.</p><div className="combo-price"><b>Out of stock</b><small>Rs. 59 per 25 g pack</small></div><div className="hero-actions"><WaitlistButton product={catalog[0]} className="primary">Join the waitlist</WaitlistButton><Link className="secondary" href="/makhana-classic-roasted">Classic Roasted details</Link></div></div><div className="combo-packs">{[0, 1, 2].map((index) => <PackShot key={index} id="classic" sizes="(max-width: 760px) 28vw, 160px" />)}</div></div></div></section>;
 }
 
 function Audience() {
@@ -166,7 +167,7 @@ export function ShopPageContent() {
 
 export function ClassicRoastedContent() {
   const product = catalog[0];
-  return <main className="page-pad"><div className="container"><div className="crumb"><Link href="/">Home</Link> / <Link href="/shop">Shop</Link> / <b>{product.name}</b></div><div className="pdp"><div className="pdp-image"><PackShot id={product.id} /></div><div><h1 className="page-title">Classic Roasted Makhana</h1><p className="page-intro">Classic Roasted Makhana is Khao Better's first roasted fox nuts pack for India. Also known as phool makhana, this 25 g roasted makhana snack is priced at Rs. 59 and is currently out of stock while Khao Better prepares for launch.</p><div className="pdp-facts"><span>25 g pack</span><span>Rs. 59</span><span>Out of stock</span></div><div className="soon-box"><b>OUT OF STOCK</b><h2>Join the launch list</h2><p>Join the launch list and we'll let you know when the first batch becomes available. Khao Better is pre-launch, so orders and payments are not open yet.</p><div className="hero-actions"><WaitlistButton product={product} className="primary">Join the waitlist</WaitlistButton><Link className="secondary" href="/why-makhana">Why roasted makhana?</Link></div></div><ProductStatusTable product={product} /></div></div><ProductStory /><NutritionTables /><ComboTable /><ProductFaq /><h2 className="related-title">More flavours coming soon</h2><div className="product-grid related">{catalog.filter((item) => item.id !== product.id).slice(0, 4).map((item) => <ProductCard key={item.id} product={item} />)}</div></div></main>;
+  return <main className="page-pad"><div className="container"><div className="crumb"><Link href="/">Home</Link> / <Link href="/shop">Shop</Link> / <b>{product.name}</b></div><div className="pdp"><div className="pdp-image"><PackShot id={product.id} sizes="(max-width: 760px) 90vw, 45vw" /></div><div><h1 className="page-title">Classic Roasted Makhana</h1><p className="page-intro">Classic Roasted Makhana is Khao Better's first roasted fox nuts pack for India. Also known as phool makhana, this 25 g roasted makhana snack is priced at Rs. 59 and is currently out of stock while Khao Better prepares for launch.</p><div className="pdp-facts"><span>25 g pack</span><span>Rs. 59</span><span>Out of stock</span></div><div className="soon-box"><b>OUT OF STOCK</b><h2>Join the launch list</h2><p>Join the launch list and we'll let you know when the first batch becomes available. Khao Better is pre-launch, so orders and payments are not open yet.</p><div className="hero-actions"><WaitlistButton product={product} className="primary">Join the waitlist</WaitlistButton><Link className="secondary" href="/why-makhana">Why roasted makhana?</Link></div></div><ProductStatusTable product={product} /></div></div><ProductStory /><NutritionTables /><ComboTable /><ProductFaq /><h2 className="related-title">More flavours coming soon</h2><div className="product-grid related">{catalog.filter((item) => item.id !== product.id).slice(0, 4).map((item) => <ProductCard key={item.id} product={item} />)}</div></div></main>;
 }
 
 function ProductStatusTable({ product }: { product: Product }) {
@@ -211,7 +212,7 @@ function Footer() {
     <footer>
       <div className="container footer-main">
         <div className="footer-brand">
-          <img src="/assets/kb-logo.png" alt="Khao Better" />
+          <Image src="/assets/kb-logo.png" alt="Khao Better" width={945} height={573} sizes="96px" />
           <p>A better snack for everyday.</p>
           <small>Roasted makhana for everyday snacking.</small>
         </div>
