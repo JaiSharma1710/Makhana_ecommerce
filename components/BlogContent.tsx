@@ -86,7 +86,7 @@ export function BlogHubContent() {
 }
 
 export function BlogArticleContent({ article }: { article: BlogArticle }) {
-  const related = relatedBlogPosts(article.slug);
+  const related = relatedBlogPosts(article.slug, article.slug === "makhana-vs-lotus-seeds" ? 3 : 2);
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -138,12 +138,16 @@ export function BlogArticleContent({ article }: { article: BlogArticle }) {
           </div>
         </header>
         <div className="container article-container article-body">
+          {article.intro?.map((paragraph) => <p key={paragraph}>{renderLinks(paragraph, article.slug)}</p>)}
           {article.sections.map((section) => (
             <section key={section.heading}>
               <h2>{section.heading}</h2>
               {section.body.map((paragraph) => <p key={paragraph}>{renderLinks(paragraph, article.slug)}</p>)}
+              {section.list ? <ul>{section.list.map((item) => <li key={item}>{item}</li>)}</ul> : null}
+              {section.afterList?.map((paragraph) => <p key={paragraph}>{renderLinks(paragraph, article.slug)}</p>)}
               {section.callout ? <div className="key-takeaway"><strong>Key takeaway</strong><p>{section.callout}</p></div> : null}
               {section.table ? <ResponsiveTable rows={section.table} /> : null}
+              {section.afterTable?.map((paragraph) => <p key={paragraph}>{renderLinks(paragraph, article.slug)}</p>)}
             </section>
           ))}
           <section>
@@ -211,6 +215,14 @@ function renderLinks(text: string, currentSlug: BlogSlug) {
     ["Khao Better guide to makhana vs popcorn vs chips", "/blog/makhana-vs-popcorn-vs-chips"],
     ["Khao Better's weight-loss portion guide", "/blog/makhana-weight-loss"],
     ["Khao Better nutrition facts article", "/blog/makhana-nutrition-facts"],
+    ["makhana nutrition facts", "/blog/makhana-nutrition-facts"],
+    ["makhana vs popcorn vs chips", "/blog/makhana-vs-popcorn-vs-chips"],
+    ["guide to what makhana is", "/why-makhana"],
+    ["botanical difference between makhana and lotus seeds", "/blog/makhana-vs-lotus-seeds"],
+    ["Khao Better Classic Roasted product details", "/makhana-classic-roasted"],
+    ["Agricultural and Processed Food Products Export Development Authority, or APEDA", "https://apeda.gov.in/sites/default/files/study_reports/Makhana_Report_English.pdf"],
+    ["Kew's Plants of the World Online", "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A605422-1/general-information"],
+    ["Makhana is produced from the seeds of Euryale ferox", "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A605350-1/general-information"],
     ["Khao Better Classic Roasted", "/makhana-classic-roasted"],
     ["Khao Better Classic", "/makhana-classic-roasted"]
   ];

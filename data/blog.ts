@@ -2,10 +2,14 @@ import { classicNutrition100g, classicNutrition25g } from "@/data/store";
 import { blogPostIndex, BlogPost, BlogSlug } from "@/lib/blog-posts";
 
 export type BlogArticle = BlogPost & {
+  intro?: string[];
   sections: Array<{
     heading: string;
     body: string[];
+    list?: string[];
+    afterList?: string[];
     table?: string[][];
+    afterTable?: string[];
     callout?: string;
   }>;
   faqs: string[][];
@@ -136,7 +140,8 @@ export const blogArticles: BlogArticle[] = [
         body: [
           "Popcorn is not one thing. Plain air-popped popcorn, stovetop popcorn with oil, microwave butter popcorn and cinema popcorn can all behave differently. The preparation method matters as much as the grain itself.",
           "For people comparing makhana vs popcorn which is healthier for weight loss, the fairest move is to compare the exact product label and the portion you will actually eat."
-          ,"Popcorn can also be very volume-friendly when prepared simply. The challenge is that many real-world popcorn occasions involve butter, cheese powders, caramel coatings or cinema-style portions. Those contexts change the comparison."
+          ,"Popcorn can also be very volume-friendly when prepared simply. The challenge is that many real-world popcorn occasions involve butter, cheese powders, caramel coatings or cinema-style portions. Those contexts change the comparison.",
+          "If ingredient names are part of your comparison, the botanical difference between makhana and lotus seeds explains why those terms are often confused."
         ]
       },
       {
@@ -254,6 +259,7 @@ export const blogArticles: BlogArticle[] = [
           "Nutrition facts are most useful when they change a decision. If you want a small snack, the 25 g line is the easiest reference. If you pour a bigger bowl, the 30 g or 50 g lines help you estimate without pretending the snack is calorie-free.",
           "If you are comparing makhana with popcorn or chips, use the same portion logic. Do not compare a tiny makhana serving with a huge cinema popcorn tub, or a plain popcorn bowl with a full chips packet. Match realistic portions and then decide.",
           "For Khao Better, the current product page and shop page remain pre-launch. Classic Roasted is out of stock, and these nutrition facts are here to support understanding before checkout opens in a later business phase."
+          ,"For clarity on the ingredient itself, the botanical difference between makhana and lotus seeds separates Euryale ferox from true lotus seeds."
         ]
       }
     ],
@@ -263,6 +269,140 @@ export const blogArticles: BlogArticle[] = [
       ["What is the makhana protein content?", "Khao Better Classic has 6.1 g protein per 100 g, or approximately 1.5 g per 25 g pack."],
       ["Does flavoured makhana have the same nutrition?", "Not necessarily. Seasonings, oils, sweet coatings and cheese powders can change nutrition."],
       ["Are these numbers universal for all fox nuts?", "No. These numbers are for Khao Better Classic Roasted only."]
+    ]
+  },
+  {
+    ...blogPostIndex["makhana-vs-lotus-seeds"],
+    intro: [
+      "Search for makhana online and you will often see it described as lotus seeds, fox nuts, gorgon nuts, or even popped water-lily seeds.",
+      "That creates an obvious question: are makhana and lotus seeds actually the same thing?",
+      "Botanically, no.",
+      "The makhana commonly roasted and eaten as a crunchy snack in India comes from a plant called Euryale ferox. True lotus seeds come from Nelumbo nucifera, the sacred lotus plant.",
+      "Both grow in aquatic environments and both produce edible seeds, which helps explain why the names are often mixed up. But they are different plants and should not be treated as interchangeable names."
+    ],
+    sections: [
+      {
+        heading: "The quick difference between makhana and lotus seeds",
+        body: [],
+        table: [
+          ["Characteristic", "Makhana", "True lotus seeds"],
+          ["Botanical name", "Euryale ferox", "Nelumbo nucifera"],
+          ["Plant family", "Nymphaeaceae", "Nelumbonaceae"],
+          ["Common Indian name", "Makhana / phool makhana", "Lotus seed / kamal gatta depending on form and context"],
+          ["Plant type", "Aquatic water-lily relative", "Sacred lotus"],
+          ["Familiar food form", "Popped, light makhana", "Whole lotus seed/kernel"],
+          ["Typical texture", "Light and airy once popped", "Denser seed/kernel"]
+        ],
+        afterTable: [
+          "The distinction is not just a technicality. It helps you understand what you are actually buying, cooking and comparing."
+        ]
+      },
+      {
+        heading: "What exactly is makhana?",
+        body: [
+          "Makhana is produced from the seeds of Euryale ferox, an aquatic plant grown in ponds, wetlands and other still-water environments.",
+          "India's Agricultural and Processed Food Products Export Development Authority, or APEDA, describes makhana as the popped expanded kernel of Euryale ferox.",
+          "The hard seed goes through several processing stages before the white, puffed makhana we recognise as a snack is produced.",
+          "That familiar light and crunchy form is what is often called phool makhana.",
+          "You may also see makhana marketed as fox nuts, gorgon nuts or water-lily seeds. Even the terminology here is not perfectly consistent, which is one reason product labels and online articles can become confusing.",
+          "The makhana nutrition facts guide explains how the familiar snack form is measured and labelled."
+        ]
+      },
+      {
+        heading: "What are true lotus seeds?",
+        body: [
+          "True lotus seeds come from Nelumbo nucifera, commonly known as the sacred lotus.",
+          "Kew's Plants of the World Online classifies Nelumbo nucifera separately from Euryale ferox. Lotus belongs to the Nelumbonaceae family, whereas Euryale ferox belongs to Nymphaeaceae.",
+          "Lotus seeds have a long culinary history in several Asian cuisines. The seeds and rhizomes of the sacred lotus are both used as food.",
+          "So lotus seeds are absolutely real edible seeds.",
+          "They simply aren't the botanical source of the phool makhana sitting in your snack bowl."
+        ]
+      },
+      {
+        heading: "Why do people call makhana “lotus seeds”?",
+        body: [
+          "This is where most of the confusion begins.",
+          "Both plants are aquatic. Both produce edible seeds. Both have been used in Asian food traditions for a long time.",
+          "And over time, “lotus seed” became a convenient English-language label for makhana, even though it isn't botanically accurate.",
+          "APEDA notes that makhana is often referred to as lotus seed but describes the terminology as misleading because Euryale ferox is not the true lotus plant.",
+          "That explains why you may see two apparently contradictory statements online:",
+          "“Makhana is lotus seed.”",
+          "and",
+          "“Makhana is not lotus seed.”",
+          "The first reflects common naming and retail usage.",
+          "The second reflects botany.",
+          "For a simple everyday snack conversation, people may understand what you mean when you say lotus seeds. But if you are comparing ingredients, nutrition or plant sources, the distinction matters."
+        ]
+      },
+      {
+        heading: "Is makhana just a popped lotus seed?",
+        body: [
+          "Not if by “lotus seed” you mean the seed of Nelumbo nucifera.",
+          "Phool makhana is produced by processing and popping seeds from Euryale ferox.",
+          "That means this commonly repeated explanation—",
+          "lotus seed → roast it → it becomes makhana",
+          "—is too simplistic and botanically incorrect.",
+          "The difference starts with the plant itself, not merely with the method of preparation."
+        ]
+      },
+      {
+        heading: "How can you tell what you're buying?",
+        body: [
+          "You do not need to become a botanist in the snack aisle.",
+          "Look for the ingredient or botanical description.",
+          "If the product identifies the ingredient as:",
+          "Euryale ferox",
+          "you are looking at makhana.",
+          "If it identifies:",
+          "Nelumbo nucifera",
+          "you are looking at true lotus seed.",
+          "For ordinary flavoured or roasted makhana packs in India, the finished product is normally obvious from its familiar white, expanded shape.",
+          "The botanical name becomes more useful when shopping online, reading imported product labels or comparing recipes from different Asian cuisines.",
+          "The guide to what makhana is gives more context on the snack and its familiar form.",
+          "See Khao Better Classic Roasted product details for a current product example."
+        ]
+      },
+      {
+        heading: "Do makhana and lotus seeds have the same nutrition?",
+        body: [
+          "They should not automatically be treated as nutritionally identical because they come from different plants.",
+          "There is another complication: nutrition can change depending on whether you are comparing raw seeds, dried seeds, popped makhana or a ready-to-eat roasted product containing oil and seasoning.",
+          "That makes many online “makhana vs lotus seed” nutrition tables misleading because they may compare two foods in completely different forms.",
+          "The safer approach is to compare the nutrition label of the actual product and serving size you intend to eat.",
+          "The makhana vs popcorn vs chips guide applies the same product-and-portion approach to familiar crunchy snacks."
+        ]
+      },
+      {
+        heading: "What should we call makhana in English?",
+        body: [
+          "For Indian consumers, makhana is already the clearest term.",
+          "Internationally, you may encounter:"
+        ],
+        list: ["gorgon nut", "fox nut", "popped water-lily seed", "lotus seed"],
+        afterList: [
+          "Of those, “lotus seed” is the one most likely to create botanical confusion.",
+          "Using makhana (Euryale ferox) is the clearest option when precision matters."
+        ]
+      },
+      {
+        heading: "So, are makhana and lotus seeds the same?",
+        body: [
+          "No — not botanically.",
+          "Makhana comes from Euryale ferox.",
+          "True lotus seeds come from Nelumbo nucifera.",
+          "They are both seeds from aquatic plants, and years of common naming have blurred the distinction. That is why “lotus seeds” still appears on websites, recipes and packaging connected with makhana.",
+          "But if someone asks, “Is makhana actually a lotus seed?”, the technically correct answer is:",
+          "Makhana is the popped seed of Euryale ferox, not the true lotus plant Nelumbo nucifera.",
+          "And now you have one less confusing snack fact to Google at 11 PM."
+        ]
+      }
+    ],
+    faqs: [
+      ["Is makhana the same as lotus seed?", "No. Makhana comes from Euryale ferox, while true lotus seeds come from Nelumbo nucifera. The term “lotus seed” is nevertheless commonly used for makhana in everyday trade and online content."],
+      ["Is makhana a water-lily seed?", "Yes. Euryale ferox belongs to Nymphaeaceae, the water-lily family."],
+      ["What is the botanical name of makhana?", "The botanical name of makhana is Euryale ferox Salisb."],
+      ["What is the botanical name of true lotus?", "The sacred or true lotus discussed here is Nelumbo nucifera Gaertn."],
+      ["Why is makhana called lotus seed?", "It is a common trade and everyday name, reinforced by the fact that both plants grow in aquatic environments. Botanically, however, Euryale ferox and Nelumbo nucifera are different plants."]
     ]
   }
 ];

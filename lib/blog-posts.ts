@@ -11,7 +11,8 @@ export type BlogCategorySlug = (typeof blogCategories)[number]["slug"];
 export const blogSlugs = [
   "makhana-weight-loss",
   "makhana-vs-popcorn-vs-chips",
-  "makhana-nutrition-facts"
+  "makhana-nutrition-facts",
+  "makhana-vs-lotus-seeds"
 ] as const;
 
 export type BlogSlug = (typeof blogSlugs)[number];
@@ -65,6 +66,18 @@ export const blogPosts: readonly BlogPost[] = [
       "A clear nutrition reference for Khao Better Classic Roasted, with 25 g, 30 g, 50 g and 100 g calculations.",
     readTime: "6 min read",
     primaryKeyword: "roasted makhana calories per 30g serving"
+  },
+  {
+    slug: "makhana-vs-lotus-seeds",
+    category: "Comparisons",
+    title: "Makhana vs Lotus Seeds: Are They the Same? | Khao Better",
+    h1: "Makhana vs Lotus Seeds: Are They Actually the Same?",
+    description:
+      "Are makhana and lotus seeds the same? Learn the botanical difference between Euryale ferox and true lotus seeds, plus how they differ in use and texture.",
+    excerpt:
+      "A clear botanical comparison of makhana from Euryale ferox and true lotus seeds from Nelumbo nucifera, including names, uses and texture.",
+    readTime: "7 min read",
+    primaryKeyword: "makhana vs lotus seeds"
   }
 ];
 
