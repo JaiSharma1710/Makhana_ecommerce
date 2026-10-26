@@ -18,6 +18,7 @@ import { ProductCard } from "@/components/ProductCard";
 import { ShopFilters } from "@/components/ShopFilters";
 import { SiteHeader } from "@/components/SiteHeader";
 import { WaitlistButton } from "@/components/WaitlistControls";
+import { RewardWheelTrigger } from "@/components/RewardWheelTrigger";
 import { absoluteUrl } from "@/lib/site";
 
 export function StorefrontShell({ children }: { children: React.ReactNode }) {
@@ -38,6 +39,7 @@ export function StorefrontShell({ children }: { children: React.ReactNode }) {
         <SiteHeader />
         {children}
         <Footer />
+        <RewardWheelTrigger />
       </div>
     </div>
   );

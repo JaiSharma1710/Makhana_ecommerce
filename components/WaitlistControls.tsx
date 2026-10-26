@@ -5,6 +5,7 @@ import { FormEvent, useEffect, useRef, useState } from "react";
 import { Product } from "@/data/store";
 import { PackShot } from "@/components/PackShot";
 import { trackEvent } from "@/lib/analytics";
+import { claimModal, releaseModal } from "@/lib/modal-coordination";
 
 const isValidIndianMobile = (phone: string) => /^[6-9]\d{9}$/.test(phone);
 
@@ -21,7 +22,12 @@ export function WaitlistButton({ product, className, children }: { product: Prod
     if (status === "success") successHeadingRef.current?.focus();
   }, [status]);
 
+  useEffect(() => () => {
+    if (open) releaseModal("waitlist");
+  }, [open]);
+
   const openModal = () => {
+    if (!claimModal("waitlist")) return;
     trackEvent("waitlist_cta_click", {
       product_id: product.id,
       product_status: product.status
@@ -39,6 +45,7 @@ export function WaitlistButton({ product, className, children }: { product: Prod
   const closeModal = () => {
     if (submittingRef.current) return;
     setOpen(false);
+    releaseModal("waitlist");
   };
 
   const submit = async (event: FormEvent<HTMLFormElement>) => {
