@@ -15,7 +15,8 @@ export const blogSlugs = [
   "makhana-vs-lotus-seeds",
   "how-to-keep-roasted-makhana-crispy",
   "best-study-snacks-long-study-sessions-india",
-  "best-work-from-home-snacks-india"
+  "best-work-from-home-snacks-india",
+  "why-is-makhana-expensive-india"
 ] as const;
 
 export type BlogSlug = (typeof blogSlugs)[number];
@@ -117,6 +118,18 @@ export const blogPosts: readonly BlogPost[] = [
       "Practical no-prep, tea-break and late-afternoon snack ideas for Indian remote workers, with tips for portioning at a home desk.",
     readTime: "10 min read",
     primaryKeyword: "best work from home snacks india"
+  },
+  {
+    slug: "why-is-makhana-expensive-india",
+    category: "Everyday Snacking",
+    title: "Why Is Makhana So Expensive in India? | Khao Better",
+    h1: "Why Is Makhana So Expensive in India?",
+    description:
+      "Why is makhana so expensive in India? Learn how harvesting, labour-intensive popping, grading, rising demand and packaged snack costs affect its price.",
+    excerpt:
+      "A detailed explanation of how aquatic cultivation, harvesting, popping, grading, demand and packaged-snack costs affect makhana prices.",
+    readTime: "14 min read",
+    primaryKeyword: "why is makhana expensive in india"
   }
 ];
 
@@ -144,7 +157,9 @@ export function relatedBlogPosts(slug: BlogSlug, limit = 2) {
       ? ["how-to-keep-roasted-makhana-crispy", "makhana-nutrition-facts", "makhana-vs-popcorn-vs-chips"]
       : slug === "best-work-from-home-snacks-india"
         ? ["how-to-keep-roasted-makhana-crispy", "makhana-nutrition-facts", "makhana-vs-popcorn-vs-chips"]
-        : [];
+        : slug === "why-is-makhana-expensive-india"
+          ? ["makhana-vs-lotus-seeds", "makhana-nutrition-facts", "makhana-vs-popcorn-vs-chips"]
+          : [];
   return blogPosts
     .filter((post) => post.slug !== slug)
     .sort((left, right) => {

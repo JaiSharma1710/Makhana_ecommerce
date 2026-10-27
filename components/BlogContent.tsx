@@ -92,7 +92,8 @@ export function BlogArticleContent({ article }: { article: BlogArticle }) {
     article.slug === "makhana-vs-lotus-seeds" ||
       article.slug === "how-to-keep-roasted-makhana-crispy" ||
       article.slug === "best-study-snacks-long-study-sessions-india" ||
-      article.slug === "best-work-from-home-snacks-india"
+      article.slug === "best-work-from-home-snacks-india" ||
+      article.slug === "why-is-makhana-expensive-india"
       ? 3
       : 2
   );
@@ -170,7 +171,7 @@ export function BlogArticleContent({ article }: { article: BlogArticle }) {
             </section>
           ))}
           <section>
-            <h2>{article.category === "Comparisons" ? "Comparison FAQs" : article.slug === "makhana-weight-loss" ? "Makhana Weight-Loss FAQs" : article.slug === "best-study-snacks-long-study-sessions-india" ? "Study Snack FAQs" : article.slug === "best-work-from-home-snacks-india" ? "Work-From-Home Snack FAQs" : article.category === "Everyday Snacking" ? "Roasted Makhana Storage FAQs" : "Makhana Nutrition FAQs"}</h2>
+            <h2>{article.category === "Comparisons" ? "Comparison FAQs" : article.slug === "makhana-weight-loss" ? "Makhana Weight-Loss FAQs" : article.slug === "best-study-snacks-long-study-sessions-india" ? "Study Snack FAQs" : article.slug === "best-work-from-home-snacks-india" ? "Work-From-Home Snack FAQs" : article.slug === "why-is-makhana-expensive-india" ? "Makhana Pricing FAQs" : article.category === "Everyday Snacking" ? "Roasted Makhana Storage FAQs" : "Makhana Nutrition FAQs"}</h2>
             <div className="article-faqs">
               {article.faqs.map(([question, answer]) => (
                 <div className="faq static-faq" key={question}>
@@ -231,6 +232,16 @@ function RelatedArticles({ articles }: { articles: readonly BlogPost[] }) {
 
 function renderLinks(text: string, currentSlug: BlogSlug) {
   const replacements: Array<[string, string]> = [
+    ["why makhana is expensive in India", "/blog/why-is-makhana-expensive-india"],
+    ["2026 Press Information Bureau overview of India's makhana sector", "https://www.pib.gov.in/PressNoteDetails.aspx?ModuleId=3&NoteId=159603&lang=2&reg=48"],
+    ["2026 Government of India sector overview", "https://www.pib.gov.in/PressNoteDetails.aspx?ModuleId=3&NoteId=159603&lang=2&reg=48"],
+    ["Government of India's August 2026 sector overview", "https://www.pib.gov.in/PressNoteDetails.aspx?ModuleId=3&NoteId=159603&lang=2&reg=48"],
+    ["PIB reported", "https://www.pib.gov.in/PressNoteDetails.aspx?ModuleId=3&NoteId=159603&lang=2&reg=48"],
+    ["APEDA's crop calendar", "https://apeda.gov.in/sites/default/files/2025-12/MIC_Monthly_dashboard_Makhana_15122025.pdf"],
+    ["APEDA has specifically identified", "https://apeda.gov.in/sites/default/files/study_reports/Makhana_Report_English.pdf"],
+    ["ICAR describes traditional makhana popping", "https://icar.gov.in/sites/default/files/2022-06/IR-January-March-2019.pdf"],
+    ["ICAR-CIPHET has developed machinery", "https://icar.gov.in/index.php/en/node/9014"],
+    ["ICAR documentation on makhana grading", "https://www.icar.gov.in/sites/default/files/2025-10/Farmers%20Innovations_2025___English.pdf"],
     ["work-from-home snacks in India for desk jobs", "/blog/best-work-from-home-snacks-india"],
     ["work-from-home snacks in India", "/blog/best-work-from-home-snacks-india"],
     ["study snacks for long study sessions in India", "/blog/best-study-snacks-long-study-sessions-india"],

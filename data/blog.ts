@@ -369,7 +369,8 @@ export const blogArticles: BlogArticle[] = [
           "For ordinary flavoured or roasted makhana packs in India, the finished product is normally obvious from its familiar white, expanded shape.",
           "The botanical name becomes more useful when shopping online, reading imported product labels or comparing recipes from different Asian cuisines.",
           "The guide to what makhana is gives more context on the snack and its familiar form.",
-          "See Khao Better Classic Roasted product details for a current product example."
+          "See Khao Better Classic Roasted product details for a current product example.",
+          "For the cultivation, processing and grading economics behind the category, read why makhana is expensive in India."
         ]
       },
       {
@@ -1198,6 +1199,445 @@ export const blogArticles: BlogArticle[] = [
       ["Is makhana a good work-from-home snack?", "It can be convenient because it is dry, crunchy and easy to portion. Check the actual product's ingredients and nutrition label rather than assuming all makhana products are nutritionally identical."],
       ["What should I eat around 4–6 PM while working from home?", "If you are hungry, options include fruit with nuts, roasted chana, makhana, curd with fruit, dhokla, sprouts or a small portion of poha."],
       ["Do I need to snack while working from home?", "No. Snack when you are genuinely hungry and your next meal is still some time away. There is no requirement to snack simply because you are working."]
+    ]
+  },
+  {
+    ...blogPostIndex["why-is-makhana-expensive-india"],
+    intro: [
+      "If you have compared a packet of makhana with popcorn, namkeen or regular chips, you have probably wondered the same thing:",
+      "Why is makhana so expensive in India?",
+      "The short answer is that makhana is not simply picked, roasted and packed.",
+      "It is an aquatic crop with a demanding cultivation and harvesting cycle. The seeds traditionally have to be collected from water, cleaned, dried, graded, roasted, tempered, roasted again and popped. Skilled processing matters because poor timing during popping can reduce the quality of the finished makhana.",
+      "At the same time, demand for makhana has risen much faster than supply in recent years.",
+      "According to a 2026 Press Information Bureau overview of India's makhana sector, average prices increased from roughly ₹500 per kg during 2020–2022 to nearly ₹1,250 per kg in 2025. The same government note says production volumes grew by only about 4–5% between FY2022 and FY2025, while demand, premiumisation and branded retail expanded.",
+      "So when you pay more for makhana, you are paying for more than the popped white piece inside the packet.",
+      "You are paying for a crop, a difficult harvest, multiple processing stages, grading, breakage and yield losses, and then—if it is a packaged snack—roasting, seasoning, packaging, logistics, retail and branding."
+    ],
+    sections: [
+      {
+        heading: "Quick answer: why is makhana costly?",
+        body: ["The main reasons are:"],
+        orderedList: [
+          "Makhana is traditionally grown in water-based systems.",
+          "Mature seeds may need to be collected from the bottom of ponds or water bodies.",
+          "Harvesting is physically demanding.",
+          "Raw makhana seeds need several post-harvest processing steps.",
+          "Traditional popping requires heat, timing and skill.",
+          "Not every raw seed becomes a large, attractive popped makhana.",
+          "Makhana is graded by size and quality.",
+          "Larger and more uniform grades can command higher prices.",
+          "Demand for makhana has increased rapidly.",
+          "Supply has not always expanded at the same speed.",
+          "Packaged flavoured makhana has additional processing, packaging and distribution costs."
+        ],
+        afterList: ["That combination makes makhana structurally different from many common mass-produced snacks."]
+      },
+      {
+        heading: "1. Makhana starts as an aquatic crop",
+        body: [
+          "The first reason behind the price is the way makhana is cultivated.",
+          "Makhana, botanically known as Euryale ferox, is an aquatic crop. Traditionally, it has been grown in ponds and other water bodies, particularly in Bihar.",
+          "India is the dominant global producer, and Bihar is the centre of the industry.",
+          "A 2026 Government of India sector overview says Bihar contributed roughly three-fourths of India's makhana production and around 80–85% of global supply. Makhana cultivation is particularly concentrated in parts of North Bihar, including areas of the Kosi basin, Mithila and Seemanchal.",
+          "That geographic concentration matters.",
+          "A product whose supply is heavily concentrated in one production belt is very different from a commodity grown at enormous scale across multiple regions.",
+          "Modern field-based cultivation methods are expanding, but makhana's traditional production system is still closely linked with water management and specialised local knowledge.",
+          "For a general category introduction, see our guide to what makhana is. If the names are confusing, our article on makhana vs lotus seeds explains the botanical difference."
+        ]
+      },
+      {
+        heading: "2. Harvesting makhana is not like picking a dry crop",
+        body: [
+          "The harvesting stage helps explain why a simple-looking white snack can have a complicated cost structure.",
+          "During the crop cycle, makhana fruits mature underwater. When mature fruits burst, the seeds eventually settle on the bottom.",
+          "APEDA's crop calendar describes the August-to-October harvest as a period when seeds that have sunk to the bottom are collected manually from the pond bed, calling the work strenuous and painstaking.",
+          "Think about what that means.",
+          "For many crops, harvesting involves cutting, picking or mechanically collecting produce above ground.",
+          "Traditional makhana harvesting can involve retrieving seeds from underwater conditions.",
+          "That requires labour, time and specialised experience before the seed even reaches the processing stage."
+        ]
+      },
+      {
+        heading: "3. The raw seed is not the makhana you eat",
+        body: [
+          "Another common misunderstanding is assuming that harvested makhana looks like the white popped pieces sold in shops.",
+          "It does not.",
+          "The commercial makhana people eat is the popped kernel produced after processing the raw seed.",
+          "That transformation is important because several steps happen between harvesting and the final edible product.",
+          "Traditional processing can involve:"
+        ],
+        list: [
+          "cleaning",
+          "drying",
+          "grading",
+          "roasting",
+          "tempering",
+          "roasting again",
+          "popping",
+          "removing defective or poorly popped pieces",
+          "grading the final product"
+        ],
+        afterList: ["Each stage adds handling, labour and the possibility of loss."]
+      },
+      {
+        heading: "4. Traditional makhana popping is highly labour-intensive",
+        body: [
+          "This is one of the biggest reasons makhana costs more than consumers may expect.",
+          "ICAR describes traditional makhana popping as a labour-intensive, time-consuming and cumbersome process.",
+          "In the traditional system, seeds are roasted at very high temperatures, tempered for roughly two to three days, roasted again and then popped manually.",
+          "The final popping stage is especially sensitive.",
+          "ICAR notes that skilled workers traditionally use a mallet after roasting, and a delay of only a few seconds can result in poorer-quality popped makhana.",
+          "That makes the process very different from simply pouring grain into a large industrial popper and running a continuous production line.",
+          "Skill affects yield.",
+          "Timing affects quality.",
+          "Heat handling affects working conditions.",
+          "And poor popping can reduce how much premium-quality finished product comes from a batch of raw seeds."
+        ]
+      },
+      {
+        heading: "5. Why doesn't the industry just automate everything?",
+        body: [
+          "Mechanisation is increasing.",
+          "ICAR-CIPHET has developed machinery for operations such as cleaning, seed grading, drying, roasting and popping. More recent ICAR work continues to promote mechanised makhana-processing technologies because traditional processing remains labour-intensive and involves handling very hot material.",
+          "But mechanisation does not instantly turn makhana into a cheap commodity.",
+          "Processing equipment requires capital.",
+          "Processors need infrastructure.",
+          "Raw material still has to be cultivated and harvested.",
+          "Machines still need operators, energy, sorting and quality control.",
+          "And traditional and semi-mechanised supply chains continue to exist alongside more modern systems.",
+          "APEDA has specifically identified labour-intensive production and processing as one of the challenges facing the makhana sector.",
+          "So mechanisation can improve efficiency, but it does not remove the underlying economics of the crop overnight."
+        ]
+      },
+      {
+        heading: "6. Not every seed becomes a perfect large makhana",
+        body: [
+          "When you buy a premium-looking packet, you are seeing the successful output of the process—not every raw seed that entered it.",
+          "Popped makhana varies in:"
+        ],
+        list: [
+          "size",
+          "expansion",
+          "shape",
+          "colour",
+          "breakage",
+          "uniformity"
+        ],
+        afterList: [
+          "Some pieces pop larger.",
+          "Some remain smaller.",
+          "Some break.",
+          "Some may not meet the quality standard required for a premium retail pack.",
+          "This is why processing yield matters.",
+          "A kilogram of raw seed does not automatically translate into a kilogram of large, uniform, ready-to-sell premium makhana.",
+          "Sorting the finished product creates different commercial grades."
+        ]
+      },
+      {
+        heading: "7. Makhana is graded by size and quality",
+        body: [
+          "Grading is an important part of makhana processing.",
+          "ICAR documentation on makhana grading describes specialised grading systems that separate popped makhana into different sizes using sieves. The goal is greater uniformity and consistent quality.",
+          "That explains why two bags labelled “makhana” may have noticeably different prices.",
+          "One may contain:"
+        ],
+        list: [
+          "smaller pieces",
+          "more variation in size",
+          "more broken pieces"
+        ],
+        subsections: [
+          {
+            heading: "while another may contain:",
+            body: [],
+            list: [
+              "larger pops",
+              "more uniform pieces",
+              "fewer broken pieces",
+              "more consistent appearance"
+            ],
+            afterList: [
+              "Consumers often notice this immediately when opening a packet.",
+              "But size should not automatically be confused with nutrition.",
+              "A bigger makhana is not magically more nutritious just because it is larger.",
+              "What size primarily changes is the commercial grade, appearance, eating experience and scarcity of uniform large pieces."
+            ]
+          }
+        ]
+      },
+      {
+        heading: "8. Why does larger makhana usually cost more?",
+        body: [
+          "Large, evenly popped makhana is generally considered a more premium commercial grade.",
+          "The reason is simple: processors need to separate out enough pieces meeting that size and quality requirement.",
+          "If only a portion of the total processed batch falls into a premium size category, the available supply of that grade is smaller.",
+          "The larger and more uniform the required product, the more selective the grading becomes.",
+          "That can translate into a higher wholesale and retail price.",
+          "This is similar to many agricultural products where size, appearance, uniformity and defect rates affect grade even when the underlying food is fundamentally the same crop."
+        ]
+      },
+      {
+        heading: "9. Demand for makhana has increased much faster than many people realise",
+        body: [
+          "Processing cost alone does not explain recent price increases.",
+          "Demand matters too.",
+          "According to the Government of India's August 2026 sector overview, India's domestic makhana market recorded annual growth of around 17–18% between 2021–22 and 2024–25.",
+          "The government attributed that growth to factors including rising health awareness, premiumisation and the expansion of branded players.",
+          "This matters because a product can become more expensive even if production improves.",
+          "If consumer demand grows faster than available supply, prices can remain elevated.",
+          "That is essentially what the recent makhana market has experienced."
+        ]
+      },
+      {
+        heading: "10. Supply did not grow at the same speed",
+        body: [
+          "The same PIB overview says production volumes increased by only about 4–5% between FY2022 and FY2025.",
+          "Compare that with the reported 17–18% annual growth in the domestic market over a similar period.",
+          "Those numbers help explain why prices moved sharply upward.",
+          "PIB reported that average makhana prices increased from approximately ₹500/kg during 2020–22 to nearly ₹1,250/kg in 2025 and linked the increase to stronger demand, premium branding and limited supply response.",
+          "That does not mean every consumer paid ₹1,250/kg in every store.",
+          "Wholesale, loose retail, grade, geography, brand, pack size and flavouring can all produce very different final prices.",
+          "The figure is useful as an indicator of the broader market trend—not a universal retail price tag."
+        ]
+      },
+      {
+        heading: "11. Makhana also has growing export demand",
+        body: [
+          "India is not serving only domestic buyers.",
+          "Makhana has increasingly become an export product as well.",
+          "The Government of India reported exports of 7,264.89 metric tonnes of makhana products in 2025–26, reflecting its expanding international market.",
+          "When domestic consumers, branded snack companies and international buyers all compete for quality raw material and popped makhana, the supply chain faces more demand.",
+          "Export demand is therefore another part of the broader pricing picture."
+        ]
+      },
+      {
+        heading: "12. Why packaged makhana costs more than loose makhana",
+        body: [
+          "Raw commodity price is only the beginning of a packaged snack's cost.",
+          "A branded packet may also involve:"
+        ],
+        list: [
+          "sorting and quality control",
+          "additional roasting",
+          "seasoning",
+          "edible oil or other ingredients where used",
+          "food-grade packaging",
+          "filling and sealing",
+          "transport",
+          "warehousing",
+          "distributor margins",
+          "retailer margins",
+          "online marketplace costs",
+          "marketing and branding",
+          "taxes where applicable",
+          "losses from damaged or unsold inventory"
+        ],
+        afterList: [
+          "This is why comparing the per-kilogram price of a 25 g flavoured snack pack with a large bag of loose makhana can be misleading.",
+          "They are different retail formats.",
+          "Small packs almost always have a higher packaging and distribution cost per kilogram than bulk purchases.",
+          "That principle is not unique to makhana.",
+          "For a current product-format example, see Khao Better Classic Roasted product details."
+        ]
+      },
+      {
+        heading: "13. Why flavoured roasted makhana costs more",
+        body: [
+          "Flavoured makhana goes through additional value addition after the popped makhana is sourced.",
+          "Depending on the product, this may include:"
+        ],
+        list: [
+          "another roasting stage",
+          "oil",
+          "seasoning blends",
+          "coating",
+          "mixing",
+          "batch testing",
+          "packing in smaller consumer units"
+        ],
+        afterList: [
+          "The brand then needs to keep texture and flavour reasonably consistent from packet to packet.",
+          "That adds cost beyond the underlying makhana itself.",
+          "This is also why comparing two makhana products only by sticker price can be misleading."
+        ],
+        subsections: [
+          {
+            heading: "Check:",
+            body: [],
+            list: [
+              "pack weight",
+              "price per 100 g",
+              "ingredients",
+              "flavouring",
+              "size and grade",
+              "whether it is plain or value-added",
+              "whether it is bulk or individually packaged"
+            ]
+          }
+        ]
+      },
+      {
+        heading: "14. Does expensive makhana automatically mean better makhana?",
+        body: [
+          "No.",
+          "Higher price can reflect better grade, larger size, cleaner sorting or more expensive packaging—but price alone does not prove superior quality.",
+          "An expensive product may also simply have:"
+        ],
+        list: [
+          "a premium brand position",
+          "a smaller pack",
+          "more elaborate packaging",
+          "higher retailer margins",
+          "higher flavouring or distribution costs"
+        ],
+        afterList: ["So do not assume that the costliest makhana on the shelf is automatically the best choice."]
+      },
+      {
+        heading: "15. How can you judge good-quality makhana?",
+        body: [
+          "Instead of relying only on price, look at the product itself.",
+          "Useful things to check include:",
+          "Uniformity: Are the pieces reasonably consistent?",
+          "Breakage: Is the pack mostly whole makhana or full of fragments?",
+          "Appearance: Do the pieces look clean and properly processed?",
+          "Texture: If sold roasted, is the product crisp when fresh?",
+          "Smell: There should not be an unpleasant stale or rancid smell.",
+          "Ingredients: For flavoured products, check what has actually been added.",
+          "Pack condition: Avoid damaged, leaking or poorly sealed packs.",
+          "Label: For packaged foods, read the nutrition and ingredient information rather than relying only on front-of-pack marketing.",
+          "Our makhana nutrition facts guide explains label context separately.",
+          "For roasted products, storage after opening also matters. Makhana can lose crispness when exposed to moisture, which is why our guide on how to keep roasted makhana crispy after opening is useful."
+        ]
+      },
+      {
+        heading: "16. Is loose makhana cheaper than packaged makhana?",
+        body: [
+          "It often can be, particularly when purchased in larger quantities.",
+          "But the comparison needs to be fair.",
+          "Loose makhana may vary by:"
+        ],
+        list: [
+          "grade",
+          "size",
+          "freshness",
+          "source",
+          "sorting quality"
+        ],
+        subsections: [
+          {
+            heading: "A packaged product may include:",
+            body: [],
+            list: [
+              "more consistent grading",
+              "roasting",
+              "seasoning",
+              "smaller portion packs",
+              "labelled ingredients and nutrition information",
+              "additional packaging"
+            ],
+            afterList: [
+              "Neither format is automatically better.",
+              "The right option depends on whether you want bulk value, convenience, flavour, portability or more standardised packaging."
+            ]
+          }
+        ]
+      },
+      {
+        heading: "17. Why has makhana become a premium snack category?",
+        body: [
+          "Makhana used to be familiar to many Indian households mainly through fasting foods, sweets, curries or traditional use.",
+          "Its role has expanded.",
+          "It is now increasingly sold as a modern packaged snack in:"
+        ],
+        list: [
+          "supermarkets",
+          "quick-commerce apps",
+          "online marketplaces",
+          "premium grocery stores",
+          "flavoured snack ranges"
+        ],
+        afterList: [
+          "That change matters economically.",
+          "When a traditional agricultural product enters an organised packaged-snack category, the value chain becomes larger.",
+          "There is now competition not only for raw makhana but for premium grades suitable for consistent branded products.",
+          "PIB specifically identifies premiumisation and expansion of branded players as drivers of recent market growth."
+        ]
+      },
+      {
+        heading: "18. Is makhana likely to become cheaper?",
+        body: [
+          "It is impossible to promise what future prices will do.",
+          "Several forces are moving in opposite directions.",
+          "On one side, India is expanding production and promoting improved cultivation, field-based methods and mechanisation.",
+          "The Government of India reported production of 63,910 MT in 2024–25 and a second advance estimate of 80,590 MT for 2025–26.",
+          "Higher productivity and more efficient processing could eventually reduce some supply constraints.",
+          "On the other side, domestic and export demand are also increasing.",
+          "If demand continues rising quickly, higher production does not automatically mean dramatically cheaper retail prices.",
+          "The more realistic expectation is that the market will continue evolving toward a mix of:"
+        ],
+        list: [
+          "bulk/value products",
+          "premium large-grade makhana",
+          "flavoured snack packs",
+          "export-quality products",
+          "more mechanised processing"
+        ]
+      },
+      {
+        heading: "19. Why this matters when comparing makhana with popcorn or chips",
+        body: [
+          "A packet of makhana can look expensive beside popcorn or potato chips, but the products have completely different agricultural and processing economics.",
+          "Corn and potatoes are produced at enormous scale.",
+          "Their supply chains are deeply mechanised and designed for high-volume snack manufacturing.",
+          "Makhana comes from a much smaller, more specialised crop sector with historically labour-intensive harvesting and processing.",
+          "That does not mean makhana is automatically “better” than popcorn or chips.",
+          "It simply explains why the price comparison is not apples-to-apples.",
+          "Our guide to makhana vs popcorn vs chips compares the snack formats without treating price as proof of superiority."
+        ]
+      },
+      {
+        heading: "20. Is expensive makhana worth buying?",
+        body: [
+          "That depends on why you are buying it.",
+          "If you enjoy makhana and value its:"
+        ],
+        list: [
+          "light texture",
+          "crunch",
+          "convenience",
+          "versatility",
+          "suitability for roasting and flavouring"
+        ],
+        afterList: [
+          "then the higher price may be acceptable to you.",
+          "If your only goal is to buy the cheapest crunchy snack available, makhana may not be the obvious choice.",
+          "There is no need to justify the price by pretending makhana is magical.",
+          "Its cost is largely understandable from the way the crop is grown, harvested, processed, graded and increasingly demanded."
+        ]
+      },
+      {
+        heading: "The bottom line",
+        body: [
+          "So, why is makhana so expensive in India?",
+          "Because the journey from an aquatic seed to a clean, white, uniformly popped snack is surprisingly demanding.",
+          "Traditional makhana production involves difficult harvesting and a multi-stage processing system. Popping requires skill and timing. Finished pieces need sorting and grading. Large premium grades are more selective. And in recent years, domestic and international demand has grown faster than supply.",
+          "On top of that, branded roasted makhana includes another layer of roasting, flavouring, packaging, distribution and retail costs.",
+          "The result is a snack that looks simple but comes from a relatively complex value chain.",
+          "That is the real reason makhana can cost considerably more than many everyday crunchy snacks."
+        ]
+      }
+    ],
+    faqs: [
+      ["Why is makhana so expensive in India?", "Makhana is expensive because cultivation, underwater harvesting, processing, popping and grading can be labour-intensive. Demand has also increased faster than supply in recent years."],
+      ["Why is makhana more expensive than popcorn?", "Makhana comes from a smaller, specialised aquatic crop and historically involves more labour-intensive harvesting and popping. Corn is produced and processed at much larger industrial scale."],
+      ["Why does large makhana cost more?", "Larger, more uniform popped pieces are separated during grading and are generally treated as premium commercial grades. Their available quantity within a processed batch can be lower than smaller grades."],
+      ["Is expensive makhana always better quality?", "No. Price may reflect grade and quality, but it can also reflect packaging, branding, flavouring, distribution and retailer margins."],
+      ["How is makhana harvested?", "Traditionally, mature makhana seeds settle underwater and are collected from the pond bed. APEDA describes this seed-collection stage as strenuous and painstaking."],
+      ["How is raw makhana turned into white makhana?", "Raw seeds are cleaned, dried and graded before processing. Traditional processing includes roasting, tempering, another roasting stage and skilled popping to produce the white popped kernel sold as makhana."],
+      ["Why did makhana prices increase so much?", "The Government of India has linked recent price increases to stronger demand for health-focused snacks, premium branding and relatively limited growth in production."],
+      ["Is loose makhana cheaper than packaged makhana?", "It often can be, especially in bulk, but price depends on grade, size, quality and source. Packaged products can include additional roasting, seasoning, packaging and distribution costs."],
+      ["Will makhana prices come down in future?", "That cannot be predicted reliably. Production and mechanisation are expanding, which may improve supply, but domestic and export demand are also growing."],
+      ["Where is most makhana produced in India?", "Bihar is India's leading makhana-producing state, with production concentrated particularly in North Bihar."]
     ]
   }
 ];
