@@ -71,6 +71,10 @@ export const metadata: Metadata = {
     images: [absoluteUrl("/assets/p-classic.png")]
   },
 
+  verification: {
+    google: "PVKKYwCKtRqsCORw6Aap9fSBk2DlruLtD5-Dx0B71ZI"
+  },
+
   other: {
     "p:domain_verify": "215944583f767a5d440bc8e2d36862a6"
   }
