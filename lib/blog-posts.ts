@@ -12,7 +12,8 @@ export const blogSlugs = [
   "makhana-weight-loss",
   "makhana-vs-popcorn-vs-chips",
   "makhana-nutrition-facts",
-  "makhana-vs-lotus-seeds"
+  "makhana-vs-lotus-seeds",
+  "how-to-keep-roasted-makhana-crispy"
 ] as const;
 
 export type BlogSlug = (typeof blogSlugs)[number];
@@ -78,6 +79,18 @@ export const blogPosts: readonly BlogPost[] = [
       "A clear botanical comparison of makhana from Euryale ferox and true lotus seeds from Nelumbo nucifera, including names, uses and texture.",
     readTime: "7 min read",
     primaryKeyword: "makhana vs lotus seeds"
+  },
+  {
+    slug: "how-to-keep-roasted-makhana-crispy",
+    category: "Everyday Snacking",
+    title: "How to Keep Roasted Makhana Crispy After Opening | Khao Better",
+    h1: "How to Keep Roasted Makhana Crispy After Opening",
+    description:
+      "Learn how to keep roasted makhana crispy after opening, the best way to store it, why makhana turns soft, and how to make soggy makhana crunchy again.",
+    excerpt:
+      "Practical steps for storing opened roasted makhana, keeping moisture out and restoring the crunch when makhana turns soft.",
+    readTime: "8 min read",
+    primaryKeyword: "how to keep roasted makhana crispy after opening"
   }
 ];
 
@@ -99,10 +112,19 @@ export function categoryUrl(slug: BlogCategorySlug) {
 
 export function relatedBlogPosts(slug: BlogSlug, limit = 2) {
   const current = blogPostIndex[slug];
+  const preferred: BlogSlug[] = slug === "how-to-keep-roasted-makhana-crispy"
+    ? ["makhana-nutrition-facts", "makhana-vs-popcorn-vs-chips", "makhana-vs-lotus-seeds"]
+    : [];
   return blogPosts
     .filter((post) => post.slug !== slug)
-    .sort((left, right) =>
-      Number(right.category === current.category) - Number(left.category === current.category)
-    )
+    .sort((left, right) => {
+      if (preferred.length) {
+        const leftRank = preferred.indexOf(left.slug);
+        const rightRank = preferred.indexOf(right.slug);
+        return (leftRank < 0 ? Number.MAX_SAFE_INTEGER : leftRank) -
+          (rightRank < 0 ? Number.MAX_SAFE_INTEGER : rightRank);
+      }
+      return Number(right.category === current.category) - Number(left.category === current.category);
+    })
     .slice(0, limit);
 }

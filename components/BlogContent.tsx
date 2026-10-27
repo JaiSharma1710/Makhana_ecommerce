@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { BlogArticle } from "@/data/blog";
 import {
   articleUrl,
@@ -86,7 +87,10 @@ export function BlogHubContent() {
 }
 
 export function BlogArticleContent({ article }: { article: BlogArticle }) {
-  const related = relatedBlogPosts(article.slug, article.slug === "makhana-vs-lotus-seeds" ? 3 : 2);
+  const related = relatedBlogPosts(
+    article.slug,
+    article.slug === "makhana-vs-lotus-seeds" || article.slug === "how-to-keep-roasted-makhana-crispy" ? 3 : 2
+  );
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -143,15 +147,25 @@ export function BlogArticleContent({ article }: { article: BlogArticle }) {
             <section key={section.heading}>
               <h2>{section.heading}</h2>
               {section.body.map((paragraph) => <p key={paragraph}>{renderLinks(paragraph, article.slug)}</p>)}
+              {section.orderedList ? <ol>{section.orderedList.map((item) => <li key={item}>{renderLinks(item, article.slug)}</li>)}</ol> : null}
               {section.list ? <ul>{section.list.map((item) => <li key={item}>{item}</li>)}</ul> : null}
               {section.afterList?.map((paragraph) => <p key={paragraph}>{renderLinks(paragraph, article.slug)}</p>)}
               {section.callout ? <div className="key-takeaway"><strong>Key takeaway</strong><p>{section.callout}</p></div> : null}
               {section.table ? <ResponsiveTable rows={section.table} /> : null}
               {section.afterTable?.map((paragraph) => <p key={paragraph}>{renderLinks(paragraph, article.slug)}</p>)}
+              {section.subsections?.map((subsection) => (
+                <div className="article-subsection" key={subsection.heading}>
+                  <h3>{subsection.heading}</h3>
+                  {subsection.body.map((paragraph) => <p key={paragraph}>{renderLinks(paragraph, article.slug)}</p>)}
+                  {subsection.orderedList ? <ol>{subsection.orderedList.map((item) => <li key={item}>{renderLinks(item, article.slug)}</li>)}</ol> : null}
+                  {subsection.list ? <ul>{subsection.list.map((item) => <li key={item}>{renderLinks(item, article.slug)}</li>)}</ul> : null}
+                  {subsection.afterList?.map((paragraph) => <p key={paragraph}>{renderLinks(paragraph, article.slug)}</p>)}
+                </div>
+              ))}
             </section>
           ))}
           <section>
-            <h2>{article.category === "Comparisons" ? "Comparison FAQs" : article.slug === "makhana-weight-loss" ? "Makhana Weight-Loss FAQs" : "Makhana Nutrition FAQs"}</h2>
+            <h2>{article.category === "Comparisons" ? "Comparison FAQs" : article.slug === "makhana-weight-loss" ? "Makhana Weight-Loss FAQs" : article.category === "Everyday Snacking" ? "Roasted Makhana Storage FAQs" : "Makhana Nutrition FAQs"}</h2>
             <div className="article-faqs">
               {article.faqs.map(([question, answer]) => (
                 <div className="faq static-faq" key={question}>
@@ -212,11 +226,17 @@ function RelatedArticles({ articles }: { articles: readonly BlogPost[] }) {
 
 function renderLinks(text: string, currentSlug: BlogSlug) {
   const replacements: Array<[string, string]> = [
+    ["how to keep roasted makhana crispy after opening", "/blog/how-to-keep-roasted-makhana-crispy"],
+    ["dried-food storage guidance from the National Center for Home Food Preservation", "https://nchfp.uga.edu/how/dry/general-information-drying/packaging-and-storing-dried-foods/"],
     ["Khao Better guide to makhana vs popcorn vs chips", "/blog/makhana-vs-popcorn-vs-chips"],
+    ["guide to makhana vs popcorn vs chips", "/blog/makhana-vs-popcorn-vs-chips"],
     ["Khao Better's weight-loss portion guide", "/blog/makhana-weight-loss"],
     ["Khao Better nutrition facts article", "/blog/makhana-nutrition-facts"],
+    ["guide to makhana nutrition facts", "/blog/makhana-nutrition-facts"],
     ["makhana nutrition facts", "/blog/makhana-nutrition-facts"],
     ["makhana vs popcorn vs chips", "/blog/makhana-vs-popcorn-vs-chips"],
+    ["article on makhana vs lotus seeds", "/blog/makhana-vs-lotus-seeds"],
+    ["Why Makhana guide", "/why-makhana"],
     ["guide to what makhana is", "/why-makhana"],
     ["botanical difference between makhana and lotus seeds", "/blog/makhana-vs-lotus-seeds"],
     ["Khao Better Classic Roasted product details", "/makhana-classic-roasted"],
@@ -226,11 +246,26 @@ function renderLinks(text: string, currentSlug: BlogSlug) {
     ["Khao Better Classic Roasted", "/makhana-classic-roasted"],
     ["Khao Better Classic", "/makhana-classic-roasted"]
   ];
-  const match = replacements.find(([label, href]) => text.includes(label) && !href.endsWith(currentSlug));
+  const content: ReactNode[] = [];
+  let remaining = text;
+  let key = 0;
 
-  if (!match) return text;
+  while (remaining) {
+    const match = replacements
+      .filter(([, href]) => !href.endsWith(currentSlug))
+      .map(([label, href]) => ({ label, href, index: remaining.indexOf(label) }))
+      .filter(({ index }) => index >= 0)
+      .sort((left, right) => left.index - right.index || right.label.length - left.label.length)[0];
 
-  const [label, href] = match;
-  const [before, after] = text.split(label);
-  return <>{before}<Link href={href}>{label}</Link>{after}</>;
+    if (!match) {
+      content.push(remaining);
+      break;
+    }
+
+    if (match.index > 0) content.push(remaining.slice(0, match.index));
+    content.push(<Link href={match.href} key={`${match.href}-${key++}`}>{match.label}</Link>);
+    remaining = remaining.slice(match.index + match.label.length);
+  }
+
+  return content.length === 1 ? content[0] : content;
 }

@@ -407,6 +407,9 @@ footer a:hover { color: #FFF4E5; }
 .article-body h2 { margin: 0 0 16px; color: #5A321F; font-size: 34px; line-height: 1.12; }
 .article-body h3 { margin: 0 0 8px; color: #5A321F; font-size: 20px; }
 .article-body p { color: #5c4131; font-size: 17px; line-height: 1.78; }
+.article-body ul, .article-body ol { margin: 18px 0 22px; padding-left: 26px; color: #5c4131; font-size: 17px; line-height: 1.7; }
+.article-body li + li { margin-top: 7px; }
+.article-subsection { margin-top: 28px; }
 .article-body a { color: #F26A2E; font-weight: 800; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
 .article-body .article-card { text-decoration: none; }
 .key-takeaway { margin: 24px 0; background: #FFF4E5; border: 1px solid rgba(90,50,31,.12); border-left: 6px solid #F26A2E; border-radius: 18px; padding: 22px; }

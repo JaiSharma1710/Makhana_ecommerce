@@ -6,11 +6,19 @@ export type BlogArticle = BlogPost & {
   sections: Array<{
     heading: string;
     body: string[];
+    orderedList?: string[];
     list?: string[];
     afterList?: string[];
     table?: string[][];
     afterTable?: string[];
     callout?: string;
+    subsections?: Array<{
+      heading: string;
+      body: string[];
+      orderedList?: string[];
+      list?: string[];
+      afterList?: string[];
+    }>;
   }>;
   faqs: string[][];
 };
@@ -259,7 +267,8 @@ export const blogArticles: BlogArticle[] = [
           "Nutrition facts are most useful when they change a decision. If you want a small snack, the 25 g line is the easiest reference. If you pour a bigger bowl, the 30 g or 50 g lines help you estimate without pretending the snack is calorie-free.",
           "If you are comparing makhana with popcorn or chips, use the same portion logic. Do not compare a tiny makhana serving with a huge cinema popcorn tub, or a plain popcorn bowl with a full chips packet. Match realistic portions and then decide.",
           "For Khao Better, the current product page and shop page remain pre-launch. Classic Roasted is out of stock, and these nutrition facts are here to support understanding before checkout opens in a later business phase."
-          ,"For clarity on the ingredient itself, the botanical difference between makhana and lotus seeds separates Euryale ferox from true lotus seeds."
+          ,"For clarity on the ingredient itself, the botanical difference between makhana and lotus seeds separates Euryale ferox from true lotus seeds.",
+          "For opened packs, see how to keep roasted makhana crispy after opening without inventing a fixed freshness timeline."
         ]
       }
     ],
@@ -403,6 +412,226 @@ export const blogArticles: BlogArticle[] = [
       ["What is the botanical name of makhana?", "The botanical name of makhana is Euryale ferox Salisb."],
       ["What is the botanical name of true lotus?", "The sacred or true lotus discussed here is Nelumbo nucifera Gaertn."],
       ["Why is makhana called lotus seed?", "It is a common trade and everyday name, reinforced by the fact that both plants grow in aquatic environments. Botanically, however, Euryale ferox and Nelumbo nucifera are different plants."]
+    ]
+  },
+  {
+    ...blogPostIndex["how-to-keep-roasted-makhana-crispy"],
+    intro: [
+      "Opened a pack of roasted makhana, came back later, and found that satisfying crunch had turned soft or chewy?",
+      "The simplest way to keep roasted makhana crispy after opening is to protect it from moisture and air. Reseal the pack tightly or transfer the makhana to a clean, completely dry airtight container, keep it in a cool and dry place, and avoid leaving the pack open for long periods.",
+      "If your makhana has already gone soft but shows no signs of spoilage, you can often bring the crunch back with a quick, gentle dry roast.",
+      "Here is how to store roasted makhana properly—and what to do when it loses its crunch."
+    ],
+    sections: [
+      {
+        heading: "Quick answer: how to keep roasted makhana crispy",
+        body: ["For the best chance of keeping roasted makhana crunchy after opening:"],
+        orderedList: [
+          "Close the pack immediately after serving.",
+          "If the original pack does not reseal well, use an airtight container.",
+          "Make sure the container and serving spoon are completely dry.",
+          "Keep makhana away from steam, moisture and direct heat.",
+          "If you have roasted makhana at home, let it cool fully before storing it.",
+          "Open the container only when needed rather than leaving it exposed during snacking."
+        ],
+        afterList: ["The main rule is simple: keep moisture out."],
+        table: [
+          ["Problem", "Best response"],
+          ["Pack left open", "Reseal immediately"],
+          ["Pack cannot reseal", "Transfer to airtight container"],
+          ["Makhana turned soft", "Gently dry-roast"],
+          ["Freshly roasted at home", "Cool fully before storing"],
+          ["Humid storage area", "Move to a cool, dry cupboard"]
+        ]
+      },
+      {
+        heading: "Why does roasted makhana become soft after opening?",
+        body: [
+          "Crunchy foods lose their texture when they absorb moisture from the surrounding air.",
+          "Roasted makhana is especially noticeable when this happens because its appeal comes largely from its light, crisp texture. Leave the pack open for long enough—particularly in a humid room or kitchen—and the makhana can gradually become chewy.",
+          "A few common reasons are:"
+        ],
+        list: [
+          "leaving the packet open while eating",
+          "storing it in a container that does not seal properly",
+          "putting a damp spoon or hand inside the container",
+          "storing the pack near steam or a cooking area",
+          "sealing freshly roasted makhana while it is still warm"
+        ],
+        afterList: [
+          "That last mistake is easy to miss.",
+          "Freshly roasted makhana should be allowed to cool before being sealed. Closing warm food inside an airtight container can trap moisture, which works against the crispness you are trying to preserve."
+        ]
+      },
+      {
+        heading: "What is the best way to store roasted makhana after opening?",
+        body: [
+          "The dried-food storage guidance from the National Center for Home Food Preservation also recommends cooling food before packing it and using clean, dry containers in a cool, dry place."
+        ],
+        subsections: [
+          {
+            heading: "1. Reseal the original packet properly",
+            body: [
+              "If the pack has a reliable zip seal, press out unnecessary air and close it completely after taking your portion.",
+              "Avoid keeping the packet open beside you while working, studying or watching something. Take out what you want to eat and close the pack.",
+              "That tiny habit can make a bigger difference than complicated storage tricks."
+            ]
+          },
+          {
+            heading: "2. Use an airtight container when needed",
+            body: [
+              "If the original packet cannot be sealed properly, transfer the makhana into a clean airtight container.",
+              "Glass or food-safe plastic can both work. What matters most is that the lid seals properly and the inside is completely dry.",
+              "The best container for roasted makhana is not necessarily the fanciest one. It is the one that reliably keeps humid air out."
+            ]
+          },
+          {
+            heading: "3. Keep it somewhere cool and dry",
+            body: ["A pantry or cupboard away from steam and direct sunlight is usually more suitable than leaving the pack beside the stove.", "Try to avoid:"],
+            list: [
+              "shelves immediately above cooking areas",
+              "areas next to the sink",
+              "damp cupboards",
+              "direct sunlight",
+              "places exposed to frequent temperature changes"
+            ]
+          },
+          {
+            heading: "4. Keep wet ingredients away",
+            body: [
+              "If you are serving makhana alongside chutney, curd, chopped vegetables or other moist foods, keep them separate until you are ready to eat.",
+              "Once moisture is mixed directly into makhana, storage becomes a very different problem.",
+              "For example, makhana used in a fresh chaat is meant to be eaten immediately rather than stored as a crunchy dry snack."
+            ]
+          }
+        ]
+      },
+      {
+        heading: "Should roasted makhana be refrigerated?",
+        body: [
+          "For normal dry roasted makhana, refrigeration is usually unnecessary.",
+          "The bigger priority is keeping it dry and well sealed.",
+          "A refrigerator is not automatically better for every crunchy food. Moisture and condensation can affect texture, especially if the container is frequently opened and moved between cold and warm environments.",
+          "For packaged roasted makhana, always follow the storage instructions printed on the actual pack.",
+          "For homemade roasted makhana, an airtight container kept in a cool, dry place is generally the simpler approach."
+        ]
+      },
+      {
+        heading: "How to make soggy makhana crispy again",
+        body: ["If your makhana has softened because it absorbed moisture, but it otherwise smells and looks normal, a gentle re-roast can often restore much of the crunch."],
+        subsections: [
+          {
+            heading: "Pan method",
+            body: [],
+            orderedList: [
+              "Heat a dry pan on low heat.",
+              "Add the soft makhana.",
+              "Roast gently while stirring or tossing regularly.",
+              "Test one piece after it has cooled for a moment.",
+              "Once the texture is crisp again, remove the makhana from the pan.",
+              "Let it cool completely before storing it again."
+            ],
+            afterList: [
+              "Avoid using very high heat simply to make the process faster. The outside can brown before the texture improves evenly.",
+              "You generally do not need to add more oil just to restore crispness."
+            ]
+          }
+        ]
+      },
+      {
+        heading: "How do you know if soft makhana is still okay to eat?",
+        body: [
+          "Losing crunch and becoming spoiled are not the same thing.",
+          "Makhana that has simply absorbed some moisture may become softer without necessarily being unsafe.",
+          "But do not try to rescue food that shows clear signs of spoilage.",
+          "Discard it if you notice things such as:"
+        ],
+        list: [
+          "visible mould",
+          "an unusual or unpleasant smell",
+          "unexpected discoloration",
+          "a noticeably strange taste"
+        ],
+        afterList: ["Re-roasting is a way to improve texture. It is not a way to make spoiled food safe again."]
+      },
+      {
+        heading: "How long does roasted makhana stay crispy after opening?",
+        body: [
+          "There is no single reliable number that applies to every pack of roasted makhana.",
+          "How quickly the texture changes depends on:"
+        ],
+        list: [
+          "packaging",
+          "humidity",
+          "how often the pack is opened",
+          "whether the seal is airtight",
+          "seasoning and ingredients",
+          "storage conditions"
+        ],
+        afterList: [
+          "That is why a blanket statement such as “makhana stays crispy for exactly X days” can be misleading.",
+          "For packaged makhana, follow the manufacturer's after-opening and best-before guidance.",
+          "For day-to-day use, focus on the factors you can control: reseal quickly, keep it dry and minimise exposure to humid air."
+        ]
+      },
+      {
+        heading: "Does flavoured makhana need different storage?",
+        body: [
+          "The basic rule remains the same: keep it dry and airtight.",
+          "However, flavoured makhana contains seasoning and may contain additional ingredients such as oil or spice blends. That means you should rely on the specific packet's storage instructions rather than assuming every flavour behaves exactly like plain makhana.",
+          "If you're comparing makhana as a snack rather than only its storage, our guide to makhana vs popcorn vs chips breaks down those options in more detail.",
+          "You can also explore our guide to makhana nutrition facts if you want to understand serving sizes and nutrition separately from storage.",
+          "For the currently published pack facts, see Khao Better Classic Roasted product details."
+        ]
+      },
+      {
+        heading: "Common makhana storage mistakes",
+        body: ["A few habits can undo otherwise good storage very quickly."],
+        subsections: [
+          {
+            heading: "Leaving the packet open during a movie or work session",
+            body: ["Pour a portion into a bowl and close the packet instead."]
+          },
+          {
+            heading: "Using a damp hand or spoon",
+            body: ["Keep anything going inside the pack dry."]
+          },
+          {
+            heading: "Storing warm homemade makhana immediately",
+            body: ["Let it cool fully first."]
+          },
+          {
+            heading: "Assuming refrigeration always keeps snacks fresher",
+            body: ["For a dry crunchy snack, moisture control matters more than simply making it colder."]
+          },
+          {
+            heading: "Re-roasting spoiled makhana",
+            body: ["Re-roasting may improve texture. It does not reverse spoilage."]
+          }
+        ]
+      },
+      {
+        heading: "The easiest storage routine",
+        body: [
+          "You do not need a complicated system.",
+          "Open → take your portion → reseal → store somewhere dry.",
+          "If the pack will not seal properly:",
+          "transfer → airtight container → dry cupboard.",
+          "If makhana becomes soft:",
+          "check for spoilage → gently dry-roast → cool completely → reseal.",
+          "That's really the whole system.",
+          "If you're new to makhana altogether, our Why Makhana guide explains the snack in more detail, while our article on makhana vs lotus seeds clears up one of the most common naming confusions around it."
+        ]
+      }
+    ],
+    faqs: [
+      ["How do I keep makhana crispy after opening?", "Reseal the pack immediately or transfer the makhana to a dry airtight container. Store it away from moisture, steam and direct heat."],
+      ["Why does makhana become soggy?", "Makhana can lose its crunch when it absorbs moisture from the surrounding air. Poor sealing, humid storage and exposure to steam can speed this up."],
+      ["Can soggy makhana become crispy again?", "If it has only softened and shows no signs of spoilage, gently dry-roasting it on low heat can often restore its crunch."],
+      ["Should I put roasted makhana in the fridge?", "Usually there is no need for normal dry roasted makhana. Keeping it airtight in a cool, dry location is generally more important. Always follow the storage instructions on a packaged product."],
+      ["Should makhana cool before going into a container?", "Yes. Freshly roasted makhana should cool before being sealed so residual heat and moisture are not trapped inside the container."],
+      ["What is the best container for makhana?", "A clean, completely dry airtight container with a reliable seal is the practical choice. Glass or food-safe plastic can both work."],
+      ["Can I eat makhana after it becomes soft?", "Soft texture alone does not necessarily mean the food has spoiled. Check for unusual smell, visible mould, discoloration or other signs of deterioration before eating or re-roasting it."]
     ]
   }
 ];
