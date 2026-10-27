@@ -39,10 +39,10 @@ export function LandingPageContent({ page }: { page: LandingPageData }) {
       <div className="container landing-body">
         {page.sections.map((section) => (
           <section className="landing-section" key={section.heading}>
-            <h2>{section.heading}</h2>
+            <h2 data-reveal>{section.heading}</h2>
             {section.body?.map((paragraph) => <p key={paragraph}>{renderLinks(paragraph, page.links)}</p>)}
             {section.cards ? (
-              <ol className="landing-card-grid landing-card-list">
+              <ol className="landing-card-grid landing-card-list" data-reveal-group>
                 {section.cards.map((card) => (
                   <li className="landing-card" key={card.title}>
                     <h3>{card.title}</h3>
@@ -52,11 +52,11 @@ export function LandingPageContent({ page }: { page: LandingPageData }) {
               </ol>
             ) : null}
             {section.table ? <LandingTable rows={section.table} /> : null}
-            {section.chips ? <div className="location-chips">{section.chips.map((chip) => <span key={chip}>{chip}</span>)}</div> : null}
+            {section.chips ? <div className="location-chips" data-reveal-group>{section.chips.map((chip) => <span key={chip}>{chip}</span>)}</div> : null}
           </section>
         ))}
         <section className="landing-section">
-          <h2>{page.slug === "office-snacks" ? "Office Snack FAQs" : page.slug === "student-snacks" ? "Hostel Snack FAQs" : "Delhi Snacking FAQs"}</h2>
+          <h2 data-reveal>{page.slug === "office-snacks" ? "Office Snack FAQs" : page.slug === "student-snacks" ? "Hostel Snack FAQs" : "Delhi Snacking FAQs"}</h2>
           <div className="landing-faqs">
             {page.faqs.map(([question, answer]) => (
               <article className="faq static-faq" key={question}>
@@ -66,7 +66,7 @@ export function LandingPageContent({ page }: { page: LandingPageData }) {
             ))}
           </div>
         </section>
-        <section className="landing-cta">
+        <section className="landing-cta" data-reveal>
           <h2>Keep Exploring Khao Better</h2>
           <div className="inline-links">
             {page.links.map((link) => <Link href={link.href} key={link.href}>{link.label}</Link>)}

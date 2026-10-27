@@ -42,7 +42,7 @@ export function BlogHubContent() {
       </section>
       <section className="section">
         <div className="container">
-          <Link className="featured-article" href={articleUrl(featured.slug)}>
+          <Link className="featured-article" href={articleUrl(featured.slug)} data-reveal>
             <span>{featured.category}</span>
             <h2>{featured.h1}</h2>
             <p>{featured.excerpt}</p>
@@ -53,7 +53,7 @@ export function BlogHubContent() {
               <Link href={categoryUrl(category.slug)} key={category.slug}>{category.label}</Link>
             ))}
           </div>
-          <div className="journal-guide">
+          <div className="journal-guide" data-reveal-group>
             <section>
               <h2>Start with the basics</h2>
               <p>If you are new to makhana, begin with the everyday names: makhana, roasted fox nuts, phool makhana and lotus seeds. The <Link href="/why-makhana">Khao Better guide to roasted fox nuts</Link> explains the snack category in plain language before you compare flavours or pack formats.</p>
@@ -75,7 +75,7 @@ export function BlogHubContent() {
               <p>Use the Journal as the slower reading corner of the site: less like a sales counter, more like a shelf of useful snack notes for people deciding whether roasted makhana belongs in their everyday routine.</p>
             </section>
           </div>
-          <div className="article-grid">
+          <div className="article-grid" data-reveal-group>
             {blogPosts.map((article) => (
               <ArticleCard article={article} anchorId={categoryAnchorByArticle.get(article.slug)} key={article.slug} />
             ))}

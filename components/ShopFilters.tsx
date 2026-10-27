@@ -33,7 +33,7 @@ export function ShopFilters() {
         <div className="shop-meta">
           <span>{products.length} flavours</span>
         </div>
-        <div className="product-grid">
+        <div className="product-grid" data-reveal-group>
           {products.map((product) => <ProductCard key={product.id} product={product} />)}
         </div>
       </div>
