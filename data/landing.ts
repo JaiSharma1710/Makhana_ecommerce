@@ -88,7 +88,8 @@ export const landingPages: Record<LandingSlug, LandingPageData> = {
         heading: "Healthy Tea-Time Snacks for Office in India",
         body: [
           "Tea-time planning does not require abandoning chai or declaring familiar snacks forbidden. It means choosing deliberately instead of reaching for the same biscuit plate every day. Roasted makhana, chana, khakhra, fruit, simple popcorn or a measured nut portion can each fill a different role.",
-          "For local workday and commute context, see the Khao Better guide to healthy office snacks in Delhi NCR. Students planning long study days can use the related Khao Better guide to healthy snacks for students."
+          "For local workday and commute context, see the Khao Better guide to healthy office snacks in Delhi NCR. Students planning long study days can use the related Khao Better guide to healthy snacks for students.",
+          "If your desk is at home and the kitchen is always nearby, our guide to work-from-home snacks in India for desk jobs covers that separate routine."
         ]
       }
     ],
@@ -104,6 +105,7 @@ export const landingPages: Record<LandingSlug, LandingPageData> = {
       { href: "/why-makhana", label: "What is roasted makhana?" },
       { href: "/blog/makhana-nutrition-facts", label: "Khao Better makhana nutrition facts" },
       { href: "/blog/makhana-vs-popcorn-vs-chips", label: "Makhana vs popcorn vs chips" },
+      { href: "/blog/best-work-from-home-snacks-india", label: "work-from-home snacks in India for desk jobs" },
       { href: "/delhi", label: "healthy office snacks in Delhi NCR" },
       { href: "/student-snacks", label: "Healthy snacks for students" }
     ]

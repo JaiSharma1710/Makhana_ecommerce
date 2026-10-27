@@ -14,7 +14,8 @@ export const blogSlugs = [
   "makhana-nutrition-facts",
   "makhana-vs-lotus-seeds",
   "how-to-keep-roasted-makhana-crispy",
-  "best-study-snacks-long-study-sessions-india"
+  "best-study-snacks-long-study-sessions-india",
+  "best-work-from-home-snacks-india"
 ] as const;
 
 export type BlogSlug = (typeof blogSlugs)[number];
@@ -104,6 +105,18 @@ export const blogPosts: readonly BlogPost[] = [
       "Practical desk, library, hostel and late-night snack ideas for Indian students, with portion, storage and hydration guidance.",
     readTime: "10 min read",
     primaryKeyword: "best study snacks for long study sessions india"
+  },
+  {
+    slug: "best-work-from-home-snacks-india",
+    category: "Everyday Snacking",
+    title: "Best Work From Home Snacks in India | Khao Better",
+    h1: "Best Work-From-Home Snacks in India for Desk Jobs",
+    description:
+      "Best work-from-home snacks in India for desk jobs: practical no-prep, tea-break and 4–6 PM options, plus tips to avoid mindless snacking.",
+    excerpt:
+      "Practical no-prep, tea-break and late-afternoon snack ideas for Indian remote workers, with tips for portioning at a home desk.",
+    readTime: "10 min read",
+    primaryKeyword: "best work from home snacks india"
   }
 ];
 
@@ -129,7 +142,9 @@ export function relatedBlogPosts(slug: BlogSlug, limit = 2) {
     ? ["makhana-nutrition-facts", "makhana-vs-popcorn-vs-chips", "makhana-vs-lotus-seeds"]
     : slug === "best-study-snacks-long-study-sessions-india"
       ? ["how-to-keep-roasted-makhana-crispy", "makhana-nutrition-facts", "makhana-vs-popcorn-vs-chips"]
-      : [];
+      : slug === "best-work-from-home-snacks-india"
+        ? ["how-to-keep-roasted-makhana-crispy", "makhana-nutrition-facts", "makhana-vs-popcorn-vs-chips"]
+        : [];
   return blogPosts
     .filter((post) => post.slug !== slug)
     .sort((left, right) => {

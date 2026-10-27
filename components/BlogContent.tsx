@@ -91,7 +91,8 @@ export function BlogArticleContent({ article }: { article: BlogArticle }) {
     article.slug,
     article.slug === "makhana-vs-lotus-seeds" ||
       article.slug === "how-to-keep-roasted-makhana-crispy" ||
-      article.slug === "best-study-snacks-long-study-sessions-india"
+      article.slug === "best-study-snacks-long-study-sessions-india" ||
+      article.slug === "best-work-from-home-snacks-india"
       ? 3
       : 2
   );
@@ -169,7 +170,7 @@ export function BlogArticleContent({ article }: { article: BlogArticle }) {
             </section>
           ))}
           <section>
-            <h2>{article.category === "Comparisons" ? "Comparison FAQs" : article.slug === "makhana-weight-loss" ? "Makhana Weight-Loss FAQs" : article.slug === "best-study-snacks-long-study-sessions-india" ? "Study Snack FAQs" : article.category === "Everyday Snacking" ? "Roasted Makhana Storage FAQs" : "Makhana Nutrition FAQs"}</h2>
+            <h2>{article.category === "Comparisons" ? "Comparison FAQs" : article.slug === "makhana-weight-loss" ? "Makhana Weight-Loss FAQs" : article.slug === "best-study-snacks-long-study-sessions-india" ? "Study Snack FAQs" : article.slug === "best-work-from-home-snacks-india" ? "Work-From-Home Snack FAQs" : article.category === "Everyday Snacking" ? "Roasted Makhana Storage FAQs" : "Makhana Nutrition FAQs"}</h2>
             <div className="article-faqs">
               {article.faqs.map(([question, answer]) => (
                 <div className="faq static-faq" key={question}>
@@ -230,6 +231,8 @@ function RelatedArticles({ articles }: { articles: readonly BlogPost[] }) {
 
 function renderLinks(text: string, currentSlug: BlogSlug) {
   const replacements: Array<[string, string]> = [
+    ["work-from-home snacks in India for desk jobs", "/blog/best-work-from-home-snacks-india"],
+    ["work-from-home snacks in India", "/blog/best-work-from-home-snacks-india"],
     ["study snacks for long study sessions in India", "/blog/best-study-snacks-long-study-sessions-india"],
     ["healthy snacks for hostel students under ₹100", "/student-snacks"],
     ["how to keep roasted makhana crispy after opening", "/blog/how-to-keep-roasted-makhana-crispy"],
@@ -250,6 +253,9 @@ function renderLinks(text: string, currentSlug: BlogSlug) {
     ["Kew's Plants of the World Online", "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A605422-1/general-information"],
     ["Makhana is produced from the seeds of Euryale ferox", "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A605350-1/general-information"],
     ["proper sleep", "https://www.cdc.gov/sleep/about/"],
+    ["FSSAI's Eat Right India workplace snacking guidance", "https://eatrightindia.gov.in/EatRightCampus/media/pdf/orangeBook_2.pdf"],
+    ["office-snacks guide", "/office-snacks"],
+    ["best healthy snacks to keep in your office drawer in India", "/office-snacks"],
     ["Khao Better Classic Roasted", "/makhana-classic-roasted"],
     ["Khao Better Classic", "/makhana-classic-roasted"]
   ];
