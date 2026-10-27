@@ -4,6 +4,7 @@ import Link from "next/link";
 import { FormEvent, KeyboardEvent, useCallback, useEffect, useRef, useState } from "react";
 import { RewardWheel } from "@/components/RewardWheel";
 import { trackEvent } from "@/lib/analytics";
+import { trackMetaLead } from "@/lib/meta-pixel";
 import {
   rewardCenterAngle,
   WheelReward,
@@ -175,6 +176,7 @@ export default function RewardWheelModal({ resumeRewardId, sourcePage, triggerTy
       }
 
       if (!reward) throw new Error("Invalid reward response");
+      trackMetaLead();
       setAssignedReward(reward);
       localStorage.setItem(wheelStorageKeys.reward, reward.id);
       setStage("ready");

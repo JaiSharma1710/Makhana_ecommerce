@@ -5,6 +5,7 @@ import { FormEvent, useEffect, useRef, useState } from "react";
 import { Product } from "@/data/store";
 import { PackShot } from "@/components/PackShot";
 import { trackEvent } from "@/lib/analytics";
+import { trackMetaLead } from "@/lib/meta-pixel";
 import { claimModal, releaseModal } from "@/lib/modal-coordination";
 
 const isValidIndianMobile = (phone: string) => /^[6-9]\d{9}$/.test(phone);
@@ -88,6 +89,7 @@ export function WaitlistButton({ product, className, children }: { product: Prod
       if (!response.ok || result.ok !== true) throw new Error("Submission failed");
 
       setStatus("success");
+      trackMetaLead();
       trackEvent("waitlist_submit_success", {
         source_page: window.location.pathname
       });

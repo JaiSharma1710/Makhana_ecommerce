@@ -4,6 +4,7 @@ import Link from "next/link";
 import { FormEvent, useEffect, useRef, useState } from "react";
 import { Product } from "@/data/store";
 import { trackEvent } from "@/lib/analytics";
+import { trackMetaLead } from "@/lib/meta-pixel";
 
 const isValidIndianMobile = (phone: string) => /^[6-9]\d{9}$/.test(phone);
 const confettiPieces = Array.from({ length: 18 }, (_, index) => index);
@@ -58,6 +59,7 @@ export function StandaloneWaitlistForm({ product }: { product: Product }) {
       if (!response.ok || result.ok !== true) throw new Error("Submission failed");
 
       setStatus("success");
+      trackMetaLead();
       trackEvent("waitlist_submit_success", {
         source_page: window.location.pathname
       });

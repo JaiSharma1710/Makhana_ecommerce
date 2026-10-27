@@ -39,6 +39,7 @@ export default function PrivacyPolicyPage() {
             <h2>Service providers and analytics</h2>
             <p>Waitlist form and contact information is processed and stored using HubSpot as our CRM and form service.</p>
             <p>We may also collect website analytics using Google Analytics. We do not intentionally send the personal information listed above in waitlist analytics events.</p>
+            <p>We also use Meta Pixel, provided by Meta Platforms, to understand website activity and measure advertising performance. Meta Pixel may collect information such as page visits, browser and device information, referring URLs, and interactions with the website for analytics, measurement, and advertising purposes. In the current implementation, we do not intentionally send your waitlist email address, phone number, name, or city through Meta Pixel browser events. Information collected through Meta Pixel may be processed by Meta according to Meta&apos;s <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer"><u>Privacy Policy</u></a>.</p>
           </section>
 
           <section>
