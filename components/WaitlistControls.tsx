@@ -152,7 +152,7 @@ export function WaitlistButton({ product, className, children }: { product: Prod
                         type="tel"
                         inputMode="numeric"
                         autoComplete="tel-national"
-                        placeholder="9876543210"
+                        placeholder="10-digit mobile number"
                         minLength={10}
                         maxLength={10}
                         pattern="[6-9][0-9]{9}"

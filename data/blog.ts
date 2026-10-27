@@ -266,6 +266,7 @@ export const blogArticles: BlogArticle[] = [
         body: [
           "Nutrition facts are most useful when they change a decision. If you want a small snack, the 25 g line is the easiest reference. If you pour a bigger bowl, the 30 g or 50 g lines help you estimate without pretending the snack is calorie-free.",
           "If you are comparing makhana with popcorn or chips, use the same portion logic. Do not compare a tiny makhana serving with a huge cinema popcorn tub, or a plain popcorn bowl with a full chips packet. Match realistic portions and then decide.",
+          "Students comparing practical options can use our guide to study snacks for long study sessions in India.",
           "For Khao Better, the current product page and shop page remain pre-launch. Classic Roasted is out of stock, and these nutrition facts are here to support understanding before checkout opens in a later business phase."
           ,"For clarity on the ingredient itself, the botanical difference between makhana and lotus seeds separates Euryale ferox from true lotus seeds.",
           "For opened packs, see how to keep roasted makhana crispy after opening without inventing a fixed freshness timeline."
@@ -632,6 +633,267 @@ export const blogArticles: BlogArticle[] = [
       ["Should makhana cool before going into a container?", "Yes. Freshly roasted makhana should cool before being sealed so residual heat and moisture are not trapped inside the container."],
       ["What is the best container for makhana?", "A clean, completely dry airtight container with a reliable seal is the practical choice. Glass or food-safe plastic can both work."],
       ["Can I eat makhana after it becomes soft?", "Soft texture alone does not necessarily mean the food has spoiled. Check for unusual smell, visible mould, discoloration or other signs of deterioration before eating or re-roasting it."]
+    ]
+  },
+  {
+    ...blogPostIndex["best-study-snacks-long-study-sessions-india"],
+    intro: [
+      "A long study session becomes much harder when hunger starts competing with your notes.",
+      "The best study snacks for long study sessions in India are not “brain foods” that magically improve memory. They are simply practical snacks that are easy to portion, convenient to keep near your desk, not excessively messy, and suitable for the time and storage facilities you have.",
+      "Good options include roasted chana, makhana, fruit with nuts, curd with fruit when refrigeration is available, lightly seasoned popcorn, eggs, peanut butter with toast or fruit, and small portions of nuts and seeds.",
+      "And one important point: no snack can guarantee that you will not feel sleepy while studying. Food can solve hunger; it cannot replace proper sleep."
+    ],
+    sections: [
+      {
+        heading: "Quick answer: the best study snacks in India",
+        body: [],
+        table: [
+          ["Study situation", "Practical snack options"],
+          ["Long desk session", "Roasted chana, makhana, nuts"],
+          ["Library session", "Banana, apple, nuts, roasted chana"],
+          ["Hostel room without a fridge", "Makhana, chana, peanuts, whole fruit"],
+          ["Fridge available", "Curd with fruit, boiled eggs"],
+          ["Want something crunchy", "Makhana, roasted chana, popcorn"],
+          ["Need something more substantial", "Toast with peanut butter, egg with toast"],
+          ["Late-night hunger", "Small portion of fruit, makhana, chana or milk if it suits you"]
+        ],
+        afterTable: [
+          "The goal is not to eat continuously through a four-hour study block. Keep one sensible portion nearby, finish it when you are genuinely hungry, and keep the main packet away from the desk."
+        ]
+      },
+      {
+        heading: "What makes a good study snack?",
+        body: [
+          "A useful study snack needs to work with the way you are actually studying.",
+          "For most students, that means it should be:"
+        ],
+        list: [
+          "easy to eat without making a mess around books or laptops",
+          "easy to portion before sitting down",
+          "convenient enough that preparing it does not become a 40-minute “study break”",
+          "suitable for the storage available",
+          "satisfying enough to deal with real hunger between meals",
+          "something you actually enjoy eating"
+        ],
+        afterList: [
+          "A student studying at home with a refrigerator has different options from someone sitting in a library for four hours or living in a hostel room.",
+          "That is why there is no single “best” study snack."
+        ]
+      },
+      {
+        heading: "1. Roasted chana",
+        body: [
+          "Roasted chana is one of the easiest Indian study snacks to keep around.",
+          "It needs no preparation, travels well, does not usually create much mess, and is easy to portion into a small bowl or container before you begin studying.",
+          "It is particularly useful for library sessions or hostel rooms where refrigeration is not available.",
+          "The important part is portioning it first instead of placing a large packet next to your laptop and eating automatically while reading."
+        ]
+      },
+      {
+        heading: "2. Roasted makhana",
+        body: [
+          "Makhana works well for the same practical reason: it is light, crunchy and easy to serve in a small bowl.",
+          "For a study desk, that makes it more convenient than snacks that require plates, sauces or preparation.",
+          "If you buy packaged roasted makhana, check the actual nutrition and ingredient label rather than assuming every brand or flavour is nutritionally identical. Our makhana nutrition facts guide explains how to read the available Khao Better Classic figures.",
+          "If you keep an opened pack near your desk, follow the practical steps on how to keep roasted makhana crispy after opening.",
+          "The Why Makhana guide explains the snack itself, while Khao Better Classic Roasted product details provide the currently verified pack facts."
+        ]
+      },
+      {
+        heading: "3. Banana or apple with nuts",
+        body: [
+          "Whole fruit is one of the simplest study-session options because there is almost nothing to prepare.",
+          "A banana works when you want something quick. An apple is useful when you want something that travels well.",
+          "Pairing fruit with a small portion of nuts gives you a more substantial snack than fruit alone.",
+          "You do not need a complicated “exam trail mix.” A fruit and a small container of nuts can do the job."
+        ]
+      },
+      {
+        heading: "4. Nuts and seeds",
+        body: [
+          "Almonds, peanuts, cashews, walnuts, pumpkin seeds or a simple mixture can all be convenient study snacks.",
+          "Their biggest advantage for students is portability.",
+          "Their biggest disadvantage is also obvious: it is extremely easy to keep eating them straight from a large packet while concentrating on something else.",
+          "Put one portion in a bowl or small box and put the packet away."
+        ]
+      },
+      {
+        heading: "5. Curd with fruit",
+        body: [
+          "If you are studying at home or somewhere with reliable refrigeration, plain curd with fruit is another simple option.",
+          "This is less practical for a long library session or a hostel room without refrigeration, so choose it according to your situation.",
+          "The same rule applies to any snack that needs chilling: do not carry it around for hours just because it appeared on a “healthy study snacks” list.",
+          "Practical food safety matters more than copying an internet list."
+        ]
+      },
+      {
+        heading: "6. Lightly seasoned popcorn",
+        body: [
+          "Popcorn can be another desk-friendly crunchy option when it is prepared simply and served in a reasonable portion.",
+          "It is worth remembering that “popcorn” is not one fixed product. Homemade popcorn, heavily buttered cinema popcorn and packaged flavoured popcorn can be very different foods.",
+          "Our makhana vs popcorn vs chips guide explains why preparation and portion matter more than a generic snack label."
+        ]
+      },
+      {
+        heading: "7. Toast with peanut butter",
+        body: [
+          "If you need something more substantial than a handful of dry snacks, toast with a modest amount of peanut butter is easy to prepare at home.",
+          "Banana with peanut butter is another option if you prefer fruit.",
+          "Check the product label if you are comparing peanut butters because ingredients can vary substantially between brands.",
+          "Anyone with a peanut allergy should obviously choose a suitable alternative."
+        ]
+      },
+      {
+        heading: "8. Boiled eggs",
+        body: [
+          "For students who eat eggs, boiled eggs can work well when prepared and stored safely.",
+          "They make more sense at home or where refrigeration is available than sitting unrefrigerated in a backpack through a long day.",
+          "Again, the best study snack is not simply the food with the strongest nutrition reputation. It has to fit your actual study environment."
+        ]
+      },
+      {
+        heading: "9. Homemade poha or a small savoury snack",
+        body: [
+          "If your “snack” is really filling a larger gap between meals, a small bowl of poha or another familiar homemade option may make more sense than repeatedly eating packaged snacks.",
+          "This is particularly useful during evening study sessions when lunch was several hours earlier but dinner is still some time away.",
+          "At that point, solving actual hunger is more useful than trying to find a supposed “focus snack.”"
+        ]
+      },
+      {
+        heading: "10. Milk or another familiar drink with a small snack",
+        body: [
+          "Sometimes a study break does not need another packet of food.",
+          "Milk, if it suits you, can be paired with a small snack. Water should also stay nearby during longer study sessions.",
+          "You do not need an “energy” drink simply because you are studying."
+        ]
+      },
+      {
+        heading: "What are the best no-fridge study snacks?",
+        body: [
+          "If you are studying in a library, hostel room or coaching centre without refrigeration, prioritise foods that are designed to be stored safely at room temperature.",
+          "Practical examples include:"
+        ],
+        list: [
+          "roasted chana",
+          "packaged roasted makhana",
+          "nuts and seeds",
+          "whole bananas or apples",
+          "suitable crackers",
+          "peanuts",
+          "properly stored homemade dry snack mixes"
+        ],
+        afterList: [
+          "For budget and hostel-specific planning, see healthy snacks for hostel students under ₹100. That page owns hostel-budget intent; this guide stays focused on snacks used during study sessions."
+        ]
+      },
+      {
+        heading: "What should you eat during a 2–4 hour study session?",
+        body: [
+          "You may not need to eat at all if you recently had a proper meal and are not hungry.",
+          "If hunger appears during a longer session, stop briefly and eat rather than grazing continuously while reading.",
+          "A simple setup could be:",
+          "Water + one pre-portioned snack.",
+          "Examples:",
+          "Makhana + water",
+          "Banana + nuts",
+          "Roasted chana + fruit",
+          "Curd + fruit when refrigeration is available",
+          "Do not turn this section into a rigid eating schedule."
+        ]
+      },
+      {
+        heading: "What are good late-night study snacks?",
+        body: [
+          "If you are genuinely hungry while studying late, keep the snack fairly simple.",
+          "Fruit, a small portion of roasted chana, makhana, nuts, or another familiar light snack can be practical choices.",
+          "What matters more is understanding that late-night snacking cannot compensate for inadequate sleep.",
+          "If you regularly feel sleepy during late-night study sessions, the answer is not necessarily another snack or another cup of coffee.",
+          "It may simply be that your body needs sleep."
+        ]
+      },
+      {
+        heading: "Are there study snacks that don't make you sleepy?",
+        body: [
+          "This is a common search, but the wording is misleading.",
+          "There is no snack that can guarantee you will stay awake or focused.",
+          "Sleepiness while studying can have many causes, including lack of sleep, the time of day, long uninterrupted study periods and simply being mentally tired.",
+          "Food can deal with hunger. It is not a substitute for rest.",
+          "If large meals make you personally feel uncomfortable during study sessions, you may prefer eating a normal meal earlier and using a smaller snack later rather than sitting down to study immediately after a very large meal."
+        ]
+      },
+      {
+        heading: "Should you drink coffee or energy drinks while studying?",
+        body: [
+          "You do not need an energy drink to study effectively.",
+          "Caffeine affects people differently, and consuming a lot of it—particularly late in the day—can interfere with sleep for some people.",
+          "If you already drink tea or coffee, there is no need to turn exam week into an escalating caffeine challenge.",
+          "Water is the simplest drink to keep beside the desk."
+        ]
+      },
+      {
+        heading: "How to stop mindless snacking while studying",
+        body: [
+          "One of the easiest mistakes is bringing the entire packet to the desk.",
+          "Your attention is on the chapter, lecture or problem set—not on how much you have eaten.",
+          "Instead:"
+        ],
+        orderedList: [
+          "Decide the portion before you start.",
+          "Put it in a small bowl or container.",
+          "Then put the main packet back in the cupboard.",
+          "When the portion is finished, it is finished."
+        ],
+        afterList: ["This works whether the snack is makhana, nuts, chana, popcorn or something else."]
+      },
+      {
+        heading: "Build a simple study-snack kit",
+        body: [
+          "If you regularly study outside your room, you can keep this extremely simple.",
+          "A basic kit might contain a reusable water bottle, one dry snack and one piece of fruit.",
+          "For example:",
+          "Roasted chana + banana + water",
+          "or",
+          "Makhana + apple + water",
+          "The point of preparing it beforehand is not nutritional perfection.",
+          "It is avoiding the situation where you become hungry halfway through a study block and the only available option is whatever happens to be nearest."
+        ]
+      },
+      {
+        heading: "What should you avoid while studying?",
+        body: [
+          "There is no need to label normal foods as “bad.”",
+          "Some choices are simply less practical for a study desk.",
+          "Be cautious with:"
+        ],
+        list: [
+          "large packets that encourage continuous grazing",
+          "very messy foods around electronics and notes",
+          "foods requiring refrigeration when you cannot store them safely",
+          "excessive caffeine late at night if it affects your sleep"
+        ],
+        afterList: ["The goal is to make studying easier—not create another complicated set of food rules."]
+      },
+      {
+        heading: "The simplest rule for long study sessions",
+        body: [
+          "A good study snack should solve hunger without becoming the main event.",
+          "Choose something practical.",
+          "Portion it before sitting down.",
+          "Keep water nearby.",
+          "Take a real break to eat when possible.",
+          "And do not expect any snack—makhana included—to replace sleep, regular meals or good study habits.",
+          "That is a much more useful strategy than searching for a magical “brain food” before every exam."
+        ]
+      }
+    ],
+    faqs: [
+      ["What are the best study snacks for long study sessions in India?", "Practical options include roasted chana, makhana, fruit with nuts, plain curd with fruit when refrigeration is available, lightly seasoned popcorn, eggs, and toast with peanut butter."],
+      ["Is makhana a good study snack?", "Makhana can be convenient because it is crunchy, portable and easy to portion. Compare the actual ingredient and nutrition label of the product you are eating rather than assuming every makhana product is the same."],
+      ["What are good study snacks without a fridge?", "Roasted chana, packaged roasted makhana, nuts, seeds, whole fruit and suitable dry snack mixes are practical options when refrigeration is unavailable."],
+      ["What should I eat during late-night study?", "If you are genuinely hungry, choose a small familiar snack such as fruit, roasted chana, makhana or nuts. No snack can replace adequate sleep."],
+      ["Are there foods that stop you from feeling sleepy while studying?", "No food can guarantee alertness. Sleep, breaks, hydration, study timing and overall eating habits all matter."],
+      ["Should I snack continuously while studying?", "There is usually no reason to. Pre-portioning one snack before starting can make it easier to avoid eating automatically from a large packet."],
+      ["Are energy drinks necessary for studying?", "No. Energy drinks are not required for effective studying. If you use caffeinated drinks, pay attention to how the amount and timing affect your sleep."]
     ]
   }
 ];

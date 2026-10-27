@@ -89,7 +89,11 @@ export function BlogHubContent() {
 export function BlogArticleContent({ article }: { article: BlogArticle }) {
   const related = relatedBlogPosts(
     article.slug,
-    article.slug === "makhana-vs-lotus-seeds" || article.slug === "how-to-keep-roasted-makhana-crispy" ? 3 : 2
+    article.slug === "makhana-vs-lotus-seeds" ||
+      article.slug === "how-to-keep-roasted-makhana-crispy" ||
+      article.slug === "best-study-snacks-long-study-sessions-india"
+      ? 3
+      : 2
   );
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -165,7 +169,7 @@ export function BlogArticleContent({ article }: { article: BlogArticle }) {
             </section>
           ))}
           <section>
-            <h2>{article.category === "Comparisons" ? "Comparison FAQs" : article.slug === "makhana-weight-loss" ? "Makhana Weight-Loss FAQs" : article.category === "Everyday Snacking" ? "Roasted Makhana Storage FAQs" : "Makhana Nutrition FAQs"}</h2>
+            <h2>{article.category === "Comparisons" ? "Comparison FAQs" : article.slug === "makhana-weight-loss" ? "Makhana Weight-Loss FAQs" : article.slug === "best-study-snacks-long-study-sessions-india" ? "Study Snack FAQs" : article.category === "Everyday Snacking" ? "Roasted Makhana Storage FAQs" : "Makhana Nutrition FAQs"}</h2>
             <div className="article-faqs">
               {article.faqs.map(([question, answer]) => (
                 <div className="faq static-faq" key={question}>
@@ -226,6 +230,8 @@ function RelatedArticles({ articles }: { articles: readonly BlogPost[] }) {
 
 function renderLinks(text: string, currentSlug: BlogSlug) {
   const replacements: Array<[string, string]> = [
+    ["study snacks for long study sessions in India", "/blog/best-study-snacks-long-study-sessions-india"],
+    ["healthy snacks for hostel students under ₹100", "/student-snacks"],
     ["how to keep roasted makhana crispy after opening", "/blog/how-to-keep-roasted-makhana-crispy"],
     ["dried-food storage guidance from the National Center for Home Food Preservation", "https://nchfp.uga.edu/how/dry/general-information-drying/packaging-and-storing-dried-foods/"],
     ["Khao Better guide to makhana vs popcorn vs chips", "/blog/makhana-vs-popcorn-vs-chips"],
@@ -243,6 +249,7 @@ function renderLinks(text: string, currentSlug: BlogSlug) {
     ["Agricultural and Processed Food Products Export Development Authority, or APEDA", "https://apeda.gov.in/sites/default/files/study_reports/Makhana_Report_English.pdf"],
     ["Kew's Plants of the World Online", "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A605422-1/general-information"],
     ["Makhana is produced from the seeds of Euryale ferox", "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A605350-1/general-information"],
+    ["proper sleep", "https://www.cdc.gov/sleep/about/"],
     ["Khao Better Classic Roasted", "/makhana-classic-roasted"],
     ["Khao Better Classic", "/makhana-classic-roasted"]
   ];

@@ -13,7 +13,8 @@ export const blogSlugs = [
   "makhana-vs-popcorn-vs-chips",
   "makhana-nutrition-facts",
   "makhana-vs-lotus-seeds",
-  "how-to-keep-roasted-makhana-crispy"
+  "how-to-keep-roasted-makhana-crispy",
+  "best-study-snacks-long-study-sessions-india"
 ] as const;
 
 export type BlogSlug = (typeof blogSlugs)[number];
@@ -91,6 +92,18 @@ export const blogPosts: readonly BlogPost[] = [
       "Practical steps for storing opened roasted makhana, keeping moisture out and restoring the crunch when makhana turns soft.",
     readTime: "8 min read",
     primaryKeyword: "how to keep roasted makhana crispy after opening"
+  },
+  {
+    slug: "best-study-snacks-long-study-sessions-india",
+    category: "Everyday Snacking",
+    title: "Study Snacks for Long Study Sessions in India | Khao Better",
+    h1: "Best Study Snacks for Long Study Sessions in India",
+    description:
+      "Best study snacks for long study sessions in India: practical desk-friendly, hostel-friendly and late-night options, plus portion and hydration tips.",
+    excerpt:
+      "Practical desk, library, hostel and late-night snack ideas for Indian students, with portion, storage and hydration guidance.",
+    readTime: "10 min read",
+    primaryKeyword: "best study snacks for long study sessions india"
   }
 ];
 
@@ -114,7 +127,9 @@ export function relatedBlogPosts(slug: BlogSlug, limit = 2) {
   const current = blogPostIndex[slug];
   const preferred: BlogSlug[] = slug === "how-to-keep-roasted-makhana-crispy"
     ? ["makhana-nutrition-facts", "makhana-vs-popcorn-vs-chips", "makhana-vs-lotus-seeds"]
-    : [];
+    : slug === "best-study-snacks-long-study-sessions-india"
+      ? ["how-to-keep-roasted-makhana-crispy", "makhana-nutrition-facts", "makhana-vs-popcorn-vs-chips"]
+      : [];
   return blogPosts
     .filter((post) => post.slug !== slug)
     .sort((left, right) => {
