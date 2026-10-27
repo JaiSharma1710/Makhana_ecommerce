@@ -1,8 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Fredoka, Hanken_Grotesk } from "next/font/google";
 import Script from "next/script";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { MetaPixelPageView } from "@/components/MetaPixelPageView";
-import { GA_MEASUREMENT_ID } from "@/lib/analytics";
 import { META_PIXEL_ID } from "@/lib/meta-pixel";
 import { absoluteUrl, SITE_URL } from "@/lib/site";
 import "./globals.css";
@@ -81,18 +81,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body className={`${hankenGrotesk.variable} ${fredoka.variable}`}>
         {children}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_MEASUREMENT_ID}');
-          `}
-        </Script>
+        <GoogleAnalytics />
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)
