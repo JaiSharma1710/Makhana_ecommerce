@@ -223,18 +223,19 @@ export const blogArticles: BlogArticle[] = [
         table: [["Nutrient", "Per 100 g"], ...classicNutrition100g]
       },
       {
-        heading: "How Portion Size Changes the Numbers",
+        heading: "How many calories are in 25 g, 30 g and 35 g of roasted makhana?",
         body: [
-          "Portion size scales the nutrition. The table uses the Khao Better Classic profile and rounds values sensibly for everyday reading.",
-          "The table is proportional math, not a new lab test for every bowl size. It is meant to help shoppers estimate common servings while understanding that the official supplied base is the 100 g profile."
+          "These calorie figures are derived from the verified Khao Better Classic Roasted nutrition label value of 450 kcal per 100 g.",
+          "The table is proportional math, not a new lab test for every bowl size, and the values are rounded for everyday reading."
         ],
         table: [
-          ["Portion", "Calories", "Protein", "Carbs", "Fibre", "Fat", "Sodium"],
-          ["25 g", "113 kcal", "1.5 g", "13.0 g", "2.6 g", "5.5 g", "117 mg"],
-          ["30 g", "135 kcal", "1.8 g", "15.6 g", "3.1 g", "6.5 g", "141 mg"],
-          ["50 g", "225 kcal", "3.1 g", "26.1 g", "5.2 g", "10.9 g", "235 mg"],
-          ["100 g", "450 kcal", "6.1 g", "52.1 g", "10.3 g", "21.8 g", "469 mg"]
-        ]
+          ["Portion", "Approx. calories"],
+          ["25 g", "~113 kcal"],
+          ["30 g", "~135 kcal"],
+          ["35 g", "~158 kcal"],
+          ["100 g", "450 kcal"]
+        ],
+        afterTable: ["These figures describe Khao Better Classic Roasted based on its current nutrition label. They should not be treated as universal values for every roasted or flavoured makhana product."]
       },
       {
         heading: "Does Roasting Change Makhana Nutrition?",
@@ -249,6 +250,7 @@ export const blogArticles: BlogArticle[] = [
         body: [
           "Flavoured makhana can have different nutrition from Classic Roasted. More oil, richer seasonings or sweet coatings can change calories, fat, sugar and sodium.",
           "Khao Better's other flavours are coming soon, so this page does not invent nutrition facts for Peri Peri, Pudina Punch, Achari Chatpata, Tangy Tomato or Cheese & Herb.",
+          "Flavoured makhana products can vary because seasonings, oil and serving sizes differ. See the planned Khao Better makhana flavours.",
           "That distinction matters for searchers comparing fox nuts nutrition across flavours. A plain or classic flavour is often the easiest place to start, but flavoured makhana should still be judged by its own finished label."
         ]
       },
@@ -274,8 +276,10 @@ export const blogArticles: BlogArticle[] = [
       }
     ],
     faqs: [
+      ["How many calories are in 25 g of makhana?", "Based on the Khao Better Classic Roasted label value of 450 kcal per 100 g, 25 g is approximately 113 kcal."],
       ["How many calories are in 30 g of roasted makhana?", "Using Khao Better Classic's supplied profile, 30 g is approximately 135 kcal."],
-      ["How many calories are in one Khao Better Classic pack?", "One 25 g pack is approximately 113 kcal, derived from the supplied per-100 g profile and rounded."],
+      ["How many calories are in 35 g of makhana?", "Based on the same Khao Better Classic Roasted label value, 35 g is approximately 158 kcal."],
+      ["Are all makhana calories the same?", "No. Serving size, oil, seasoning and other ingredients can change the calorie value, so these calculations are not universal."],
       ["What is the makhana protein content?", "Khao Better Classic has 6.1 g protein per 100 g, or approximately 1.5 g per 25 g pack."],
       ["Does flavoured makhana have the same nutrition?", "Not necessarily. Seasonings, oils, sweet coatings and cheese powders can change nutrition."],
       ["Are these numbers universal for all fox nuts?", "No. These numbers are for Khao Better Classic Roasted only."]
@@ -559,8 +563,8 @@ export const blogArticles: BlogArticle[] = [
       {
         heading: "How long does roasted makhana stay crispy after opening?",
         body: [
-          "There is no single reliable number that applies to every pack of roasted makhana.",
-          "How quickly the texture changes depends on:"
+          "There is no single universal number for how long roasted makhana stays crisp after opening.",
+          "It depends on factors such as the packaging, humidity, how often the pack is opened, how tightly it is resealed, the seasoning and storage conditions."
         ],
         list: [
           "packaging",
@@ -572,8 +576,15 @@ export const blogArticles: BlogArticle[] = [
         ],
         afterList: [
           "That is why a blanket statement such as “makhana stays crispy for exactly X days” can be misleading.",
-          "For packaged makhana, follow the manufacturer's after-opening and best-before guidance.",
-          "For day-to-day use, focus on the factors you can control: reseal quickly, keep it dry and minimise exposure to humid air."
+          "For a packaged product, follow the manufacturer's storage and best-before instructions. Keeping roasted makhana tightly sealed in a cool, dry place helps protect its texture."
+        ]
+      },
+      {
+        heading: "Does makhana expire after opening?",
+        body: [
+          "Opening a pack does not create one universal new expiry date.",
+          "Follow the product's printed best-before date and storage instructions, and pay attention to the condition of the food.",
+          "If makhana develops an unusual smell, visible mould, obvious moisture damage or another sign of spoilage, do not try to fix it by re-roasting it."
         ]
       },
       {
@@ -581,6 +592,7 @@ export const blogArticles: BlogArticle[] = [
         body: [
           "The basic rule remains the same: keep it dry and airtight.",
           "However, flavoured makhana contains seasoning and may contain additional ingredients such as oil or spice blends. That means you should rely on the specific packet's storage instructions rather than assuming every flavour behaves exactly like plain makhana.",
+          "Seasoning can affect storage and texture, so compare the final label as the planned Khao Better makhana flavours are confirmed.",
           "If you're comparing makhana as a snack rather than only its storage, our guide to makhana vs popcorn vs chips breaks down those options in more detail.",
           "You can also explore our guide to makhana nutrition facts if you want to understand serving sizes and nutrition separately from storage.",
           "For the currently published pack facts, see Khao Better Classic Roasted product details.",
@@ -628,13 +640,16 @@ export const blogArticles: BlogArticle[] = [
       }
     ],
     faqs: [
+      ["How long does roasted makhana stay crispy after opening?", "There is no universal number. Packaging, humidity, resealing, seasoning and storage conditions all affect texture, so follow the packet's instructions and keep it tightly sealed in a cool, dry place."],
+      ["Does makhana expire after opening?", "Opening does not create one universal new expiry date. Follow the printed best-before date and storage instructions, and discard food that shows signs of spoilage."],
       ["How do I keep makhana crispy after opening?", "Reseal the pack immediately or transfer the makhana to a dry airtight container. Store it away from moisture, steam and direct heat."],
       ["Why does makhana become soggy?", "Makhana can lose its crunch when it absorbs moisture from the surrounding air. Poor sealing, humid storage and exposure to steam can speed this up."],
       ["Can soggy makhana become crispy again?", "If it has only softened and shows no signs of spoilage, gently dry-roasting it on low heat can often restore its crunch."],
       ["Should I put roasted makhana in the fridge?", "Usually there is no need for normal dry roasted makhana. Keeping it airtight in a cool, dry location is generally more important. Always follow the storage instructions on a packaged product."],
       ["Should makhana cool before going into a container?", "Yes. Freshly roasted makhana should cool before being sealed so residual heat and moisture are not trapped inside the container."],
       ["What is the best container for makhana?", "A clean, completely dry airtight container with a reliable seal is the practical choice. Glass or food-safe plastic can both work."],
-      ["Can I eat makhana after it becomes soft?", "Soft texture alone does not necessarily mean the food has spoiled. Check for unusual smell, visible mould, discoloration or other signs of deterioration before eating or re-roasting it."]
+      ["Can I eat makhana after it becomes soft?", "Soft texture alone does not necessarily mean the food has spoiled. Check for unusual smell, visible mould, discoloration or other signs of deterioration before eating or re-roasting it."],
+      ["When is soft makhana a safety concern?", "Do not eat or re-roast it if you notice an unusual smell, visible mould, obvious moisture damage, unexpected discoloration or another sign of spoilage."]
     ]
   },
   {

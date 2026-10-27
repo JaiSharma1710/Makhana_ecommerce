@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     { path: "/", priority: 1 },
     { path: "/shop", priority: 0.8 },
+    { path: "/flavours", priority: 0.8 },
     { path: "/why-makhana", priority: 0.7 },
     { path: "/our-story", priority: 0.6 },
     { path: "/makhana-classic-roasted", priority: 0.8 },

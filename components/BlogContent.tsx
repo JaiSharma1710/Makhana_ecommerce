@@ -67,7 +67,7 @@ export function BlogHubContent() {
             <section>
               <h2>Portions and everyday eating</h2>
               <p>For readers thinking about portion size, the <Link href="/blog/makhana-weight-loss">makhana portion guide for weight management</Link> explains how a 25-35 g serving can fit into a broader eating plan. It does not treat makhana as a shortcut or a medical solution.</p>
-              <p>For label details, the <Link href="/blog/makhana-nutrition-facts">roasted makhana nutrition facts guide</Link> shows Khao Better Classic calculations for 25 g, 30 g, 50 g and 100 g portions using the supplied product profile.</p>
+              <p>For label details, the <Link href="/blog/makhana-nutrition-facts">roasted makhana nutrition facts guide</Link> shows Khao Better Classic calculations for 25 g, 30 g, 35 g and 100 g portions using the supplied product profile.</p>
             </section>
             <section>
               <h2>Khao Better product notes</h2>
@@ -232,6 +232,7 @@ function RelatedArticles({ articles }: { articles: readonly BlogPost[] }) {
 
 function renderLinks(text: string, currentSlug: BlogSlug) {
   const replacements: Array<[string, string]> = [
+    ["planned Khao Better makhana flavours", "/flavours"],
     ["why makhana is expensive in India", "/blog/why-is-makhana-expensive-india"],
     ["2026 Press Information Bureau overview of India's makhana sector", "https://www.pib.gov.in/PressNoteDetails.aspx?ModuleId=3&NoteId=159603&lang=2&reg=48"],
     ["2026 Government of India sector overview", "https://www.pib.gov.in/PressNoteDetails.aspx?ModuleId=3&NoteId=159603&lang=2&reg=48"],

@@ -67,7 +67,7 @@ export const blogPosts: readonly BlogPost[] = [
     description:
       "See roasted makhana calories per 30 g serving plus Khao Better Classic nutrition per 25 g and 100 g, including protein, fibre and fat.",
     excerpt:
-      "A clear nutrition reference for Khao Better Classic Roasted, with 25 g, 30 g, 50 g and 100 g calculations.",
+      "A clear nutrition reference for Khao Better Classic Roasted, with 25 g, 30 g, 35 g and 100 g calculations.",
     readTime: "6 min read",
     primaryKeyword: "roasted makhana calories per 30g serving"
   },

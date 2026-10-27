@@ -128,7 +128,7 @@ export const comboPacks = [
 export const faqData = [
   [
     "What is makhana, and is it the same as fox nuts?",
-    "Yes. Makhana is commonly known as fox nuts, phool makhana or lotus seeds in everyday Indian snacking conversations. Khao Better uses the term roasted makhana because it is clear for shoppers who already know the snack and for people discovering roasted fox nuts for the first time."
+    "Makhana is commonly called fox nuts or phool makhana. It is also sometimes marketed as \"lotus seeds,\" although botanically makhana comes from Euryale ferox, not the true lotus Nelumbo nucifera. Learn more in our makhana vs lotus seeds guide."
   ],
   [
     "Is Khao Better makhana roasted or fried?",
@@ -155,7 +155,7 @@ export const faqData = [
 export const whyMakhanaFaq = [
   [
     "What is makhana?",
-    "Makhana is the familiar Indian snack many people also call fox nuts, phool makhana or lotus seeds. It is light, crunchy and often roasted before seasoning, which makes it a useful base for simple everyday snack packs."
+    "Makhana is commonly called fox nuts or phool makhana. It comes from Euryale ferox and is botanically different from the true lotus Nelumbo nucifera. It is often roasted before seasoning as an everyday snack."
   ],
   [
     "Is roasted makhana the same as fried namkeen?",
