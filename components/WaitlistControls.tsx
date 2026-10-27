@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { FormEvent, useEffect, useRef, useState } from "react";
+import { FormEvent, KeyboardEvent, useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { Product } from "@/data/store";
 import { PackShot } from "@/components/PackShot";
 import { trackEvent } from "@/lib/analytics";
@@ -14,17 +15,34 @@ const confettiPieces = Array.from({ length: 18 }, (_, index) => index);
 
 export function WaitlistButton({ product, className, children }: { product: Product; className?: string; children: React.ReactNode }) {
   const [open, setOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [phoneError, setPhoneError] = useState("");
   const submittingRef = useRef(false);
   const successHeadingRef = useRef<HTMLHeadingElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const drawerRef = useRef<HTMLElement>(null);
+  const activeProduct = selectedProduct ?? product;
 
   useEffect(() => {
     if (status === "success") successHeadingRef.current?.focus();
   }, [status]);
 
-  useEffect(() => () => {
-    if (open) releaseModal("waitlist");
+  useEffect(() => {
+    if (!open) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const focusFrame = window.requestAnimationFrame(() => {
+      drawerRef.current?.querySelector<HTMLInputElement>('input:not([type="hidden"])')?.focus();
+    });
+
+    return () => {
+      window.cancelAnimationFrame(focusFrame);
+      document.body.style.overflow = previousOverflow;
+      releaseModal("waitlist");
+      triggerRef.current?.focus();
+    };
   }, [open]);
 
   const openModal = () => {
@@ -36,6 +54,7 @@ export function WaitlistButton({ product, className, children }: { product: Prod
     setPhoneError("");
     setStatus("idle");
     submittingRef.current = false;
+    setSelectedProduct(product);
     setOpen(true);
     trackEvent("waitlist_modal_open", {
       product_id: product.id,
@@ -46,7 +65,32 @@ export function WaitlistButton({ product, className, children }: { product: Prod
   const closeModal = () => {
     if (submittingRef.current) return;
     setOpen(false);
-    releaseModal("waitlist");
+  };
+
+  const handleDrawerKeyDown = (event: KeyboardEvent<HTMLElement>) => {
+    if (event.key === "Escape") {
+      event.preventDefault();
+      closeModal();
+      return;
+    }
+    if (event.key !== "Tab" || !drawerRef.current) return;
+
+    const focusable = Array.from(
+      drawerRef.current.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled]), input:not([disabled]):not([tabindex="-1"]), [tabindex]:not([tabindex="-1"])'
+      )
+    ).filter((element) => !element.hasAttribute("hidden"));
+    if (!focusable.length) return;
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && (document.activeElement === first || !drawerRef.current.contains(document.activeElement))) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
   };
 
   const submit = async (event: FormEvent<HTMLFormElement>) => {
@@ -66,8 +110,8 @@ export function WaitlistButton({ product, className, children }: { product: Prod
     setStatus("submitting");
     submittingRef.current = true;
     trackEvent("waitlist_submit_attempt", {
-      product_id: product.id,
-      product_status: product.status
+      product_id: activeProduct.id,
+      product_status: activeProduct.status
     });
 
     try {
@@ -102,29 +146,28 @@ export function WaitlistButton({ product, className, children }: { product: Prod
 
   return (
     <>
-      <button className={className} onClick={openModal}>{children}</button>
-      {open ? (
+      <button ref={triggerRef} className={className} onClick={openModal}>{children}</button>
+      {open && typeof document !== "undefined" ? createPortal(
         <>
-          <div className="overlay" onClick={closeModal} />
+          <div className="overlay" onClick={closeModal} aria-hidden="true" />
           <aside
             className="drawer"
-            aria-label="Waitlist form"
+            ref={drawerRef}
+            aria-labelledby={`waitlist-title-${activeProduct.id}`}
             aria-modal="true"
             role="dialog"
-            onKeyDown={(event) => {
-              if (event.key === "Escape") closeModal();
-            }}
+            onKeyDown={handleDrawerKeyDown}
           >
             <div className="drawer-head">
-              <h2>{product.status === "out-of-stock" ? "Join the launch list" : "Notify me"}</h2>
-              <button onClick={closeModal} aria-label="Close" disabled={status === "submitting"}>x</button>
+              <h2 id={`waitlist-title-${activeProduct.id}`}>Join the launch list</h2>
+              <button onClick={closeModal} aria-label="Close waitlist" disabled={status === "submitting"}>{"\u00d7"}</button>
             </div>
             <div className="drawer-items">
               <div className="empty">
-                <PackShot id={product.id} small />
+                <PackShot id={activeProduct.id} small />
                 <div className="empty-copy">
-                  <h3>{product.name}</h3>
-                  <p>{product.status === "out-of-stock" ? "We'll let you know when Khao Better is ready." : "This flavour is coming soon. We'll share updates closer to launch."}</p>
+                  <h3>{activeProduct.name}</h3>
+                  <p>{activeProduct.status === "out-of-stock" ? "We'll let you know when Khao Better is ready." : "This flavour is coming soon. We'll share updates closer to launch."}</p>
                 </div>
               </div>
               <form className={`notify-form${status === "success" ? " is-success" : ""}`} onSubmit={submit}>
@@ -141,15 +184,15 @@ export function WaitlistButton({ product, className, children }: { product: Prod
                   </div>
                 ) : (
                   <>
-                    <label htmlFor={`waitlist-name-${product.id}`}>Full name</label>
-                    <input id={`waitlist-name-${product.id}`} name="fullName" type="text" placeholder="Your name" autoComplete="name" maxLength={100} autoFocus required />
-                    <label htmlFor={`waitlist-email-${product.id}`}>Email address</label>
-                    <input id={`waitlist-email-${product.id}`} name="email" type="email" placeholder="you@email.com" autoComplete="email" maxLength={254} required />
-                    <label htmlFor={`waitlist-phone-${product.id}`}>Mobile number</label>
+                    <label htmlFor={`waitlist-name-${activeProduct.id}`}>Full name</label>
+                    <input id={`waitlist-name-${activeProduct.id}`} name="fullName" type="text" placeholder="Your name" autoComplete="name" maxLength={100} required />
+                    <label htmlFor={`waitlist-email-${activeProduct.id}`}>Email address</label>
+                    <input id={`waitlist-email-${activeProduct.id}`} name="email" type="email" placeholder="you@email.com" autoComplete="email" maxLength={254} required />
+                    <label htmlFor={`waitlist-phone-${activeProduct.id}`}>Mobile number</label>
                     <div className={`phone-field${phoneError ? " has-error" : ""}`}>
                       <span>+91</span>
                       <input
-                        id={`waitlist-phone-${product.id}`}
+                        id={`waitlist-phone-${activeProduct.id}`}
                         name="phone"
                         type="tel"
                         inputMode="numeric"
@@ -159,7 +202,7 @@ export function WaitlistButton({ product, className, children }: { product: Prod
                         maxLength={10}
                         pattern="[6-9][0-9]{9}"
                         aria-invalid={phoneError ? "true" : "false"}
-                        aria-describedby={phoneError ? `waitlist-phone-error-${product.id}` : undefined}
+                        aria-describedby={phoneError ? `waitlist-phone-error-${activeProduct.id}` : undefined}
                         onInput={(event) => {
                           event.currentTarget.value = event.currentTarget.value.replace(/\D/g, "").slice(0, 10);
                           event.currentTarget.setCustomValidity("");
@@ -172,15 +215,15 @@ export function WaitlistButton({ product, className, children }: { product: Prod
                         required
                       />
                     </div>
-                    {phoneError ? <p id={`waitlist-phone-error-${product.id}`} className="form-error" role="alert">{phoneError}</p> : null}
-                    <label htmlFor={`waitlist-city-${product.id}`}>City <span>(optional)</span></label>
-                    <input id={`waitlist-city-${product.id}`} name="city" type="text" placeholder="City" autoComplete="address-level2" maxLength={100} />
+                    {phoneError ? <p id={`waitlist-phone-error-${activeProduct.id}`} className="form-error" role="alert">{phoneError}</p> : null}
+                    <label htmlFor={`waitlist-city-${activeProduct.id}`}>City <span>(optional)</span></label>
+                    <input id={`waitlist-city-${activeProduct.id}`} name="city" type="text" placeholder="City" autoComplete="address-level2" maxLength={100} />
                     <div className="waitlist-honeypot" aria-hidden="true">
-                      <label htmlFor={`waitlist-website-${product.id}`}>Website</label>
-                      <input id={`waitlist-website-${product.id}`} name="website" type="text" tabIndex={-1} autoComplete="off" />
+                      <label htmlFor={`waitlist-website-${activeProduct.id}`}>Website</label>
+                      <input id={`waitlist-website-${activeProduct.id}`} name="website" type="text" tabIndex={-1} autoComplete="off" />
                     </div>
-                    <label className="consent-row" htmlFor={`waitlist-consent-${product.id}`}>
-                      <input id={`waitlist-consent-${product.id}`} name="consent" type="checkbox" required />
+                    <label className="consent-row" htmlFor={`waitlist-consent-${activeProduct.id}`}>
+                      <input id={`waitlist-consent-${activeProduct.id}`} name="consent" type="checkbox" required />
                       <span>I agree to receive Khao Better launch updates and have read the <Link href="/privacy-policy">Privacy Policy</Link>.</span>
                     </label>
                     {status === "error" ? <p className="form-error" role="alert">Something went wrong. Please try again.</p> : null}
@@ -192,7 +235,8 @@ export function WaitlistButton({ product, className, children }: { product: Prod
               </form>
             </div>
           </aside>
-        </>
+        </>,
+        document.body
       ) : null}
     </>
   );
