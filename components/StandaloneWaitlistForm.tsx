@@ -78,9 +78,10 @@ export function StandaloneWaitlistForm({ product }: { product: Product }) {
             {confettiPieces.map((piece) => <i key={piece} style={{ "--piece": piece } as React.CSSProperties} />)}
           </div>
           <div className="success-mark" aria-hidden="true"><span /></div>
-          <strong>YOU DID IT!</strong>
+          <strong>YOU'RE IN</strong>
           <h2 ref={successHeadingRef} tabIndex={-1}>You're on the Khao Better waitlist.</h2>
-          <p>We'll keep you posted about the launch.</p>
+          <p>We'll keep you posted when it's time to crunch.</p>
+          <Link className="primary full" href="/">Explore Khao Better</Link>
         </div>
       ) : (
         <>
@@ -134,8 +135,9 @@ export function StandaloneWaitlistForm({ product }: { product: Product }) {
 
           {status === "error" ? <p className="form-error" role="alert">Something went wrong. Please try again.</p> : null}
           <button className="primary full" type="submit" disabled={status === "submitting"}>
-            {status === "submitting" ? "Joining..." : "Join the launch list"}
+            {status === "submitting" ? "Joining..." : <>Join the launch list <span aria-hidden="true">→</span></>}
           </button>
+          <p className="waitlist-page-reassurance">No spam. Just launch updates, flavour news and Khao Better drops.</p>
         </>
       )}
     </form>
