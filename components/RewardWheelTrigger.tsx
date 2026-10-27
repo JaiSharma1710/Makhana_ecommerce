@@ -53,14 +53,22 @@ export function RewardWheelTrigger() {
     }
 
     let timer = window.setTimeout(() => openWheel("time"), 25_000);
+    let scrollFrame = 0;
     const checkScroll = () => {
       const pageHeight = document.documentElement.scrollHeight;
       const viewedDepth = pageHeight > 0 ? (window.scrollY + window.innerHeight) / pageHeight : 0;
       if (window.scrollY > 0 && viewedDepth >= 0.55) {
         window.clearTimeout(timer);
-        window.removeEventListener("scroll", checkScroll);
+        window.removeEventListener("scroll", scheduleScrollCheck);
         openWheel("scroll");
       }
+    };
+    const scheduleScrollCheck = () => {
+      if (scrollFrame) return;
+      scrollFrame = window.requestAnimationFrame(() => {
+        scrollFrame = 0;
+        checkScroll();
+      });
     };
     const handleModalChange = () => {
       if (!getActiveModal() && pendingTriggerRef.current) {
@@ -69,13 +77,14 @@ export function RewardWheelTrigger() {
       }
     };
 
-    window.addEventListener("scroll", checkScroll, { passive: true });
+    window.addEventListener("scroll", scheduleScrollCheck, { passive: true });
     document.addEventListener(modalChangeEvent, handleModalChange);
     checkScroll();
 
     return () => {
       window.clearTimeout(timer);
-      window.removeEventListener("scroll", checkScroll);
+      window.removeEventListener("scroll", scheduleScrollCheck);
+      if (scrollFrame) window.cancelAnimationFrame(scrollFrame);
       document.removeEventListener(modalChangeEvent, handleModalChange);
       if (openedRef.current) releaseModal("reward-wheel");
     };

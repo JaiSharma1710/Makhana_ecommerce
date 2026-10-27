@@ -38,9 +38,9 @@ export function ScrollRevealEffects({ rootSelector, readyClass = "is-reveal-read
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
         const item = entry.target as HTMLElement;
+        const configuredDelay = Number.parseFloat(window.getComputedStyle(item).getPropertyValue("--reveal-delay")) || 0;
         item.classList.add("is-visible");
         observer.unobserve(item);
-        const configuredDelay = Number.parseFloat(window.getComputedStyle(item).getPropertyValue("--reveal-delay")) || 0;
         const timer = window.setTimeout(() => {
           item.classList.add("is-reveal-complete");
           completionTimers.delete(timer);

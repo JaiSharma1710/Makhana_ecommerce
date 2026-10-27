@@ -40,7 +40,7 @@ type Phase = "enter" | "active" | "exit";
 
 export function HeroFlavourShowcase() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [phase, setPhase] = useState<Phase>("enter");
+  const [phase, setPhase] = useState<Phase>("active");
   const [reducedMotion, setReducedMotion] = useState(false);
   const [visibleLoaded, setVisibleLoaded] = useState(false);
   const [preloadNext, setPreloadNext] = useState(false);
@@ -114,7 +114,8 @@ export function HeroFlavourShowcase() {
             height={1254}
             preload={activeIndex === 0 && !hasRotated}
             fetchPriority={activeIndex === 0 && !hasRotated ? "high" : "auto"}
-            sizes="(max-width: 760px) 100vw, (max-width: 1180px) 52vw, 760px"
+            quality={70}
+            sizes="(max-width: 760px) calc(100vw - 34px), (max-width: 1180px) 52vw, 760px"
             onLoad={() => {
               setVisibleLoaded(true);
               if (activeIndex > 0) {
@@ -132,7 +133,8 @@ export function HeroFlavourShowcase() {
           aria-hidden="true"
           width={1254}
           height={1254}
-          sizes="(max-width: 760px) 100vw, (max-width: 1180px) 52vw, 760px"
+          quality={70}
+          sizes="(max-width: 760px) calc(100vw - 34px), (max-width: 1180px) 52vw, 760px"
           loading="eager"
           fetchPriority="low"
           onLoad={() => setNextReady(true)}
