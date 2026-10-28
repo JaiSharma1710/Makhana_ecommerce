@@ -38,6 +38,10 @@ const flavours = [
 
 type Phase = "enter" | "active" | "exit";
 
+const INITIAL_CLASSIC_HOLD_MS = 12_000;
+const ROTATION_HOLD_MS = 4_550;
+const NEXT_IMAGE_LEAD_MS = 1_800;
+
 export function HeroFlavourShowcase() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [phase, setPhase] = useState<Phase>("active");
@@ -63,21 +67,30 @@ export function HeroFlavourShowcase() {
   useEffect(() => {
     if (!visibleLoaded || reducedMotion) return;
 
-    const requestIdle = window.requestIdleCallback;
-    if (requestIdle) {
-      const idleId = requestIdle(() => setPreloadNext(true), { timeout: 1200 });
-      return () => window.cancelIdleCallback(idleId);
-    }
+    let idleId: number | undefined;
+    const firstCycle = activeIndex === 0 && !hasRotated;
+    const delay = firstCycle ? INITIAL_CLASSIC_HOLD_MS - NEXT_IMAGE_LEAD_MS : 900;
+    const timer = window.setTimeout(() => {
+      if (window.requestIdleCallback) {
+        idleId = window.requestIdleCallback(() => setPreloadNext(true), { timeout: 1200 });
+      } else {
+        setPreloadNext(true);
+      }
+    }, delay);
 
-    const timer = window.setTimeout(() => setPreloadNext(true), 900);
-    return () => window.clearTimeout(timer);
-  }, [activeIndex, reducedMotion, visibleLoaded]);
+    return () => {
+      window.clearTimeout(timer);
+      if (idleId !== undefined) window.cancelIdleCallback(idleId);
+    };
+  }, [activeIndex, hasRotated, reducedMotion, visibleLoaded]);
 
   useEffect(() => {
     if (!nextReady || reducedMotion) return;
 
     const elapsed = window.performance.now() - cycleStartedAt.current;
-    const exitDelay = Math.max(0, 4550 - elapsed);
+    const firstCycle = activeIndex === 0 && !hasRotated;
+    const holdDuration = firstCycle ? INITIAL_CLASSIC_HOLD_MS : ROTATION_HOLD_MS;
+    const exitDelay = Math.max(0, holdDuration - elapsed);
     const exitTimer = window.setTimeout(() => setPhase("exit"), exitDelay);
     const nextTimer = window.setTimeout(() => {
       setHasRotated(true);
@@ -92,7 +105,7 @@ export function HeroFlavourShowcase() {
       window.clearTimeout(exitTimer);
       window.clearTimeout(nextTimer);
     };
-  }, [nextReady, reducedMotion]);
+  }, [activeIndex, hasRotated, nextReady, reducedMotion]);
 
   useEffect(() => {
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");

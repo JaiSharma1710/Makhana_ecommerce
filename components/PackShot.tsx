@@ -23,7 +23,7 @@ export function PackShot({ id, small, className = "", sizes, priority = false }:
         width={dimensions.width}
         height={dimensions.height}
         priority={priority}
-        sizes={sizes ?? (small ? "118px" : "(max-width: 760px) 46vw, (max-width: 1180px) 30vw, 360px")}
+        sizes={sizes ?? (small ? "118px" : "(max-width: 760px) 118px, (max-width: 1180px) 140px, 160px")}
       />
     </div>
   );
