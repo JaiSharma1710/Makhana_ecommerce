@@ -53,6 +53,7 @@ export function HeroFlavourShowcase() {
   const cycleStartedAt = useRef(0);
   const active = flavours[activeIndex];
   const next = flavours[(activeIndex + 1) % flavours.length];
+  const isInitialClassic = activeIndex === 0 && !hasRotated;
 
   useEffect(() => {
     if (reducedMotion) {
@@ -118,15 +119,16 @@ export function HeroFlavourShowcase() {
 
   return (
     <div className="hero-visual" aria-label="Khao Better roasted makhana flavours">
-      <div className={`hero-flavour hero-flavour-${phase}`}>
+      <div className={`hero-flavour hero-flavour-${isInitialClassic ? "initial" : phase}`}>
         <div className="hero-flavour-lift">
           <Image
             src={active.src}
             alt={active.alt}
             width={1254}
             height={1254}
-            preload={activeIndex === 0 && !hasRotated}
-            fetchPriority={activeIndex === 0 && !hasRotated ? "high" : "auto"}
+            preload={isInitialClassic}
+            fetchPriority={isInitialClassic ? "high" : "auto"}
+            decoding={isInitialClassic ? "sync" : "async"}
             quality={70}
             sizes="(max-width: 760px) calc(100vw - 34px), (max-width: 1180px) 52vw, 760px"
             onLoad={() => {
