@@ -16,7 +16,10 @@ export const blogSlugs = [
   "how-to-keep-roasted-makhana-crispy",
   "best-study-snacks-long-study-sessions-india",
   "best-work-from-home-snacks-india",
-  "why-is-makhana-expensive-india"
+  "why-is-makhana-expensive-india",
+  "roasted-not-fried-makhana-oil",
+  "broken-makhana-packet-quality",
+  "plain-vs-flavoured-makhana"
 ] as const;
 
 export type BlogSlug = (typeof blogSlugs)[number];
@@ -130,6 +133,42 @@ export const blogPosts: readonly BlogPost[] = [
       "A detailed explanation of how aquatic cultivation, harvesting, popping, grading, demand and packaged-snack costs affect makhana prices.",
     readTime: "14 min read",
     primaryKeyword: "why is makhana expensive in india"
+  },
+  {
+    slug: "roasted-not-fried-makhana-oil",
+    category: "Comparisons",
+    title: "Does Roasted Makhana Contain Oil? Roasted vs Fried Explained",
+    h1: "Does \u201cRoasted, Not Fried\u201d Makhana Still Contain Oil?",
+    description:
+      "Does roasted makhana contain oil? Learn what “roasted, not fried” actually tells you, when oil may still be used, and what to check on the packet.",
+    excerpt:
+      "A label-first explanation of roasting, frying and why a roasted makhana product may still include oil in its finished recipe.",
+    readTime: "12 min read",
+    primaryKeyword: "does roasted makhana contain oil"
+  },
+  {
+    slug: "broken-makhana-packet-quality",
+    category: "Everyday Snacking",
+    title: "Broken Makhana in a Packet: Does It Mean Poor Quality?",
+    h1: "Broken Makhana in Your Packet: Does It Mean Poor Quality?",
+    description:
+      "Found broken makhana in a packet? Learn what breakage can mean, how it differs from stale or un-popped makhana, and what actually matters when judging quality.",
+    excerpt:
+      "A practical guide to broken makhana, commercial grading, handling damage and the signs that matter more than piece shape alone.",
+    readTime: "11 min read",
+    primaryKeyword: "broken makhana quality"
+  },
+  {
+    slug: "plain-vs-flavoured-makhana",
+    category: "Comparisons",
+    title: "Plain vs Flavoured Makhana: What Actually Changes?",
+    h1: "Plain vs Flavoured Makhana: What Actually Changes?",
+    description:
+      "Plain vs flavoured makhana: compare ingredients, calories, fat, sodium, sugar and serving sizes, and learn how to read packaged makhana labels fairly.",
+    excerpt:
+      "A finished-product comparison of plain and flavoured makhana, with the label checks that matter before choosing a pack.",
+    readTime: "12 min read",
+    primaryKeyword: "plain vs flavoured makhana"
   }
 ];
 
@@ -159,6 +198,12 @@ export function relatedBlogPosts(slug: BlogSlug, limit = 2) {
         ? ["how-to-keep-roasted-makhana-crispy", "makhana-nutrition-facts", "makhana-vs-popcorn-vs-chips"]
         : slug === "why-is-makhana-expensive-india"
           ? ["makhana-vs-lotus-seeds", "makhana-nutrition-facts", "makhana-vs-popcorn-vs-chips"]
+          : slug === "roasted-not-fried-makhana-oil"
+            ? ["plain-vs-flavoured-makhana", "makhana-nutrition-facts", "makhana-vs-popcorn-vs-chips"]
+            : slug === "broken-makhana-packet-quality"
+              ? ["how-to-keep-roasted-makhana-crispy", "why-is-makhana-expensive-india", "makhana-nutrition-facts"]
+              : slug === "plain-vs-flavoured-makhana"
+                ? ["roasted-not-fried-makhana-oil", "makhana-nutrition-facts", "makhana-vs-popcorn-vs-chips"]
           : [];
   return blogPosts
     .filter((post) => post.slug !== slug)

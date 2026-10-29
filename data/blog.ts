@@ -251,6 +251,7 @@ export const blogArticles: BlogArticle[] = [
           "Flavoured makhana can have different nutrition from Classic Roasted. More oil, richer seasonings or sweet coatings can change calories, fat, sugar and sodium.",
           "Khao Better's other flavours are coming soon, so this page does not invent nutrition facts for Peri Peri, Pudina Punch, Achari Chatpata, Tangy Tomato or Cheese & Herb.",
           "Flavoured makhana products can vary because seasonings, oil and serving sizes differ. See the planned Khao Better makhana flavours.",
+          "For a label-first comparison of those possible recipe changes, read plain vs flavoured makhana.",
           "That distinction matters for searchers comparing fox nuts nutrition across flavours. A plain or classic flavour is often the easiest place to start, but flavoured makhana should still be judged by its own finished label."
         ]
       },
@@ -550,6 +551,7 @@ export const blogArticles: BlogArticle[] = [
           "Losing crunch and becoming spoiled are not the same thing.",
           "Makhana that has simply absorbed some moisture may become softer without necessarily being unsafe.",
           "But do not try to rescue food that shows clear signs of spoilage.",
+          "Texture and shape are separate checks: broken makhana in a packet can still be crisp, while a whole piece can become soft after moisture exposure.",
           "Discard it if you notice things such as:"
         ],
         list: [
@@ -1653,6 +1655,438 @@ export const blogArticles: BlogArticle[] = [
       ["Is loose makhana cheaper than packaged makhana?", "It often can be, especially in bulk, but price depends on grade, size, quality and source. Packaged products can include additional roasting, seasoning, packaging and distribution costs."],
       ["Will makhana prices come down in future?", "That cannot be predicted reliably. Production and mechanisation are expanding, which may improve supply, but domestic and export demand are also growing."],
       ["Where is most makhana produced in India?", "Bihar is India's leading makhana-producing state, with production concentrated particularly in North Bihar."]
+    ]
+  },
+  {
+    ...blogPostIndex["roasted-not-fried-makhana-oil"],
+    intro: [
+      "The short answer is yes: a product described as roasted makhana can still contain oil. Roasted tells you about a heating method. It does not, by itself, promise that the complete finished recipe is oil-free.",
+      "Some makhana is dry-roasted. Some is roasted and then seasoned with a small amount of edible oil so flavour can coat the pieces. Some recipes use ghee or butter. The only reliable way to answer for the packet in your hand is to read its ingredient list and nutrition declaration.",
+      "That distinction matters because shoppers often read \u201croasted, not fried\u201d as if it were the same claim as \u201cno oil.\u201d The two phrases answer different questions. This guide separates the process from the finished product without treating either roasting or frying as a complete nutrition verdict."
+    ],
+    sections: [
+      {
+        heading: "Does roasted makhana always contain oil?",
+        body: [
+          "Yes. Roasted makhana may be made without added oil, or it may include oil as part of roasting, seasoning or flavour adhesion. A roasted product is not automatically oil-free, fat-free or lower in calories than every fried alternative.",
+          "If oil matters to your choice, check the ingredient list for words such as edible vegetable oil, sunflower oil, rice bran oil, palm oil, ghee or butter. Then check the nutrition panel, especially total fat, saturated fat and the stated serving size. Do not infer an exact oil quantity from total fat alone because the finished food can contain fat from more than one ingredient.",
+          "Do not infer Khao Better Classic's exact oil content or preparation method from its fat grams alone. This article only uses the verified label values supplied for the product."
+        ],
+        callout: "\u201cRoasted\u201d describes preparation. \u201cOil-free\u201d describes the recipe. One phrase does not automatically prove the other."
+      },
+      {
+        heading: "Where does roasting happen in makhana processing?",
+        body: [
+          "Makhana reaches the familiar white popped form through a processing chain that already includes heating. The Indian Council of Agricultural Research describes traditional makhana processing as repeated roasting and popping: seeds are heated, tempered, heated again and popped by impact. APEDA's market report similarly describes drying, size grading, pre-heating, tempering, final roasting and popping.",
+          "Those official descriptions are about turning the hard seed into popped makhana. A snack manufacturer can then roast or heat the popped pieces again to develop crispness and apply a finished seasoning. The word roasted on a retail pack therefore sits within a broader process, and it does not tell you every ingredient used after popping.",
+          "ICAR-CIPHET also documents a primary roasting machine that heats raw makhana seeds in batches. Its existence reinforces the basic point: roasting is a defined heat-processing operation. Whether the final snack contains oil is a separate recipe decision that the finished label should disclose."
+        ]
+      },
+      {
+        heading: "What does “roasted, not fried” actually mean?",
+        body: [
+          "It generally describes the cooking technique, not a guarantee about the complete nutrition profile. A roasted snack may still use oil for seasoning or texture while remaining distinct from a snack cooked by frying.",
+          "Treat the phrase as one useful preparation claim. Then read the ingredients, serving size, fat, sodium and sugar declarations instead of asking the front of the pack to answer every nutrition question."
+        ]
+      },
+      {
+        heading: "Roasted vs fried makhana: what is the practical difference?",
+        body: [
+          "Frying generally cooks food through contact with hot fat or oil. Roasting applies dry heat or heated equipment, although a roasted recipe may still use some oil. That is why \u201cnot fried\u201d can be accurate while oil still appears in the ingredient list.",
+          "The distinction is useful, but it should not become a shortcut for judging the whole snack. Oil type and quantity, seasoning, serving size, sodium, sugar and the rest of the ingredient list still affect the finished product. Two roasted makhana packets can have different nutrition panels, just as two fried snacks can have different recipes.",
+          "A careful comparison keeps the claims narrow. A brand can truthfully say that its makhana is roasted rather than fried while also listing the oil used in seasoning. The contradiction appears only when shoppers assume that all oil use is the same as frying."
+        ],
+        table: [
+          ["Label phrase", "What it can tell you", "What it does not prove"],
+          ["Roasted", "A roasting or dry-heat process is used", "That no oil appears in the recipe"],
+          ["Not fried", "The product is not prepared by frying", "That total fat is zero"],
+          ["Oil-free", "No oil is intended as an ingredient, subject to the exact claim", "That the product has zero fat from every source"],
+          ["Fat-free", "A regulated nutrient claim that should meet applicable criteria", "That the product is unprocessed or automatically better for everyone"]
+        ]
+      },
+      {
+        heading: "Why might a roasted makhana recipe use oil?",
+        body: [
+          "A small amount of oil can help dry seasonings spread and remain on an airy, irregular surface. It can also influence mouthfeel and the way heat moves around the pieces during a finishing roast. These are recipe functions; they do not turn the product into a deep-fried snack by definition.",
+          "Plain or lightly salted products may use no added oil, while other products use oil to carry salt, spices or flavour powders. Richer variants may use more ingredients. Without the actual recipe or label, it is not responsible to guess how much oil a particular brand uses.",
+          "These are possible formulation choices, not a claim about every roasted or flavoured packet."
+        ]
+      },
+      {
+        heading: "Can makhana be flavoured without oil?",
+        body: [
+          "Yes. ICAR-CIPHET's press note on fat-free flavoured makhana describes a licensed process made without fat, oil or fat-containing materials. That official example shows that oil-free flavouring is technically possible.",
+          "The existence of that process does not prove that every flavoured or roasted packet uses it. The actual ingredient list and manufacturer information remain the evidence for a specific product."
+        ]
+      },
+      {
+        heading: "How to tell whether your roasted makhana contains oil",
+        body: [
+          "Use the packet, not the front-of-pack impression. FSSAI's labelling framework requires packaged foods to carry declarations that help consumers identify the finished product and its ingredients. Exact requirements depend on the product and claim, but the practical reading order is simple."
+        ],
+        orderedList: [
+          "Read the ingredient list from beginning to end. Look for edible oils, ghee, butter and fat-containing seasoning components.",
+          "Check the nutrition panel for total fat and saturated fat, but do not convert those numbers into an assumed oil quantity.",
+          "Confirm whether values are shown per 100 g, per serving or both. Compare products on the same basis.",
+          "Notice the serving size. A low number can look very different when one pack contains more than one serving.",
+          "Treat front-of-pack phrases as specific claims, not as a summary of everything in the packet."
+        ],
+        afterList: [
+          "If the ingredient list names an oil, the product contains that oil even if the front says roasted or not fried. If no oil is listed, avoid making broader assumptions about manufacturing beyond what the label supports.",
+          "For a wider product comparison, the plain vs flavoured makhana guide explains how seasoning, sodium, sugar and serving size can change alongside oil. The makhana nutrition facts guide explains how to compare the declared numbers."
+        ]
+      },
+      {
+        heading: "Can you calculate added oil from total fat?",
+        body: [
+          "Not reliably. Total fat is a measurement for the complete food, not a direct statement of how many grams of oil were poured into the recipe. The base ingredients and seasoning components may contribute some fat, and processing can change the finished weight used for the nutrition calculation.",
+          "Even if you compare a plain product with a flavoured one, the difference in total fat does not automatically equal added oil. The products may use different makhana lots, serving sizes, seasonings or analytical methods. A recipe specification from the manufacturer would be needed for an exact added-oil quantity.",
+          "For Khao Better Classic, the verified panel lists 21.8 g total fat per 100 g and approximately 5.5 g per 25 g pack. Those facts can be stated, but the fat number alone should not be reverse-engineered into an unverified grams-of-oil claim."
+        ]
+      },
+      {
+        heading: "Does “roasted” automatically mean healthier?",
+        body: [
+          "No. Dry-roasted makhana can suit someone who wants a simpler ingredient list or wants to avoid added oil, but the final decision still depends on taste, portion, sodium, allergies, dietary needs and the rest of the day.",
+          "A product with a small amount of oil is not automatically a poor choice, and an oil-free product is not automatically suitable for everyone. An oil-free sweet coating may still contain added sugar; an oil-free salty seasoning may still be high in sodium. Labels work best when read as a whole.",
+          "The useful question is not \u201cWhich marketing phrase wins?\u201d It is \u201cWhat is in this finished packet, how much am I eating, and does that fit what I want from this snack?\u201d"
+        ]
+      },
+      {
+        heading: "Khao Better Classic Roasted: verified facts",
+        body: [
+          "Khao Better Classic Roasted is a 25 g pre-launch product listed at ₹59 and not currently available for checkout. Its verified nutrition declaration lists 450 kcal, 6.1 g protein, 52.1 g carbohydrates, 10.3 g dietary fibre, 21.8 g total fat, 5 g saturated fat, 0 g trans fat, 0 mg cholesterol, 6.2 g total sugar, 0 g added sugar and 469 mg sodium per 100 g.",
+          "At the stated 25 g pack size, proportional values are approximately 113 kcal, 1.5 g protein, 13 g carbohydrates, 2.6 g dietary fibre, 5.5 g total fat, 1.25 g saturated fat, 0 g trans fat, 0 mg cholesterol, 1.6 g total sugar, 0 g added sugar and 117 mg sodium. These values describe Classic Roasted only.",
+          "Khao Better's other planned flavours do not yet have verified final recipes, ingredient lists or nutrition declarations in this project. Nothing about their oil, calories, sodium or sugar should be inferred from Classic Roasted or from their flavour names."
+        ]
+      },
+      {
+        heading: "What should you compare on two makhana packets?",
+        body: ["Match the quantity first, then compare the complete labels rather than one front-of-pack phrase."],
+        table: [
+          ["Check", "Why it matters"],
+          ["Serving size", "Makes nutrition comparisons fairer"],
+          ["Ingredients", "Shows oils, seasonings and other additions"],
+          ["Total fat", "Helps compare formulations"],
+          ["Saturated fat", "Another label value worth checking"],
+          ["Sodium", "Can vary with seasoning"],
+          ["Total sugar", "Is not the same as added sugar"],
+          ["Added sugar", "Shows whether sugars were added"],
+          ["Preparation claims", "Are useful, but should not replace label reading"]
+        ],
+        afterTable: [
+          "For the wider range, explore the planned Khao Better makhana flavours while remembering that only Classic currently has verified final nutrition details.",
+          "This method is less dramatic than declaring every roasted snack healthy and every fried snack unhealthy. It is also more accurate."
+        ]
+      },
+      {
+        heading: "Sources",
+        body: [
+          "The Indian Council of Agricultural Research overview of mechanized makhana popping describes traditional roasting, tempering and popping and the mechanized processing chain.",
+          "The APEDA Market Intelligence Report on Makhana describes drying, size grading, pre-heating, tempering, roasting, popping and packing in the traditional value chain.",
+          "ICAR-CIPHET's Makhana Primary Roasting Machine page documents roasting as a distinct processing operation, while its press note on fat-free flavoured makhana documents a separate flavouring process made without oil or fat-containing materials.",
+          "FSSAI's Labelling and Display Regulations page is the official starting point for current packaged-food labelling requirements in India."
+        ]
+      }
+    ],
+    faqs: [
+      ["Does roasted makhana contain oil?", "It can. Some roasted makhana is dry-roasted, while other recipes use oil during roasting or seasoning. Read the ingredient list for the exact packet."],
+      ["Is roasted makhana oil-free?", "Not automatically. Not fried describes the cooking method. A roasted product may still contain oil as a recipe or seasoning ingredient."],
+      ["Does flavoured makhana contain oil?", "Some formulations use oil and some may not. ICAR-CIPHET has documented an oil-free flavouring process, but each packet's ingredient list is what matters."],
+      ["Is roasted makhana the same as fried makhana?", "No. Roasting and frying are different preparation methods, although a roasted recipe can still use some oil."],
+      ["How can I tell whether makhana contains oil?", "Check the ingredient list for edible oils, ghee or butter, then read the full nutrition panel and serving size."],
+      ["Does “roasted, not fried” mean low fat?", "No. That phrase describes preparation, not a guaranteed fat level. Check total fat, saturated fat, serving size and the complete ingredient list."]
+    ]
+  },
+  {
+    ...blogPostIndex["broken-makhana-packet-quality"],
+    intro: [
+      "Finding a few broken makhana pieces in a packet does not automatically mean the product is poor quality. Makhana is light, crisp and naturally irregular, so pieces can break during grading, packing, transport or normal handling.",
+      "Breakage can affect appearance and sometimes value perception, especially when a pack promises a premium large grade. But shape alone cannot tell you whether the snack is fresh, crisp, properly sealed or safe to eat.",
+      "A better quality check separates three ideas: commercial grade, physical breakage and eating quality. They can overlap, but they are not the same thing."
+    ],
+    sections: [
+      {
+        heading: "Quick answer: is broken makhana poor quality?",
+        body: [
+          "Not necessarily. One or several broken pieces can be normal handling damage in a brittle popped snack. A packet can contain some fragments and still be crisp, fresh-smelling and properly sealed.",
+          "Breakage matters more when it is excessive, when the pack was advertised as a uniform premium whole-piece grade, or when it appears alongside other problems such as a damaged seal, moisture, a stale texture, unusual odour, visible mould or infestation.",
+          "Judge the complete packet. Piece size and shape tell you about appearance and grading; aroma, texture, seal integrity and label information tell you more about actual eating quality and storage condition."
+        ],
+        callout: "Broken is a shape observation. Stale is a texture or flavour observation. Unsafe requires evidence such as spoilage, contamination or a compromised pack."
+      },
+      {
+        heading: "Why does makhana break?",
+        body: [
+          "Popped makhana has an expanded, porous structure. That gives it a light bite, but it also makes the finished piece easier to chip or crack than a dense nut or seed. Irregular shapes can press against one another inside a flexible packet.",
+          "That susceptibility after popping is a practical inference from the lightweight expanded structure and the heat-and-impact process ICAR describes; it is not a transport-breakage statistic.",
+          "Normal movement continues after packing. Cartons are stacked, transported and unloaded; retail packs are handled; and a packet may be squeezed in a shopping bag or cupboard. Even when the product started with mostly whole pieces, some breakage can occur before it reaches your bowl.",
+          "Seasoning and roast level may also influence how brittle a piece feels, but the exact cause cannot be diagnosed from a photograph alone. A few crumbs at the bottom are not proof of bad manufacturing."
+        ]
+      },
+      {
+        heading: "Broken vs flattened vs un-popped makhana",
+        body: [
+          "These terms describe different observations. ICAR-CIPHET specifically documents separating flattened and un-popped material during grading; it does not define every broken-piece situation a consumer may see.",
+          "A broken piece is a physically fragmented pop. Flattened makhana describes shape. Un-popped material refers to seed or kernel material that did not fully pop. None of those labels should be guessed from a distant photograph when the condition is unclear."
+        ],
+        table: [
+          ["What you see", "What it describes"],
+          ["Broken piece", "A pop that is physically fragmented"],
+          ["Flattened makhana", "A shape characteristic identified during grading"],
+          ["Un-popped material", "Seed or kernel material that did not fully pop"]
+        ]
+      },
+      {
+        heading: "Does broken makhana mean it is stale?",
+        body: [
+          "A clean snap creates fragments, so a very crisp piece can break more readily under pressure. Staleness is different: roasted makhana often feels soft or chewy after absorbing moisture. The two conditions can appear together, but neither automatically causes the other.",
+          "Test texture only if the pack is intact, within its declared date and free from spoilage signs. A broken piece that tastes crisp and normal may simply be a broken piece. A whole piece that feels soft may have lost crunch despite looking perfect.",
+          "If an opened pack has softened, the guide on how to keep roasted makhana crispy after opening explains airtight storage and gentle re-roasting. That advice is for texture loss in food that otherwise appears normal; it is not a method for rescuing spoiled food."
+        ]
+      },
+      {
+        heading: "What actually matters more than one broken piece?",
+        body: [
+          "Use a short sequence rather than judging only the most visible fragment. This is especially important for online orders, where the outer carton and flexible pouch can experience several handling stages."
+        ],
+        orderedList: [
+          "Check that the outer pack and seal are intact, with no open seam, puncture or unexplained moisture.",
+          "Read the product name, ingredient list, nutrition declaration, date marking and storage instructions.",
+          "Open the pack and notice whether the aroma is normal for the product.",
+          "Look for visible mould, insects, webbing, unexpected discoloration or foreign material.",
+          "Taste only when the pack passes those checks. Assess crunch, seasoning and any unusual rancid or stale flavour.",
+          "Compare the amount of breakage with the pack's grade or visual promise rather than assuming every fragment is a safety defect."
+        ],
+        afterList: [
+          "If the seal is compromised, the pack smells unusual or you see contamination, do not rely on re-roasting. Keep the packaging and contact the seller or manufacturer with the batch details.",
+          "When the issue is mainly cosmetic, a clear photo of the unopened pack and the contents can still help customer support assess whether transport damage or excessive breakage occurred."
+        ]
+      },
+      {
+        heading: "Should brands try to minimise breakage?",
+        body: [
+          "Yes. Product presentation and careful packaging matter, and a complaint can be reasonable when fragments are far beyond what the product presentation led you to expect. It can also be reasonable when the pack arrived crushed, unsealed or leaking.",
+          "Document the condition before discarding anything. Photograph the shipping carton, the sealed packet, the batch and date information, and the contents after opening. Describe the issue precisely: \u201cexcessive fragments\u201d is more useful than calling the product stale if the actual concern is breakage.",
+          "Do not taste a product when there are signs of contamination or a compromised seal. Quality support can address visual or transport damage, but food-safety concerns should be treated cautiously."
+        ]
+      },
+      {
+        heading: "Does makhana size determine quality?",
+        body: [
+          "Size is one grading dimension, not a universal score for every aspect of quality. ICAR-CIPHET describes size grading while separately identifying flattened and un-popped material.",
+          "Larger, more uniform pieces may have a different commercial value, but a bigger piece can still be soft or stale and a smaller piece can still be crisp. The article on why makhana is expensive in India explains how grading can affect price without turning size into the only quality test.",
+          "The Why Makhana guide covers the snack itself if you want the broader background without turning this packet-condition question into a grading article."
+        ]
+      },
+      {
+        heading: "Why are makhana packets not visually identical?",
+        body: [
+          "Makhana is an agricultural product that passes through drying, size sorting, roasting, tempering and popping. APEDA describes the traditional process as labour-intensive, while ICAR notes that timing during popping can affect the result.",
+          "Natural raw-material differences and processing can therefore leave some variation in size, expansion and shape. That explanation does not excuse a compromised seal, contamination or a packet that materially fails the grade it promised.",
+          "After opening, handling can create more crumbs. A rigid, dry airtight container can protect shape and crunch better than a pouch that is repeatedly squeezed."
+        ]
+      },
+      {
+        heading: "When should you avoid eating makhana from a pack?",
+        body: [
+          "Avoid eating from a pack with visible mould, an unusual smell, obvious moisture damage, insects or foreign material, or a seal that is open or unexpectedly compromised. Follow the best-before and storage instructions on the actual product.",
+          "Do not try to re-roast food with spoilage or contamination signs. The storage guide explains how to keep roasted makhana crispy and how to treat ordinary texture loss in food that otherwise appears normal.",
+          "If you are uncertain about a specific packet, keep its batch details and contact the manufacturer or seller. A remote article cannot certify that an individual pack is safe."
+        ]
+      },
+      {
+        heading: "Khao Better product context",
+        body: [
+          "Khao Better Classic Roasted is a 25 g pre-launch product listed at ₹59 and not currently available for checkout. Its published nutrition facts belong to Classic Roasted only.",
+          "The five other named Khao Better flavours are planned and coming soon. Their final ingredients, nutrition, piece grade and product declarations have not been verified here, so this article does not make quality promises for unreleased packs.",
+          "If a future Khao Better packet arrives with a genuine condition problem, the correct assessment will still rely on the actual product declaration, pack seal, batch information and what the customer received."
+        ]
+      },
+      {
+        heading: "Sources",
+        body: [
+          "ICAR-CIPHET's Popped Makhana Grading Machine page explains size grading and separation of flattened and unpopped material.",
+          "The APEDA Market Intelligence Report on Makhana describes size categorisation, heating, tempering, popping and packing in the makhana processing chain.",
+          "The Indian Council of Agricultural Research overview of mechanized makhana popping explains how timing during traditional popping can affect the resulting quality and describes the mechanized processing system.",
+          "FSSAI's Labelling and Display Regulations page provides the official framework for packaged-food declarations in India."
+        ]
+      }
+    ],
+    faqs: [
+      ["Does broken makhana mean poor quality?", "Not automatically. Some breakage can happen because popped makhana is brittle and moves during packing and transport. Assess the seal, aroma, texture and declared grade too."],
+      ["Is broken makhana stale?", "No. Broken describes shape, while stale usually describes lost freshness or texture. A broken piece can still be crisp, and a whole piece can be soft."],
+      ["Can I eat broken makhana?", "If the pack is intact and the food has no spoilage or contamination signs, broken pieces can be eaten or used in recipes. Follow the pack's date and storage instructions."],
+      ["Why is there powder at the bottom of the packet?", "Small crumbs can form when brittle pieces rub or break during handling. Excessive powder may justify contacting the seller, especially if the pack was sold as a premium whole grade."],
+      ["Should I re-roast broken makhana?", "Breakage alone does not require re-roasting. Gentle dry roasting is only a texture step for softened makhana that otherwise looks and smells normal; it cannot make spoiled food safe."],
+      ["Does piece size change makhana nutrition?", "Not when the pieces come from the same recipe. Nutrition is assessed by the weight eaten and the product label, not by whether each piece is whole."]
+    ]
+  },
+  {
+    ...blogPostIndex["plain-vs-flavoured-makhana"],
+    intro: [
+      "Plain and flavoured makhana start from the same broad snack base, but the finished packets can be very different. Seasoning may change the ingredient list, oil, sodium, sugar, allergens, calories and even the serving size used on the nutrition panel.",
+      "That does not make plain makhana automatically good or flavoured makhana automatically bad. It means the comparison belongs on the actual labels, not in the flavour names.",
+      "This guide shows what commonly changes, what may stay similar and how to compare two real packets without inventing nutrition facts for products that have not been finalised."
+    ],
+    sections: [
+      {
+        heading: "Quick answer: what changes between plain and flavoured makhana?",
+        body: [
+          "The base makhana may be similar, but flavouring can add oil, salt, sugar, dairy ingredients, spice blends, acidity regulators or other components. Those additions can change calories, total fat, saturated fat, sodium, sugars and allergen information.",
+          "The amount of change depends on the recipe. A lightly salted seasoning and a rich cheese-style coating are not equivalent. A sweet coating and a chilli blend solve different taste goals and can create very different panels.",
+          "Serving sizes can also differ between brands or variants. Compare on the same gram basis and read both ingredient lists before deciding."
+        ],
+        callout: "Flavour name is not a nutrition category. The finished ingredient list, nutrition panel and serving size are the evidence."
+      },
+      {
+        heading: "What stays the same?",
+        body: [
+          "The common base ingredient may still be popped makhana. Beyond that starting point, a product called plain or classic may contain only makhana, or it may also include oil and salt. The product name alone does not disclose the full recipe.",
+          "A product called plain or classic can still use more than one ingredient. The actual ingredient list, rather than the flavour name, establishes the recipe.",
+          "When comparing a plain pack with a flavoured pack, first define the actual baseline. If the plain product already includes oil and salt, the nutritional difference created by flavouring may be smaller or larger than the front labels suggest."
+        ]
+      },
+      {
+        heading: "Can flavoured makhana be fat-free?",
+        body: [
+          "A savoury flavour might combine salt, spices, herbs, vegetable powders, dairy ingredients or flavouring substances. A sweet version might use sugar, jaggery or another coating. Oil can help seasoning adhere, but not every flavouring process requires it.",
+          "ICAR-CIPHET documents a specific technology for fat-free flavoured makhana made without fat, oil or fat-containing materials. That proves an oil-free process is possible. It does not establish the recipe used by any unrelated retail product.",
+          "Yes, a specific process can produce it. The fair conclusion remains product-specific: flavoured makhana may contain more ingredients than a plain version, but its exact oil, sugar, sodium and calorie profile must come from its own finished label."
+        ]
+      },
+      {
+        heading: "What can change when makhana is flavoured?",
+        body: [
+          "The table describes what to inspect, not a universal winner. Any row can vary by brand and recipe."
+        ],
+        table: [
+          ["Factor", "Why it may change"],
+          ["Ingredients", "Seasonings and additions differ"],
+          ["Total fat", "A formulation may use oil or fat"],
+          ["Sodium", "Salt and seasoning can affect it"],
+          ["Sugar", "Some formulations may include sugars"],
+          ["Calories", "Added ingredients can alter energy"],
+          ["Serving size", "Brands may define different portions"],
+          ["Allergens", "Flavour formulations may introduce additional ingredients"]
+        ],
+        afterTable: [
+          "A front-of-pack word such as classic, peri peri, pudina or cheese does not replace the declarations on the back. Compare the exact packets you are deciding between."
+        ]
+      },
+      {
+        heading: "How oil can change the comparison",
+        body: [
+          "Roasted makhana can contain oil whether it is plain or flavoured. Oil may be used during a finishing roast or to help powdered seasoning coat the surface. The phrase roasted, not fried does not mean oil-free.",
+          "Look for the named oil in the ingredient list, then check total fat and saturated fat. Do not infer the exact grams of added oil from total fat, because that number belongs to the whole finished food.",
+          "For a detailed explanation of the preparation claim, read does roasted makhana contain oil. It separates roasting from frying and shows why the label remains the deciding source."
+        ]
+      },
+      {
+        heading: "Does flavoured makhana always contain more sodium?",
+        body: [
+          "No universal rule applies. Salt is often part of both plain and flavoured savoury makhana, but flavour blends can change the quantity. Ingredients such as cheese powders, spice mixes and prepared seasonings may contribute sodium in addition to separately added salt.",
+          "Compare sodium per 100 g or per the same gram portion. If one label uses a 20 g serving and another uses 30 g, the per-serving numbers are not directly comparable until you normalise them.",
+          "Taste intensity does not provide an exact sodium reading. A spicy or sour product may taste powerful for reasons other than salt, while a mild-tasting product can still have meaningful sodium. Use the panel."
+        ]
+      },
+      {
+        heading: "How sugar and coatings may change",
+        body: [
+          "Sweet flavoured makhana can add sugar, jaggery, caramel-style ingredients or other sweet coatings. Some savoury seasoning systems may also contain sugar even when the snack does not taste like dessert.",
+          "Read total sugar and added sugar separately where declared. Total sugar can include sugars contributed by ingredients, while added sugar addresses sugar added during formulation. Do not assume all flavoured makhana contains added sugar, and do not assume a savoury name guarantees zero.",
+          "Khao Better Classic's verified panel lists 6.2 g total sugar and 0 g added sugar per 100 g. That statement applies only to Classic Roasted and cannot be extended to Khao Better flavours that are still coming soon."
+        ]
+      },
+      {
+        heading: "Does flavoured makhana always contain more calories?",
+        body: [
+          "No. A richer coating can increase calories, but it is not accurate to publish one universal calorie difference between plain and flavoured makhana. Recipes and serving sizes vary too much.",
+          "Compare per 100 g for a standard basis, then convert the result to the portion you are likely to eat. A small single-serve pack and a large resealable pouch create different real-world eating situations even when their per-100 g values are similar.",
+          "Khao Better Classic provides a verified reference of 450 kcal per 100 g, which is approximately 113 kcal per 25 g pack. It is a product-specific number, not a generic calorie value for plain makhana."
+        ]
+      },
+      {
+        heading: "Allergens and ingredient complexity",
+        body: [
+          "Plain products may have shorter ingredient lists, while flavoured variants can introduce dairy, nuts, gluten-containing components or other allergens through seasoning blends. The presence and declaration depend on the exact formulation and manufacturing context.",
+          "Anyone managing an allergy should read the ingredient and allergen statements on every variant, even within the same brand. Do not assume a flavour shares the status of the classic product.",
+          "Recipes can also change, so the current pack is more authoritative than memory or an older online image. If a declaration is unclear for a serious allergy, contact the manufacturer rather than guessing."
+        ]
+      },
+      {
+        heading: "How to compare two makhana packets fairly",
+        body: [
+          "A consistent method prevents health halos and flavour prejudice from deciding for you. FSSAI's Labelling and Display Regulations page is the official context for the declarations on packaged foods."
+        ],
+        orderedList: [
+          "Compare the same quantity where possible, using per 100 g or the same gram portion.",
+          "Check the declared serving size and how many servings the packet contains.",
+          "Compare calories on that matched basis.",
+          "Check total fat and saturated fat.",
+          "Compare sodium rather than judging salt by taste alone.",
+          "Distinguish total sugar from added sugar.",
+          "Read the complete ingredient lists.",
+          "Check allergen declarations when relevant to you."
+        ],
+        afterList: [
+          "This method does not require declaring one category universally healthier. It gives you a defensible comparison between the two products actually available to you.",
+          "If one product lacks a readable label, that is a reason to pause rather than fill the gap with assumptions."
+        ]
+      },
+      {
+        heading: "Khao Better Classic Roasted as a real label example",
+        body: [
+          "Classic Roasted is Khao Better's first planned flavour. The verified product is a 25 g pack listed at ₹59 and is not currently available for checkout.",
+          "The verified per-100 g nutrition declaration is 450 kcal, 6.1 g protein, 52.1 g carbohydrates, 10.3 g dietary fibre, 21.8 g total fat, 5 g saturated fat, 0 g trans fat, 0 mg cholesterol, 6.2 g total sugar, 0 g added sugar and 469 mg sodium. The proportional 25 g values are approximately 113 kcal, 1.5 g protein, 13 g carbohydrates, 2.6 g fibre, 5.5 g total fat, 1.25 g saturated fat, 0 g trans fat, 0 mg cholesterol, 1.6 g total sugar, 0 g added sugar and 117 mg sodium.",
+          "These numbers apply to Khao Better Classic Roasted based on its current verified label. They must not be assumed for Peri Peri, Pudina Punch, Achari Chatpata, Tangy Tomato or Cheese & Herb until those products' final nutrition information is verified.",
+          "Peri Peri, Pudina Punch, Achari Chatpata, Tangy Tomato and Cheese & Herb are planned names and coming soon. Their final recipes, ingredient lists, allergens, nutrition, pack sizes and prices have not been verified in this project. This article does not claim that any one of them contains or avoids oil, dairy, gluten, sugar or a particular sodium level."
+        ],
+        table: [
+          ["Khao Better Classic Roasted", "Per 25 g pack"],
+          ["Energy", "~113 kcal"],
+          ["Protein", "~1.5 g"],
+          ["Carbohydrates", "~13 g"],
+          ["Dietary fibre", "~2.6 g"],
+          ["Total sugar", "~1.6 g"],
+          ["Added sugar", "0 g"],
+          ["Total fat", "~5.5 g"],
+          ["Saturated fat", "~1.25 g"],
+          ["Sodium", "~117 mg"]
+        ]
+      },
+      {
+        heading: "Plain vs flavoured: which is healthier?",
+        body: [
+          "Choose plain or classic when you prefer a simpler flavour direction or when its actual label better fits your needs. Choose flavoured makhana when you want the seasoning and its declared ingredients and nutrition work for you.",
+          "Enjoyment matters because a snack you dislike is not useful simply because its ingredient list is shorter. At the same time, flavour excitement should not make the serving size or allergen statement disappear from view.",
+          "There is no need for a moral ranking. Plain and flavoured makhana are finished products with different recipes. Read, compare and choose the packet that makes sense for your taste and context."
+        ]
+      },
+      {
+        heading: "Want to compare Khao Better flavours?",
+        body: [
+          "Explore the planned Khao Better makhana flavours for the six-flavour lineup. Only Khao Better Classic Roasted currently has verified product and nutrition details, so the future flavour names are not nutrition promises.",
+          "The makhana nutrition facts guide provides the full Classic reference, and the Khao Better Classic Roasted product details show the current pre-launch product page."
+        ]
+      },
+      {
+        heading: "Sources",
+        body: [
+          "FSSAI's Labelling and Display Regulations page is the official reference point for packaged-food labelling requirements and amendments in India.",
+          "ICAR-CIPHET's press note on fat-free flavoured makhana documents a specific flavouring technology made without oil, fat or fat-containing materials.",
+          "The Indian Council of Agricultural Research overview of mechanized makhana popping and the APEDA Market Intelligence Report on Makhana describe roasting and popping in the broader makhana processing chain.",
+          "Khao Better Classic figures in this article come from the verified product data already maintained in this project, not from competitor estimates."
+        ]
+      }
+    ],
+    faqs: [
+      ["Is flavoured makhana healthier than plain makhana?", "There is no universal winner. Compare the specific ingredients, nutrition, serving size and allergens, then choose for your dietary context and preference."],
+      ["Does flavoured makhana have more calories?", "Not always. Calories depend on the complete recipe and serving size, so compare actual nutrition panels on the same gram basis."],
+      ["Does flavoured makhana contain oil?", "It may or may not. Oil-free flavouring is possible, but a product's own ingredient list is the evidence."],
+      ["Does flavoured makhana contain added sugar?", "It can, including in some savoury seasoning systems, but not every flavoured product does. Check total sugar, added sugar and the ingredient list."],
+      ["Is sodium higher in flavoured makhana?", "Not necessarily. Seasoning can change sodium, but the actual labels must be compared on the same quantity."],
+      ["How should I compare two makhana packets?", "Compare ingredients, allergens and nutrition per 100 g or the same gram portion, then consider the pack size and portion you will actually eat."]
     ]
   }
 ];

@@ -93,7 +93,10 @@ export function BlogArticleContent({ article }: { article: BlogArticle }) {
       article.slug === "how-to-keep-roasted-makhana-crispy" ||
       article.slug === "best-study-snacks-long-study-sessions-india" ||
       article.slug === "best-work-from-home-snacks-india" ||
-      article.slug === "why-is-makhana-expensive-india"
+      article.slug === "why-is-makhana-expensive-india" ||
+      article.slug === "roasted-not-fried-makhana-oil" ||
+      article.slug === "broken-makhana-packet-quality" ||
+      article.slug === "plain-vs-flavoured-makhana"
       ? 3
       : 2
   );
@@ -171,7 +174,7 @@ export function BlogArticleContent({ article }: { article: BlogArticle }) {
             </section>
           ))}
           <section>
-            <h2>{article.category === "Comparisons" ? "Comparison FAQs" : article.slug === "makhana-weight-loss" ? "Makhana Weight-Loss FAQs" : article.slug === "best-study-snacks-long-study-sessions-india" ? "Study Snack FAQs" : article.slug === "best-work-from-home-snacks-india" ? "Work-From-Home Snack FAQs" : article.slug === "why-is-makhana-expensive-india" ? "Makhana Pricing FAQs" : article.category === "Everyday Snacking" ? "Roasted Makhana Storage FAQs" : "Makhana Nutrition FAQs"}</h2>
+            <h2>{article.category === "Comparisons" ? "Comparison FAQs" : article.slug === "makhana-weight-loss" ? "Makhana Weight-Loss FAQs" : article.slug === "best-study-snacks-long-study-sessions-india" ? "Study Snack FAQs" : article.slug === "best-work-from-home-snacks-india" ? "Work-From-Home Snack FAQs" : article.slug === "why-is-makhana-expensive-india" ? "Makhana Pricing FAQs" : article.slug === "broken-makhana-packet-quality" ? "Makhana Packet Quality FAQs" : article.category === "Everyday Snacking" ? "Roasted Makhana Storage FAQs" : "Makhana Nutrition FAQs"}</h2>
             <div className="article-faqs">
               {article.faqs.map(([question, answer]) => (
                 <div className="faq static-faq" key={question}>
@@ -232,6 +235,18 @@ function RelatedArticles({ articles }: { articles: readonly BlogPost[] }) {
 
 function renderLinks(text: string, currentSlug: BlogSlug) {
   const replacements: Array<[string, string]> = [
+    ["The Indian Council of Agricultural Research overview of mechanized makhana popping", "https://icar.gov.in/en/node/4761"],
+    ["Indian Council of Agricultural Research overview of mechanized makhana popping", "https://icar.gov.in/en/node/4761"],
+    ["APEDA Market Intelligence Report on Makhana", "https://agriexchange.apeda.gov.in/Weekly_eReport/Makhana_Report.pdf"],
+    ["APEDA's market report", "https://agriexchange.apeda.gov.in/Weekly_eReport/Makhana_Report.pdf"],
+    ["ICAR-CIPHET's Makhana Primary Roasting Machine page", "https://ciphet.res.in/makhana-primary-roasting-machine-2/"],
+    ["ICAR-CIPHET's Popped Makhana Grading Machine page", "https://ciphet.res.in/popped-makhana/"],
+    ["ICAR-CIPHET's press note on fat-free flavoured makhana", "https://ciphet.res.in/wp-content/uploads/2023/01/Press-note_makhana-_20.1.23-eng.pdf"],
+    ["FSSAI's Labelling and Display Regulations page", "https://fssai.gov.in/food-law/regulations/amendments/labelling-display"],
+    ["does roasted makhana contain oil", "/blog/roasted-not-fried-makhana-oil"],
+    ["plain vs flavoured makhana guide", "/blog/plain-vs-flavoured-makhana"],
+    ["plain vs flavoured makhana", "/blog/plain-vs-flavoured-makhana"],
+    ["broken makhana in a packet", "/blog/broken-makhana-packet-quality"],
     ["planned Khao Better makhana flavours", "/flavours"],
     ["why makhana is expensive in India", "/blog/why-is-makhana-expensive-india"],
     ["2026 Press Information Bureau overview of India's makhana sector", "https://www.pib.gov.in/PressNoteDetails.aspx?ModuleId=3&NoteId=159603&lang=2&reg=48"],
