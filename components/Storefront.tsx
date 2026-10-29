@@ -70,8 +70,8 @@ export function HomePageContent() {
             <p>Khao Better is a pre-launch roasted makhana brand built for everyday snackers, office desks and student study breaks. Classic Roasted Makhana is the first flavour, with roasted fox nuts in a 25 g pack priced at Rs. 59.</p>
             <div className="hero-actions">
               <WaitlistButton product={catalog[0]} className="primary">Join the waitlist</WaitlistButton>
-              <Link className="secondary" href="/why-makhana">Why makhana?</Link>
-              <Link className="secondary" href="/our-story">Our story</Link>
+              <Link className="secondary" href="/why-makhana" prefetch={false}>Why makhana?</Link>
+              <Link className="secondary" href="/our-story" prefetch={false}>Our story</Link>
             </div>
             <div className="stats"><span><b>25 g</b>classic pack</span><span><b>Rs. 59</b>single pack</span><span><b>Soon</b>launch updates</span></div>
           </div>

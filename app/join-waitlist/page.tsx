@@ -2,6 +2,7 @@ import type { CSSProperties } from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import "./landing.css";
 import { LandingFormCta, LandingPageEffects } from "@/components/LandingWaitlistInteractions";
 import { PackShot } from "@/components/PackShot";
 import { StandaloneWaitlistForm } from "@/components/StandaloneWaitlistForm";

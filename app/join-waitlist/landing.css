@@ -1,0 +1,369 @@
+.paid-waitlist-page { min-height: 100svh; overflow: clip; background: #FFF8EE; color: #3A1E10; }
+.paid-waitlist-container { width: min(100%, 1180px); margin: 0 auto; padding-inline: 18px; }
+.paid-waitlist-header { border-bottom: 1px solid rgba(90,50,31,.1); background: rgba(255,244,229,.96); }
+.paid-waitlist-header-inner { min-height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.paid-waitlist-header img { width: 88px; height: auto; }
+.paid-waitlist-explore { color: #5A321F; font-size: 13px; font-weight: 800; }
+.paid-waitlist-explore span { color: #B33D0B; }
+.paid-waitlist-hero { position: relative; padding: 34px 0 58px; background: radial-gradient(circle at 90% 5%, rgba(255,201,40,.24), transparent 28%), #FFF4E5; }
+.paid-waitlist-hero-grid { display: grid; gap: 30px; }
+.paid-waitlist-hero-copy { min-width: 0; }
+.paid-waitlist-eyebrow { display: inline-flex; margin-bottom: 13px; border-radius: 999px; background: #FFC928; padding: 7px 12px; color: #3A1E10; font-size: 11px; font-weight: 900; letter-spacing: .11em; text-transform: uppercase; }
+.paid-waitlist-hero h1 { max-width: 650px; margin: 0; color: #5A321F; font-family: var(--font-fredoka), sans-serif; font-size: clamp(43px, 12vw, 66px); line-height: .96; letter-spacing: -.025em; }
+.paid-waitlist-hero-copy > p { max-width: 620px; margin: 14px 0 0; color: #6f513d; font-size: 16px; line-height: 1.58; }
+.paid-waitlist-hero-copy .paid-waitlist-lead { margin-top: 20px; color: #3A1E10; font-size: 18px; font-weight: 650; }
+.paid-waitlist-primary { width: min(100%, 330px); min-height: 50px; display: inline-flex; align-items: center; justify-content: center; margin-top: 24px; border-radius: 999px; background: #C84F18; padding: 13px 22px; color: #fff; font-weight: 900; box-shadow: 0 12px 26px rgba(200,79,24,.24); }
+.paid-waitlist-primary:hover { background: #B94412; }
+.paid-waitlist-page a:focus-visible, .paid-waitlist-page button:focus-visible, .paid-waitlist-page input:focus-visible, .paid-waitlist-page summary:focus-visible { outline: 3px solid rgba(58,30,16,.52); outline-offset: 4px; }
+.paid-waitlist-hero-copy > small { display: block; max-width: 420px; margin-top: 10px; color: #7a5b46; font-size: 12px; line-height: 1.45; }
+.paid-waitlist-trust { display: flex; flex-wrap: wrap; gap: 7px; margin: 19px 0 0; padding: 0; list-style: none; }
+.paid-waitlist-trust li { border: 1px solid rgba(90,50,31,.14); border-radius: 999px; background: rgba(255,255,255,.48); padding: 7px 10px; color: #5A321F; font-size: 11px; font-weight: 800; }
+.paid-waitlist-conversion { min-width: 0; display: grid; gap: 16px; }
+.paid-waitlist-pack-stage { position: relative; order: 2; height: 205px; overflow: hidden; border: 1px solid rgba(90,50,31,.1); border-radius: 24px; background: linear-gradient(145deg, rgba(255,201,40,.26), rgba(242,106,46,.13)); }
+.paid-waitlist-main-pack { position: absolute; z-index: 2; top: 7px; left: 50%; width: 145px; height: 174px; transform: translateX(-50%); }
+.paid-waitlist-main-pack img { width: 100%; height: 100%; object-fit: contain; }
+.paid-waitlist-side-pack { position: absolute; z-index: 1; top: 35px; width: 100px; opacity: .72; }
+.paid-waitlist-side-pack .pack-shot { height: 132px; }
+.paid-waitlist-side-pack-left { left: calc(50% - 138px); transform: rotate(-8deg); }
+.paid-waitlist-side-pack-right { right: calc(50% - 138px); transform: rotate(8deg); }
+.paid-waitlist-pack-stage > p { position: absolute; z-index: 3; right: 12px; bottom: 10px; left: 12px; margin: 0; border-radius: 12px; background: rgba(255,250,242,.9); padding: 7px 10px; color: #6f513d; font-size: 10.5px; line-height: 1.35; text-align: center; backdrop-filter: blur(5px); }
+.paid-waitlist-pack-stage > p b { color: #5A321F; }
+.paid-waitlist-form-card { order: 1; scroll-margin-top: 20px; border: 1px solid rgba(90,50,31,.12); border-radius: 24px; background: #fffaf2; padding: 22px 18px; box-shadow: 0 22px 55px rgba(90,50,31,.14); }
+.paid-waitlist-form-head > span { color: #B33D0B; font-size: 10.5px; font-weight: 900; letter-spacing: .11em; text-transform: uppercase; }
+.paid-waitlist-form-head h2 { margin: 7px 0; color: #5A321F; font-size: 29px; line-height: 1.05; }
+.paid-waitlist-form-head p { margin: 0 0 19px; color: #7a5b46; font-size: 14px; line-height: 1.5; }
+.waitlist-page-form { border: 0; background: transparent; padding: 0; }
+.waitlist-page-form input { min-height: 50px; font-size: 16px; }
+.waitlist-page-form .primary { min-height: 50px; margin-top: 4px; color: #fff; background: #C84F18; box-shadow: 0 12px 24px rgba(200,79,24,.25); }
+.waitlist-page-form .primary:hover { background: #B94412; }
+.waitlist-page-form .primary:focus-visible { outline: 3px solid rgba(58,30,16,.5); outline-offset: 3px; }
+.waitlist-page-form.is-success { min-height: 390px; }
+.waitlist-page-form .waitlist-success h2 { max-width: 320px; margin: 8px 0 10px; color: #5A321F; font-size: 28px; line-height: 1.12; }
+.waitlist-page-form .waitlist-success .primary { max-width: 240px; }
+.waitlist-page-reassurance { margin: 1px 0 0 !important; color: #7a5b46 !important; text-align: center; }
+.paid-waitlist-section { padding: 58px 0; }
+.paid-waitlist-section h2, .paid-waitlist-statement h2, .paid-waitlist-final h2 { margin: 0; color: #5A321F; font-size: clamp(32px, 8.5vw, 48px); line-height: 1.04; }
+.paid-waitlist-reason-grid { display: grid; gap: 12px; margin-top: 25px; }
+.paid-waitlist-reason-grid article { border: 1px solid rgba(90,50,31,.11); border-radius: 20px; background: #fffaf2; padding: 21px; }
+.paid-waitlist-reason-grid article > span { color: #B33D0B; font-size: 12px; font-weight: 900; letter-spacing: .1em; }
+.paid-waitlist-reason-grid h3 { margin: 14px 0 8px; color: #5A321F; font-size: 21px; }
+.paid-waitlist-reason-grid p { margin: 0; color: #6f513d; font-size: 14.5px; line-height: 1.55; }
+.paid-waitlist-flavours { background: #EFE6D8; }
+.paid-waitlist-section-heading > p { max-width: 650px; margin: 13px 0 0; color: #6f513d; line-height: 1.6; }
+.paid-waitlist-flavour-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; margin-top: 28px; }
+.paid-waitlist-flavour-card { min-width: 0; overflow: hidden; border: 1px solid rgba(90,50,31,.1); border-radius: 18px; background: linear-gradient(155deg, color-mix(in srgb, var(--flavour-tint) 16%, #FFF4E5), #FFF4E5 70%); padding: 13px 10px 15px; text-align: center; content-visibility: auto; contain-intrinsic-size: 250px; }
+.paid-waitlist-flavour-card > span { display: inline-flex; min-height: 25px; align-items: center; border-radius: 999px; background: rgba(255,250,242,.78); padding: 5px 8px; color: #5A321F; font-size: 8.5px; font-weight: 900; letter-spacing: .05em; text-transform: uppercase; }
+.paid-waitlist-flavour-card .pack-shot { height: 140px; margin-top: 5px; }
+.paid-waitlist-flavour-card h3 { margin: 5px 0 0; color: #5A321F; font-size: 16px; line-height: 1.15; }
+.paid-waitlist-why { background: #FFF4E5; }
+.paid-waitlist-why-grid { display: grid; gap: 28px; }
+.paid-waitlist-why-grid > div:first-child > p { margin: 13px 0 0; color: #6f513d; font-size: 16px; line-height: 1.6; }
+.paid-waitlist-proof-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+.paid-waitlist-proof-grid div { min-height: 118px; display: flex; flex-direction: column; justify-content: flex-end; border-radius: 19px; background: #FFC928; padding: 16px; }
+.paid-waitlist-proof-grid div:nth-child(even) { background: #F26A2E; }
+.paid-waitlist-proof-grid b { color: #3A1E10; font-family: var(--font-fredoka), sans-serif; font-size: 26px; line-height: 1; }
+.paid-waitlist-proof-grid span { margin-top: 7px; color: #3A1E10; font-size: 11px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.paid-waitlist-statement { background: #F26A2E; padding: 58px 0; text-align: center; }
+.paid-waitlist-statement span { color: #3A1E10; font-size: 11px; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+.paid-waitlist-statement h2 { max-width: 720px; margin: 12px auto 0; }
+.paid-waitlist-statement p { max-width: 580px; margin: 16px auto 0; color: #3A1E10; font-size: 16px; line-height: 1.6; }
+.paid-waitlist-second-cta { text-align: center; }
+.paid-waitlist-second-cta p { max-width: 590px; margin: 14px auto 0; color: #6f513d; line-height: 1.6; }
+.paid-waitlist-faq { background: #EFE6D8; }
+.paid-waitlist-faq-grid { display: grid; gap: 25px; }
+.paid-waitlist-faq details { border-bottom: 1px solid rgba(90,50,31,.15); padding: 17px 0; }
+.paid-waitlist-faq details:first-child { padding-top: 0; }
+.paid-waitlist-faq summary { color: #5A321F; font-size: 16px; font-weight: 850; cursor: pointer; }
+.paid-waitlist-faq details p { margin: 11px 0 0; color: #6f513d; font-size: 14.5px; line-height: 1.6; }
+.paid-waitlist-faq details a { color: #B33D0B; font-weight: 850; text-decoration: underline; text-underline-offset: 3px; }
+.paid-waitlist-final { background: #5A321F; padding: 60px 0; text-align: center; }
+.paid-waitlist-final h2 { color: #FFF4E5; }
+.paid-waitlist-final p { max-width: 560px; margin: 14px auto 0; color: rgba(255,244,229,.74); line-height: 1.6; }
+.paid-waitlist-primary-light { color: #3A1E10; background: #FFC928; box-shadow: 0 12px 26px rgba(0,0,0,.2); }
+.paid-waitlist-primary-light:hover { background: #FFD653; }
+.paid-waitlist-footer { border-top: 1px solid rgba(90,50,31,.1); background: #FFF4E5; padding: 24px 0; }
+.paid-waitlist-footer .paid-waitlist-container { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.paid-waitlist-footer img { width: 78px; height: auto; }
+.paid-waitlist-footer div div { display: flex; gap: 16px; }
+.paid-waitlist-footer div div a { color: #5A321F; font-size: 12px; font-weight: 800; }
+
+@media (min-width: 700px) {
+  .paid-waitlist-container { padding-inline: 28px; }
+  .paid-waitlist-header-inner { min-height: 76px; }
+  .paid-waitlist-header img { width: 98px; }
+  .paid-waitlist-hero { padding: 52px 0 76px; }
+  .paid-waitlist-hero-grid { width: min(100%, 760px); }
+  .paid-waitlist-pack-stage { height: 240px; }
+  .paid-waitlist-main-pack { width: 178px; height: 214px; }
+  .paid-waitlist-side-pack { top: 43px; width: 125px; }
+  .paid-waitlist-side-pack .pack-shot { height: 158px; }
+  .paid-waitlist-side-pack-left { left: calc(50% - 174px); }
+  .paid-waitlist-side-pack-right { right: calc(50% - 174px); }
+  .paid-waitlist-form-card { padding: 30px; }
+  .paid-waitlist-section { padding: 76px 0; }
+  .paid-waitlist-reason-grid { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
+  .paid-waitlist-flavour-grid { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
+  .paid-waitlist-flavour-card { padding: 17px 14px 19px; }
+  .paid-waitlist-flavour-card .pack-shot { height: 170px; }
+  .paid-waitlist-flavour-card h3 { font-size: 18px; }
+  .paid-waitlist-why-grid, .paid-waitlist-faq-grid { grid-template-columns: minmax(0,.85fr) minmax(0,1.15fr); align-items: center; gap: 54px; }
+  .paid-waitlist-statement, .paid-waitlist-final { padding: 76px 0; }
+}
+
+@media (min-width: 960px) {
+  .paid-waitlist-hero-grid { width: min(100%, 1180px); grid-template-columns: minmax(0,1.02fr) minmax(420px,.88fr); align-items: center; gap: clamp(54px,7vw,94px); }
+  .paid-waitlist-hero h1 { font-size: clamp(62px,5.6vw,78px); }
+  .paid-waitlist-conversion { align-self: start; }
+  .paid-waitlist-pack-stage { order: 1; }
+  .paid-waitlist-form-card { order: 2; }
+  .paid-waitlist-flavour-grid { grid-template-columns: repeat(6,minmax(0,1fr)); }
+  .paid-waitlist-flavour-card .pack-shot { height: 150px; }
+  .paid-waitlist-flavour-card h3 { font-size: 16px; }
+}
+
+@media (max-width: 430px) {
+  .paid-waitlist-header-inner { min-height: 62px; }
+  .paid-waitlist-header img { width: 80px; }
+  .paid-waitlist-explore { font-size: 11.5px; }
+  .paid-waitlist-hero { padding-top: 27px; }
+  .paid-waitlist-hero h1 { font-size: clamp(41px,12.4vw,50px); }
+  .paid-waitlist-pack-stage { height: 188px; }
+  .paid-waitlist-main-pack { width: 132px; height: 158px; }
+  .paid-waitlist-side-pack { top: 30px; width: 88px; }
+  .paid-waitlist-side-pack .pack-shot { height: 118px; }
+  .paid-waitlist-side-pack-left { left: calc(50% - 124px); }
+  .paid-waitlist-side-pack-right { right: calc(50% - 124px); }
+  .paid-waitlist-form-card { padding: 21px 16px; }
+  .paid-waitlist-form-head h2 { font-size: 27px; }
+  .waitlist-page-form { gap: 8px; }
+  .waitlist-page-form.is-success { min-height: 350px; }
+  .paid-waitlist-footer .paid-waitlist-container { align-items: flex-start; }
+  .paid-waitlist-footer div div { flex-direction: column; gap: 8px; text-align: right; }
+}
+
+/* Paid waitlist landing page: the mockup-led campaign experience is scoped here. */
+.paid-waitlist-page { --landing-cream: #FFF8EE; --landing-paper: #FFFDF8; --landing-brown: #4B2617; --landing-orange: #F25A19; --landing-yellow: #FFC51B; background: var(--landing-cream); color: var(--landing-brown); }
+.paid-waitlist-page *, .paid-waitlist-page *::before, .paid-waitlist-page *::after { box-sizing: border-box; }
+.paid-waitlist-container { width: min(100%, 1280px); padding-inline: clamp(18px, 4vw, 44px); }
+.paid-waitlist-header { position: relative; z-index: 5; border-bottom-color: rgba(75,38,23,.1); background: rgba(255,248,238,.94); backdrop-filter: blur(10px); }
+.paid-waitlist-header-inner { min-height: 72px; }
+.paid-waitlist-header img { width: 92px; }
+.paid-waitlist-explore { display: inline-flex; align-items: center; gap: 8px; color: var(--landing-brown); font-size: 13px; text-decoration: none; }
+.paid-waitlist-explore span, .paid-waitlist-footer a span { color: var(--landing-orange); font-size: 18px; transition: transform .2s ease; }
+.paid-waitlist-explore:hover span, .paid-waitlist-footer a:hover span { transform: translateX(3px); }
+
+.paid-waitlist-hero { overflow: hidden; padding: clamp(30px, 4.8vw, 70px) 0 clamp(46px, 5vw, 72px); background: radial-gradient(circle at 67% 19%, rgba(255,197,27,.16), transparent 24%), var(--landing-cream); }
+.paid-waitlist-hero-grid { grid-template-areas: "copy" "product" "form" "trust"; gap: 24px; }
+.paid-waitlist-hero-copy { grid-area: copy; position: relative; z-index: 2; }
+.paid-waitlist-eyebrow { margin-bottom: 14px; background: var(--landing-yellow); padding: 7px 15px; font-size: 10.5px; box-shadow: 0 5px 0 rgba(75,38,23,.06); }
+.paid-waitlist-hero h1 { max-width: 550px; color: var(--landing-brown); font-size: clamp(44px, 12.7vw, 68px); line-height: .93; }
+.paid-waitlist-hero h1 span { position: relative; display: inline-block; color: var(--landing-orange); }
+.paid-waitlist-hero h1 span::after { content: ""; position: absolute; right: 7%; bottom: -9px; left: 8%; height: 7px; border-radius: 50%; background: var(--landing-yellow); transform: rotate(-2deg); }
+.paid-waitlist-hero-copy > p { max-width: 510px; margin-top: 14px; color: #5f3d2b; font-size: 15px; line-height: 1.48; }
+.paid-waitlist-hero-copy .paid-waitlist-lead { margin-top: 26px; color: var(--landing-brown); font-size: 16px; font-weight: 650; }
+
+.paid-waitlist-product-world { grid-area: product; position: relative; width: min(100%, 410px); height: clamp(260px, 74vw, 400px); margin-inline: auto; isolation: isolate; }
+.paid-waitlist-blob { position: absolute; inset: 14% 8% 3%; z-index: -2; border-radius: 44% 56% 54% 46% / 42% 44% 56% 58%; background: linear-gradient(145deg, #FFD95E, #FFB814); transform: rotate(-6deg); }
+.paid-waitlist-hero-pack { position: absolute; z-index: 2; top: 3%; left: 50%; width: min(72%, 285px); height: 94%; object-fit: contain; filter: drop-shadow(0 24px 20px rgba(75,38,23,.2)); transform: translateX(-50%) rotate(3deg); animation: landing-pack-float 5.6s ease-in-out infinite; }
+.paid-waitlist-doodle { position: absolute; z-index: 3; width: 42px; height: 42px; }
+.paid-waitlist-doodle::before, .paid-waitlist-doodle::after { content: ""; position: absolute; width: 7px; height: 31px; border-radius: 99px; background: var(--landing-yellow); }
+.paid-waitlist-doodle::before { left: 5px; transform: rotate(-42deg); }
+.paid-waitlist-doodle::after { right: 5px; transform: rotate(20deg); }
+.paid-waitlist-doodle-left { top: 5%; left: 0; transform: rotate(-28deg); }
+.paid-waitlist-doodle-right { right: 0; bottom: 25%; transform: rotate(42deg); }
+.paid-waitlist-makhana, .paid-waitlist-banner-piece, .paid-waitlist-final-piece { position: absolute; z-index: 4; width: 40px; aspect-ratio: 1; border: 1px solid #f1bc6a; border-radius: 47% 53% 42% 58%; background: radial-gradient(circle at 36% 30%, #fffef6 0 30%, transparent 31%), radial-gradient(circle at 28% 35%, #e99b38 0 3%, transparent 4%), radial-gradient(circle at 65% 58%, #dc872d 0 4%, transparent 5%), #f8e1b5; box-shadow: inset -5px -6px 8px rgba(207,126,33,.15), 0 9px 15px rgba(75,38,23,.12); }
+.paid-waitlist-makhana { animation: landing-piece-drift 4.8s ease-in-out infinite; }
+.paid-waitlist-makhana.piece-1 { top: 0; right: 14%; width: 36px; animation-delay: -.7s; }
+.paid-waitlist-makhana.piece-2 { top: 16%; right: 1%; width: 29px; animation-delay: -2.2s; }
+.paid-waitlist-makhana.piece-3 { bottom: 15%; left: 1%; width: 34px; animation-delay: -1.2s; }
+.paid-waitlist-makhana.piece-4 { right: 3%; bottom: 2%; width: 43px; animation-delay: -3.1s; }
+.paid-waitlist-makhana.piece-5 { bottom: 2%; left: 18%; width: 25px; animation-delay: -1.8s; }
+
+.paid-waitlist-form-card { grid-area: form; order: initial; align-self: center; scroll-margin-top: 18px; border-color: rgba(75,38,23,.1); border-radius: 28px; background: rgba(255,253,248,.94); padding: clamp(20px, 3vw, 30px); box-shadow: 0 24px 65px rgba(75,38,23,.14); }
+.paid-waitlist-form-head > span { color: var(--landing-orange); }
+.paid-waitlist-form-head h2 { color: var(--landing-brown); font-size: clamp(30px, 7vw, 39px); }
+.paid-waitlist-form-head p { color: #5f3d2b; font-size: 13px; line-height: 1.4; }
+.waitlist-page-form { gap: 8px; }
+.waitlist-page-form > label:not(.consent-row) { color: var(--landing-brown); font-size: 11px; }
+.waitlist-page-form input { min-height: 45px; border-color: rgba(75,38,23,.18); border-radius: 12px; background: rgba(255,255,255,.86); font-size: 15px; }
+.waitlist-page-form .phone-field { min-height: 45px; border-radius: 12px; background: rgba(255,255,255,.86); }
+.waitlist-page-form .phone-field input { min-height: 42px; background: transparent; }
+.waitlist-page-form .consent-row { margin-top: 2px; color: var(--landing-brown); font-size: 10.5px; line-height: 1.3; }
+.waitlist-page-form .primary { min-height: 49px; border-radius: 999px; background: var(--landing-orange); }
+.waitlist-page-form .primary:hover { background: #D94B12; transform: translateY(-1px); }
+.waitlist-page-form .primary > span { margin-left: 7px; font-size: 19px; transition: transform .2s ease; }
+.waitlist-page-form .primary:hover > span { transform: translateX(3px); }
+.waitlist-page-reassurance { font-size: 10.5px !important; line-height: 1.35 !important; }
+.paid-waitlist-trust { grid-area: trust; justify-content: center; margin: 0; }
+.paid-waitlist-trust li { display: inline-flex; align-items: center; gap: 5px; border: 0; background: #FFFDF8; box-shadow: 0 6px 15px rgba(75,38,23,.08); }
+.paid-waitlist-trust svg { width: 17px; fill: none; stroke: var(--landing-orange); stroke-width: 1.8; }
+
+.paid-waitlist-benefits { padding: 0 clamp(12px, 2.5vw, 30px) clamp(46px, 5vw, 68px); }
+.paid-waitlist-benefit-strip { display: grid; gap: 22px; border: 1px solid rgba(75,38,23,.09); border-radius: 34px; background: #FFF9EF; padding-block: 26px; box-shadow: 0 14px 40px rgba(75,38,23,.06); }
+.paid-waitlist-benefit-heading h2 { margin: 0; font-size: 31px; line-height: .98; }
+.paid-waitlist-underline { display: block; width: 90px; height: 6px; margin: 9px 0 0 55px; border-radius: 99px; background: var(--landing-yellow); transform: rotate(-4deg); }
+.paid-waitlist-benefit-strip article { display: grid; grid-template-columns: 49px 1fr; gap: 13px; align-items: start; }
+.paid-waitlist-benefit-strip article svg { width: 49px; fill: none; stroke: var(--landing-orange); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2.2; }
+.paid-waitlist-benefit-strip h3 { margin: 1px 0 5px; font-size: 17px; }
+.paid-waitlist-benefit-strip p { margin: 0; color: #5f3d2b; font-size: 12.5px; line-height: 1.4; }
+
+.paid-waitlist-section { padding: clamp(52px, 6vw, 82px) 0; }
+.paid-waitlist-section h2, .paid-waitlist-final h2 { color: var(--landing-brown); font-size: clamp(35px, 7vw, 50px); }
+.paid-waitlist-flavours { background: var(--landing-cream); }
+.paid-waitlist-section-heading { position: relative; max-width: 850px; margin-inline: auto; text-align: center; }
+.paid-waitlist-section-heading > p { max-width: 760px; margin-inline: auto; color: #5f3d2b; }
+.paid-waitlist-heading-rays { position: absolute; top: 13px; left: -5px; width: 42px; height: 7px; border-radius: 99px; background: var(--landing-yellow); transform: rotate(8deg); box-shadow: -12px 16px 0 var(--landing-yellow); }
+.paid-waitlist-chef { display: none; position: absolute; right: -130px; bottom: -54px; width: 126px; height: auto; object-fit: contain; filter: drop-shadow(0 10px 12px rgba(75,38,23,.12)); animation: landing-mascot-sway 5s ease-in-out infinite; }
+.paid-waitlist-flavour-grid { gap: 12px; margin-top: 32px; }
+.paid-waitlist-flavour-card { position: relative; overflow: visible; border-radius: 25px; background: linear-gradient(160deg, color-mix(in srgb, var(--flavour-tint) 11%, #FFFDF8), #FFF9F0 68%); padding: 18px 9px 17px; box-shadow: 0 9px 22px rgba(75,38,23,.07); content-visibility: visible; contain: none; transition: transform .25s ease, box-shadow .25s ease; }
+.paid-waitlist-flavour-card:hover { transform: translateY(-5px); box-shadow: 0 17px 29px rgba(75,38,23,.12); }
+.paid-waitlist-flavour-card.is-classic { border: 2px solid var(--landing-yellow); box-shadow: 0 10px 23px rgba(255,197,27,.2); }
+.paid-waitlist-flavour-card .pack-shot { height: 150px; }
+.paid-waitlist-flavour-card h3 { margin: 5px 0 9px; font-size: 15px; }
+.paid-waitlist-flavour-card > span { min-height: 25px; background: #EDE3D5; font-size: 8.5px; }
+.paid-waitlist-flavour-card.is-classic > span { background: var(--landing-yellow); }
+
+.paid-waitlist-story { background: #FFFDF8; }
+.paid-waitlist-story-grid { display: grid; gap: 24px; align-items: center; }
+.paid-waitlist-mascot-wrap { text-align: center; }
+.paid-waitlist-mascot-wrap img { width: min(58vw, 220px); height: auto; filter: drop-shadow(0 18px 16px rgba(75,38,23,.14)); animation: landing-mascot-sway 5.8s ease-in-out infinite; }
+.paid-waitlist-story-copy h2 { margin: 0 0 16px; }
+.paid-waitlist-story-copy p { margin: 8px 0 0; color: #5f3d2b; font-size: 15px; line-height: 1.5; }
+.paid-waitlist-proof-grid { gap: 10px; }
+.paid-waitlist-proof-grid div { min-height: 125px; align-items: center; justify-content: center; border: 1px solid rgba(75,38,23,.08); border-radius: 50%; background: #FFF8EB; padding: 12px; text-align: center; box-shadow: 0 8px 19px rgba(75,38,23,.06); }
+.paid-waitlist-proof-grid div:nth-child(even) { background: #FFF8EB; }
+.paid-waitlist-proof-grid svg { width: 32px; height: 32px; margin-bottom: 5px; fill: none; stroke: var(--landing-orange); stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
+.paid-waitlist-proof-grid b { color: var(--landing-brown); font-size: 21px; }
+.paid-waitlist-proof-grid span { margin-top: 3px; color: #5f3d2b; font-size: 9px; }
+
+.paid-waitlist-personality { position: relative; background: var(--landing-orange); }
+.paid-waitlist-personality::before, .paid-waitlist-personality::after { content: ""; position: absolute; right: -3%; left: -3%; height: 22px; background: var(--landing-cream); border-radius: 50%; }
+.paid-waitlist-personality::before { top: -11px; }
+.paid-waitlist-personality::after { bottom: -11px; }
+.paid-waitlist-personality-inner { position: relative; min-height: 270px; display: flex; align-items: center; justify-content: center; padding-block: 50px; text-align: center; }
+.paid-waitlist-personality h2 { margin: 0; color: #fff; font-size: clamp(34px, 8vw, 51px); line-height: 1; }
+.paid-waitlist-personality p { margin: 15px 0 0; color: #fff; font-size: 15px; line-height: 1.45; }
+.paid-waitlist-bowl-mascot { display: none; position: absolute; right: 0; bottom: -4px; width: 260px; height: auto; filter: drop-shadow(0 16px 16px rgba(75,38,23,.18)); animation: landing-mascot-sway 5.2s ease-in-out infinite reverse; }
+.paid-waitlist-banner-piece { left: 6%; top: 36%; width: 39px; transform: rotate(-12deg); }
+.paid-waitlist-banner-piece.banner-piece-2 { top: auto; right: 7%; bottom: 22%; left: auto; width: 28px; }
+
+.paid-waitlist-faq { background: var(--landing-cream); }
+.paid-waitlist-faq-grid { align-items: start; }
+.paid-waitlist-faq h2 { font-size: clamp(42px, 10vw, 58px); line-height: .94; }
+.paid-waitlist-faq details { overflow: hidden; margin-bottom: 8px; border: 1px solid rgba(75,38,23,.1); border-radius: 15px; background: #FFFDF8; padding: 0; box-shadow: 0 5px 14px rgba(75,38,23,.06); }
+.paid-waitlist-faq details:first-child { padding-top: 0; }
+.paid-waitlist-faq summary { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 17px; list-style: none; font-size: 14px; }
+.paid-waitlist-faq summary::-webkit-details-marker { display: none; }
+.paid-waitlist-faq summary span { width: 9px; height: 9px; flex: 0 0 auto; border-right: 2px solid var(--landing-brown); border-bottom: 2px solid var(--landing-brown); transform: translateY(-2px) rotate(45deg); transition: transform .25s ease; }
+.paid-waitlist-faq details[open] summary span { transform: translateY(2px) rotate(225deg); }
+.paid-waitlist-faq-answer { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .3s ease; }
+.paid-waitlist-faq details[open] .paid-waitlist-faq-answer { grid-template-rows: 1fr; }
+.paid-waitlist-faq-answer p { min-height: 0; overflow: hidden; margin: 0 !important; padding: 0 17px 15px; }
+
+.paid-waitlist-final-wrap { padding: 0 0 clamp(28px, 5vw, 55px); }
+.paid-waitlist-final { position: relative; overflow: hidden; border-radius: 36px; background: radial-gradient(circle at 70% -80%, #A4511E, transparent 58%), #542A17; padding: clamp(46px, 5vw, 65px) 20px; }
+.paid-waitlist-final h2 { color: #fff; }
+.paid-waitlist-final p { color: rgba(255,255,255,.84); }
+.paid-waitlist-primary { gap: 8px; border: 0; cursor: pointer; transition: transform .2s ease, background .2s ease, box-shadow .2s ease; }
+.paid-waitlist-primary:hover { transform: translateY(-2px); }
+.paid-waitlist-primary > span { transition: transform .2s ease; }
+.paid-waitlist-primary:hover > span { transform: translateX(3px); }
+.paid-waitlist-primary-light { background: var(--landing-yellow); }
+.paid-waitlist-final-piece { top: 32%; left: 8%; width: 39px; }
+.paid-waitlist-final-piece.final-piece-2 { right: 8%; left: auto; top: 44%; width: 28px; }
+.paid-waitlist-footer { background: var(--landing-cream); padding-block: 20px; }
+.paid-waitlist-footer .paid-waitlist-container { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.paid-waitlist-footer .paid-waitlist-container > a { display: inline-flex; flex: 0 0 auto; align-items: center; line-height: 0; }
+.paid-waitlist-footer img { display: block; }
+.paid-waitlist-footer .paid-waitlist-container > div { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 10px 14px; line-height: 1.2; }
+.paid-waitlist-footer .paid-waitlist-container > div a { display: inline-flex; align-items: center; color: var(--landing-brown); }
+.paid-waitlist-footer .paid-waitlist-container > div a + a { border-left: 1px solid rgba(75,38,23,.3); padding-left: 14px; }
+
+.paid-waitlist-page.is-reveal-ready [data-reveal]:not(.is-reveal-complete) { opacity: 0; transform: translateY(22px); transition: opacity .55s ease var(--reveal-delay, 0ms), transform .55s cubic-bezier(.2,.7,.2,1) var(--reveal-delay, 0ms); }
+.paid-waitlist-page.is-reveal-ready [data-reveal].is-visible:not(.is-reveal-complete) { opacity: 1; transform: none; }
+
+
+@keyframes landing-pack-float { 0%,100% { transform: translateX(-50%) translateY(0) rotate(3deg); } 50% { transform: translateX(-50%) translateY(-9px) rotate(1.5deg); } }
+@keyframes landing-piece-drift { 0%,100% { translate: 0 0; rotate: 0deg; } 50% { translate: 4px -8px; rotate: 10deg; } }
+@keyframes landing-mascot-sway { 0%,100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-6px) rotate(1deg); } }
+
+@media (min-width: 700px) {
+  .paid-waitlist-header-inner { min-height: 78px; }
+  .paid-waitlist-hero-grid { width: min(100%, 900px); grid-template-areas: "copy product" "form form" "trust trust"; grid-template-columns: minmax(0,1fr) minmax(290px,.85fr); align-items: center; gap: 30px 40px; }
+  .paid-waitlist-product-world { height: 390px; }
+  .paid-waitlist-form-card { width: min(100%, 580px); justify-self: center; }
+  .paid-waitlist-benefit-strip { grid-template-columns: repeat(3, minmax(0,1fr)); }
+  .paid-waitlist-benefit-heading { grid-column: 1 / -1; }
+  .paid-waitlist-flavour-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .paid-waitlist-flavour-card .pack-shot { height: 180px; }
+  .paid-waitlist-story-grid { grid-template-columns: minmax(170px,.55fr) minmax(260px,1fr); }
+  .paid-waitlist-proof-grid { grid-column: 1 / -1; grid-template-columns: repeat(4,minmax(0,1fr)); }
+  .paid-waitlist-personality-inner { min-height: 300px; padding-right: 230px; }
+  .paid-waitlist-bowl-mascot { display: block; width: 235px; }
+  .paid-waitlist-faq-grid { grid-template-columns: minmax(190px,.55fr) minmax(0,1.45fr); }
+}
+
+@media (min-width: 1100px) {
+  .paid-waitlist-header img { width: 104px; }
+  .paid-waitlist-hero-grid { width: min(100%, 1280px); grid-template-columns: minmax(300px,1fr) minmax(285px,.78fr) minmax(365px,.95fr); grid-template-areas: "copy product form" "trust trust form"; gap: 16px clamp(28px,3.2vw,48px); }
+  .paid-waitlist-hero h1 { font-size: clamp(62px,5.2vw,76px); }
+  .paid-waitlist-product-world { height: 440px; }
+  .paid-waitlist-form-card { width: 100%; padding: 26px; }
+  .paid-waitlist-trust { justify-content: flex-start; padding-left: 0; }
+  .paid-waitlist-benefit-strip { grid-template-columns: 1.05fr repeat(3,1fr); align-items: center; gap: 0; }
+  .paid-waitlist-benefit-heading { grid-column: auto; padding-right: 28px; }
+  .paid-waitlist-benefit-strip article { min-height: 86px; align-items: center; border-left: 1px solid rgba(75,38,23,.13); padding-inline: 24px; }
+  .paid-waitlist-chef { display: block; }
+  .paid-waitlist-flavour-grid { grid-template-columns: repeat(6,minmax(0,1fr)); }
+  .paid-waitlist-flavour-card .pack-shot { height: 165px; }
+  .paid-waitlist-story-grid { grid-template-columns: minmax(190px,.62fr) minmax(300px,1.05fr) minmax(410px,1.3fr); gap: 34px; }
+  .paid-waitlist-proof-grid { grid-column: auto; grid-template-columns: repeat(4,minmax(0,1fr)); }
+  .paid-waitlist-proof-grid div { min-height: 122px; }
+  .paid-waitlist-personality-inner { min-height: 310px; padding-right: 290px; }
+  .paid-waitlist-bowl-mascot { width: 285px; }
+}
+
+@media (min-width: 1500px) {
+  .paid-waitlist-container { width: min(100%, 1400px); }
+  .paid-waitlist-hero-grid { width: min(100%, 1400px); }
+  .paid-waitlist-hero h1 { font-size: 79px; }
+  .paid-waitlist-product-world { height: 470px; }
+}
+
+@media (max-width: 699px) {
+  .paid-waitlist-header-inner { min-height: 64px; }
+  .paid-waitlist-header img { width: 78px; }
+  .paid-waitlist-explore { font-size: 11px; }
+  .paid-waitlist-product-world { margin-top: -10px; margin-bottom: -9px; }
+  .paid-waitlist-trust { gap: 6px; }
+  .paid-waitlist-trust li { padding: 6px 8px; font-size: 9.5px; }
+  .paid-waitlist-benefit-heading { margin-bottom: 4px; }
+  .paid-waitlist-flavour-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .paid-waitlist-personality-inner { padding-bottom: 180px; }
+  .paid-waitlist-bowl-mascot { display: block; right: 50%; bottom: -2px; width: 190px; transform: translateX(50%); animation: none; }
+  .paid-waitlist-banner-piece.banner-piece-2 { right: 3%; bottom: 25%; }
+  .paid-waitlist-footer .paid-waitlist-container { align-items: center; }
+}
+
+@media (max-width: 380px) {
+  .paid-waitlist-hero h1 { font-size: 43px; }
+  .paid-waitlist-explore { max-width: 125px; text-align: right; }
+  .paid-waitlist-form-card { padding-inline: 15px; }
+  .paid-waitlist-trust li { font-size: 9px; }
+  .paid-waitlist-flavour-card { padding-inline: 6px; }
+  .paid-waitlist-flavour-card h3 { font-size: 14px; }
+}
+
+@media (max-width: 520px) {
+  .paid-waitlist-footer { padding-block: 18px; }
+  .paid-waitlist-footer .paid-waitlist-container { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .paid-waitlist-footer .paid-waitlist-container > div { flex-direction: row; justify-content: flex-start; gap: 8px 10px; text-align: left; }
+  .paid-waitlist-footer .paid-waitlist-container > div a + a { padding-left: 10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .paid-waitlist-page { scroll-behavior: auto; }
+  .paid-waitlist-page.is-reveal-ready [data-reveal] { opacity: 1; transform: none; transition: none; }
+  .paid-waitlist-hero-pack, .paid-waitlist-makhana, .paid-waitlist-mascot-wrap img, .paid-waitlist-chef, .paid-waitlist-bowl-mascot { animation: none; }
+  .paid-waitlist-page .paid-waitlist-primary, .paid-waitlist-page .paid-waitlist-flavour-card, .paid-waitlist-page .paid-waitlist-faq-answer, .paid-waitlist-page .paid-waitlist-faq summary span { transition: none; }
+}
