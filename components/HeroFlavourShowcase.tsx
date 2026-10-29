@@ -38,7 +38,7 @@ const flavours = [
 
 type Phase = "enter" | "active" | "exit";
 
-const INITIAL_CLASSIC_HOLD_MS = 12_000;
+const INITIAL_CLASSIC_HOLD_MS = 6_000;
 const ROTATION_HOLD_MS = 4_550;
 const NEXT_IMAGE_LEAD_MS = 1_800;
 
