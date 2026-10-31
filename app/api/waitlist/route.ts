@@ -23,8 +23,8 @@ type WaitlistRequest = {
 
 type HubSpotSubmissionResult = { ok: true } | { ok: false; status: number };
 type WheelResponse =
-  | { ok: true; alreadySpun: false; rewardId: WheelRewardId }
-  | { ok: true; alreadySpun: true; rewardId?: WheelRewardId }
+  | { ok: true; alreadySpun: false; rewardId: WheelRewardId; isNewContact: boolean }
+  | { ok: true; alreadySpun: true; rewardId?: WheelRewardId; isNewContact: false }
   | { ok: false; code: "CONFIGURATION_REQUIRED" | "LOOKUP_FAILED" | "SUBMISSION_FAILED" };
 
 const pendingWheelAwards = new Map<string, Promise<{ body: WheelResponse; status: number }>>();
@@ -160,7 +160,7 @@ async function submitToHubSpot(
   }
 }
 
-async function findExistingWheelReward(email: string) {
+async function findExistingContact(email: string) {
   try {
     const response = await fetch(HUBSPOT_CONTACT_SEARCH_URL, {
       method: "POST",
@@ -185,17 +185,22 @@ async function findExistingWheelReward(email: string) {
       } catch {
         category = undefined;
       }
-      console.error("HubSpot reward lookup failed", { status: response.status, category });
+      console.error("HubSpot contact lookup failed", { status: response.status, category });
       return { ok: false as const };
     }
 
     const payload = await response.json() as {
       results?: Array<{ properties?: Record<string, string | null | undefined> }>;
     };
-    const savedReward = payload.results?.[0]?.properties?.[WHEEL_REWARD_PROPERTY]?.trim();
-    return { ok: true as const, savedReward: savedReward || undefined };
+    const contact = payload.results?.[0];
+    const savedReward = contact?.properties?.[WHEEL_REWARD_PROPERTY]?.trim();
+    return {
+      ok: true as const,
+      contactExists: Boolean(contact),
+      savedReward: savedReward || undefined
+    };
   } catch {
-    console.error("HubSpot reward lookup failed", { status: "NETWORK_ERROR" });
+    console.error("HubSpot contact lookup failed", { status: "NETWORK_ERROR" });
     return { ok: false as const };
   }
 }
@@ -217,12 +222,12 @@ async function awardRewardWheel(email: string, sourcePage: string) {
   const cachedRewardId = completedWheelAwards.get(email);
   if (cachedRewardId) {
     return {
-      body: { ok: true, alreadySpun: true, rewardId: cachedRewardId } satisfies WheelResponse,
+      body: { ok: true, alreadySpun: true, rewardId: cachedRewardId, isNewContact: false } satisfies WheelResponse,
       status: 200
     };
   }
 
-  const lookup = await findExistingWheelReward(email);
+  const lookup = await findExistingContact(email);
   if (!lookup.ok) {
     return {
       body: { ok: false, code: "LOOKUP_FAILED" } satisfies WheelResponse,
@@ -234,7 +239,7 @@ async function awardRewardWheel(email: string, sourcePage: string) {
     const rewardId = currentRewardId(lookup.savedReward);
     if (rewardId) rememberCompletedWheelAward(email, rewardId);
     return {
-      body: { ok: true, alreadySpun: true, ...(rewardId ? { rewardId } : {}) } satisfies WheelResponse,
+      body: { ok: true, alreadySpun: true, isNewContact: false, ...(rewardId ? { rewardId } : {}) } satisfies WheelResponse,
       status: 200
     };
   }
@@ -261,7 +266,12 @@ async function awardRewardWheel(email: string, sourcePage: string) {
 
   rememberCompletedWheelAward(email, reward.id);
   return {
-    body: { ok: true, alreadySpun: false, rewardId: reward.id } satisfies WheelResponse,
+    body: {
+      ok: true,
+      alreadySpun: false,
+      rewardId: reward.id,
+      isNewContact: !lookup.contactExists
+    } satisfies WheelResponse,
     status: 200
   };
 }
@@ -318,7 +328,7 @@ export async function POST(request: Request) {
   // Bots commonly fill fields that are visually hidden from people. Return a
   // generic success so the endpoint does not reveal how the trap works.
   if (typeof body.website === "string" && body.website.trim()) {
-    return NextResponse.json({ ok: true });
+    return NextResponse.json({ ok: true, isNewContact: false });
   }
 
   if (body.flow === "reward-wheel") {
@@ -338,6 +348,11 @@ export async function POST(request: Request) {
     { name: "consent", value: "true" }
   ];
 
+  // Check before submitting so a newly created contact cannot be mistaken for an
+  // existing contact if HubSpot indexes the form submission unusually quickly.
+  const lookup = HUBSPOT_PRIVATE_APP_ACCESS_TOKEN
+    ? await findExistingContact(parsed.email)
+    : { ok: false as const };
   const submission = await submitToHubSpot(
     hubSpotSubmissionUrl(WAITLIST_FORM_ID),
     fields,
@@ -345,6 +360,9 @@ export async function POST(request: Request) {
     "Khao Better waitlist"
   );
   return submission.ok
-    ? NextResponse.json({ ok: true })
+    ? NextResponse.json({
+        ok: true,
+        isNewContact: lookup.ok && !lookup.contactExists
+      })
     : NextResponse.json({ ok: false, code: "SUBMISSION_FAILED" }, { status: 502 });
 }

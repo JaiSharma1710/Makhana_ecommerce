@@ -33,6 +33,7 @@ export type BlogPost = {
   category: BlogCategory;
   readTime: string;
   primaryKeyword: string;
+  lastModified: string;
   featured?: boolean;
 };
 
@@ -48,6 +49,7 @@ export const blogPosts: readonly BlogPost[] = [
       "A careful guide to roasted makhana portions, calories, late-night snacking and preparation choices for people managing their everyday eating plan.",
     readTime: "7 min read",
     primaryKeyword: "how much makhana can i eat in a day for weight loss",
+    lastModified: "2026-09-09",
     featured: true
   },
   {
@@ -60,7 +62,8 @@ export const blogPosts: readonly BlogPost[] = [
     excerpt:
       "A practical comparison of roasted makhana, popcorn and chips based on preparation, portion control, office use and label-reading.",
     readTime: "6 min read",
-    primaryKeyword: "makhana vs popcorn which is healthier for weight loss"
+    primaryKeyword: "makhana vs popcorn which is healthier for weight loss",
+    lastModified: "2026-09-29"
   },
   {
     slug: "makhana-nutrition-facts",
@@ -72,7 +75,8 @@ export const blogPosts: readonly BlogPost[] = [
     excerpt:
       "A clear nutrition reference for Khao Better Classic Roasted, with 25 g, 30 g, 35 g and 100 g calculations.",
     readTime: "6 min read",
-    primaryKeyword: "roasted makhana calories per 30g serving"
+    primaryKeyword: "roasted makhana calories per 30g serving",
+    lastModified: "2026-10-29"
   },
   {
     slug: "makhana-vs-lotus-seeds",
@@ -84,7 +88,8 @@ export const blogPosts: readonly BlogPost[] = [
     excerpt:
       "A clear botanical comparison of makhana from Euryale ferox and true lotus seeds from Nelumbo nucifera, including names, uses and texture.",
     readTime: "7 min read",
-    primaryKeyword: "makhana vs lotus seeds"
+    primaryKeyword: "makhana vs lotus seeds",
+    lastModified: "2026-10-27"
   },
   {
     slug: "how-to-keep-roasted-makhana-crispy",
@@ -96,7 +101,8 @@ export const blogPosts: readonly BlogPost[] = [
     excerpt:
       "Practical steps for storing opened roasted makhana, keeping moisture out and restoring the crunch when makhana turns soft.",
     readTime: "8 min read",
-    primaryKeyword: "how to keep roasted makhana crispy after opening"
+    primaryKeyword: "how to keep roasted makhana crispy after opening",
+    lastModified: "2026-10-29"
   },
   {
     slug: "best-study-snacks-long-study-sessions-india",
@@ -108,7 +114,8 @@ export const blogPosts: readonly BlogPost[] = [
     excerpt:
       "Practical desk, library, hostel and late-night snack ideas for Indian students, with portion, storage and hydration guidance.",
     readTime: "10 min read",
-    primaryKeyword: "best study snacks for long study sessions india"
+    primaryKeyword: "best study snacks for long study sessions india",
+    lastModified: "2026-10-27"
   },
   {
     slug: "best-work-from-home-snacks-india",
@@ -120,7 +127,8 @@ export const blogPosts: readonly BlogPost[] = [
     excerpt:
       "Practical no-prep, tea-break and late-afternoon snack ideas for Indian remote workers, with tips for portioning at a home desk.",
     readTime: "10 min read",
-    primaryKeyword: "best work from home snacks india"
+    primaryKeyword: "best work from home snacks india",
+    lastModified: "2026-10-27"
   },
   {
     slug: "why-is-makhana-expensive-india",
@@ -132,7 +140,8 @@ export const blogPosts: readonly BlogPost[] = [
     excerpt:
       "A detailed explanation of how aquatic cultivation, harvesting, popping, grading, demand and packaged-snack costs affect makhana prices.",
     readTime: "14 min read",
-    primaryKeyword: "why is makhana expensive in india"
+    primaryKeyword: "why is makhana expensive in india",
+    lastModified: "2026-10-29"
   },
   {
     slug: "roasted-not-fried-makhana-oil",
@@ -144,7 +153,8 @@ export const blogPosts: readonly BlogPost[] = [
     excerpt:
       "A label-first explanation of roasting, frying and why a roasted makhana product may still include oil in its finished recipe.",
     readTime: "12 min read",
-    primaryKeyword: "does roasted makhana contain oil"
+    primaryKeyword: "does roasted makhana contain oil",
+    lastModified: "2026-10-29"
   },
   {
     slug: "broken-makhana-packet-quality",
@@ -156,7 +166,8 @@ export const blogPosts: readonly BlogPost[] = [
     excerpt:
       "A practical guide to broken makhana, commercial grading, handling damage and the signs that matter more than piece shape alone.",
     readTime: "11 min read",
-    primaryKeyword: "broken makhana quality"
+    primaryKeyword: "broken makhana quality",
+    lastModified: "2026-10-29"
   },
   {
     slug: "plain-vs-flavoured-makhana",
@@ -168,7 +179,8 @@ export const blogPosts: readonly BlogPost[] = [
     excerpt:
       "A finished-product comparison of plain and flavoured makhana, with the label checks that matter before choosing a pack.",
     readTime: "12 min read",
-    primaryKeyword: "plain vs flavoured makhana"
+    primaryKeyword: "plain vs flavoured makhana",
+    lastModified: "2026-10-29"
   }
 ];
 

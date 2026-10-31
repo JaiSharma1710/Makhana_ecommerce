@@ -4,8 +4,9 @@ import Link from "next/link";
 import { FormEvent, KeyboardEvent, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { PackShot } from "@/components/PackShot";
+import { WaitlistShareActions } from "@/components/WaitlistShareActions";
 import { Product } from "@/data/store";
-import { trackEvent } from "@/lib/analytics";
+import { trackEvent, trackGenerateLead } from "@/lib/analytics";
 import { trackMetaLead } from "@/lib/meta-pixel";
 
 const isValidIndianMobile = (phone: string) => /^[6-9]\d{9}$/.test(phone);
@@ -90,10 +91,13 @@ export default function WaitlistDrawer({ product, onClose }: { product: Product;
           sourcePage: window.location.pathname
         })
       });
-      const result = (await response.json()) as { ok?: boolean };
+      const result = (await response.json()) as { ok?: boolean; isNewContact?: boolean };
       if (!response.ok || result.ok !== true) throw new Error("Submission failed");
       setStatus("success");
-      trackMetaLead();
+      if (result.isNewContact === true) {
+        trackMetaLead();
+        trackGenerateLead(window.location.pathname, "waitlist_form");
+      }
       trackEvent("waitlist_submit_success", { source_page: window.location.pathname });
     } catch {
       setStatus("error");
@@ -123,9 +127,10 @@ export default function WaitlistDrawer({ product, onClose }: { product: Product;
               <div className="waitlist-success" role="status" aria-live="polite">
                 <div className="success-confetti" aria-hidden="true">{confettiPieces.map((piece) => <i key={piece} style={{ "--piece": piece } as React.CSSProperties} />)}</div>
                 <div className="success-mark" aria-hidden="true"><span /></div>
-                <strong>YOU DID IT!</strong>
-                <h3 ref={successHeadingRef} tabIndex={-1}>You're on the Khao Better waitlist.</h3>
-                <p>We'll keep you posted about the launch.</p>
+                <strong>YOU’RE IN</strong>
+                <h3 ref={successHeadingRef} tabIndex={-1}>You’re on the list 🧡</h3>
+                <p>We’ll keep you posted when Khao Better is ready to crunch.</p>
+                <WaitlistShareActions sharePath="/" />
                 <button className="primary full" type="button" onClick={closeDrawer}>Done</button>
               </div>
             ) : (

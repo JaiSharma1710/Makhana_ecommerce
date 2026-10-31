@@ -25,3 +25,10 @@ export function trackEvent(eventName: string, params?: AnalyticsParams) {
 
   window.gtag("event", eventName, params);
 }
+
+export function trackGenerateLead(sourcePage: string, leadSource: "waitlist_form" | "reward_wheel") {
+  trackEvent("generate_lead", {
+    source_page: sourcePage,
+    lead_source: leadSource
+  });
+}

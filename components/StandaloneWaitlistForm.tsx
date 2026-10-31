@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { FormEvent, useEffect, useRef, useState } from "react";
 import { Product } from "@/data/store";
-import { trackEvent } from "@/lib/analytics";
+import { WaitlistShareActions } from "@/components/WaitlistShareActions";
+import { trackEvent, trackGenerateLead } from "@/lib/analytics";
 import { trackMetaLead } from "@/lib/meta-pixel";
 
 const isValidIndianMobile = (phone: string) => /^[6-9]\d{9}$/.test(phone);
@@ -54,12 +55,15 @@ export function StandaloneWaitlistForm({ product }: { product: Product }) {
           sourcePage: window.location.pathname
         })
       });
-      const result = (await response.json()) as { ok?: boolean };
+      const result = (await response.json()) as { ok?: boolean; isNewContact?: boolean };
 
       if (!response.ok || result.ok !== true) throw new Error("Submission failed");
 
       setStatus("success");
-      trackMetaLead();
+      if (result.isNewContact === true) {
+        trackMetaLead();
+        trackGenerateLead(window.location.pathname, "waitlist_form");
+      }
       trackEvent("waitlist_submit_success", {
         source_page: window.location.pathname
       });
@@ -79,8 +83,9 @@ export function StandaloneWaitlistForm({ product }: { product: Product }) {
           </div>
           <div className="success-mark" aria-hidden="true"><span /></div>
           <strong>YOU'RE IN</strong>
-          <h2 ref={successHeadingRef} tabIndex={-1}>You're on the Khao Better waitlist.</h2>
-          <p>We'll keep you posted when it's time to crunch.</p>
+          <h2 ref={successHeadingRef} tabIndex={-1}>You’re on the list 🧡</h2>
+          <p>We’ll keep you posted when it’s time to crunch.</p>
+          <WaitlistShareActions sharePath="/join-waitlist" />
           <Link className="primary full" href="/">Explore Khao Better</Link>
         </div>
       ) : (
