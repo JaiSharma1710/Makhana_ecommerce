@@ -4,7 +4,7 @@ import Script from "next/script";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { MetaPixelPageView } from "@/components/MetaPixelPageView";
 import { META_PIXEL_ID } from "@/lib/meta-pixel";
-import { absoluteUrl, SITE_URL } from "@/lib/site";
+import { absoluteUrl, defaultOpenGraphImages, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const hankenGrotesk = Hanken_Grotesk({
@@ -53,14 +53,7 @@ export const metadata: Metadata = {
     title: "Khao Better | Roasted Makhana Launching Soon",
     description:
       "A pre-launch Indian roasted makhana brand preparing Classic Roasted and more flavours.",
-    images: [
-      {
-        url: absoluteUrl("/assets/p-classic.png"),
-        width: 1122,
-        height: 1402,
-        alt: "Khao Better Classic Roasted makhana pack"
-      }
-    ]
+    images: defaultOpenGraphImages
   },
 
   twitter: {

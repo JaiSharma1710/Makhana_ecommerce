@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { StorefrontShell } from "@/components/Storefront";
-import { absoluteUrl } from "@/lib/site";
+import { absoluteUrl, defaultOpenGraphImages } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Khao Better",
@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     canonical: absoluteUrl("/privacy-policy")
   },
   openGraph: {
+    images: defaultOpenGraphImages,
     title: "Privacy Policy | Khao Better",
     description: "How Khao Better collects and uses information submitted through its pre-launch waitlist.",
     url: absoluteUrl("/privacy-policy")

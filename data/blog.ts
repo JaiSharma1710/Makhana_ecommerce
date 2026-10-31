@@ -39,7 +39,7 @@ export const blogArticles: BlogArticle[] = [
         heading: "How Much Makhana Should You Eat in a Day?",
         body: [
           "If your goal is weight management, the better question is not whether makhana is magic. It is whether the portion fits your day. A 25 g pack can work as one snack. A 30-35 g bowl can also work if the rest of your meals leave room for it.",
-          "Eating makhana daily for weight loss can make sense for some people when it replaces a less planned snack and when the portion is controlled. It will not create weight loss by itself. Overall calorie balance, protein intake, meal quality, sleep and activity still matter.",
+          "Eating makhana daily for weight loss can make sense for some people when it replaces a less planned snack and when the portion is controlled. It will not create weight loss by itself. Overall calorie balance, protein intake, meal quality, sleep and activity still matter. CDC guidance on balancing food, activity and portion size provides broader public-health context for those factors.",
           "People often overeat crunchy snacks because the bowl stays open. Pre-portioning helps. If you are pouring from a large jar, measure once, put the jar away, then snack slowly.",
           "A simple way to use makhana for weight loss planning is to choose the snack slot first. For example, if you want something crunchy at 5 PM, decide whether that snack should be around 100-160 kcal, then pick the makhana portion that fits. This keeps the conversation practical instead of treating makhana as a shortcut."
         ]

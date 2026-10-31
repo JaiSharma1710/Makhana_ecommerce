@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ShopPageContent, StorefrontShell } from "@/components/Storefront";
-import { absoluteUrl } from "@/lib/site";
+import { absoluteUrl, defaultOpenGraphImages } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Roasted Makhana Flavours | Khao Better",
@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     canonical: absoluteUrl("/shop")
   },
   openGraph: {
+    images: defaultOpenGraphImages,
     title: "Roasted Makhana Flavours | Khao Better",
     description:
       "Explore Khao Better roasted makhana flavours. Classic Roasted is currently out of stock, with more flavours coming soon.",

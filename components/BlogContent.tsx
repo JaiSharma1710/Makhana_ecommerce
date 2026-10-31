@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { BlogEditorialVisual } from "@/components/BlogEditorialVisuals";
+import { BlogShare } from "@/components/BlogShare";
 import { BlogArticle } from "@/data/blog";
 import {
   articleUrl,
@@ -186,6 +187,7 @@ export function BlogArticleContent({ article }: { article: BlogArticle }) {
               ))}
             </div>
           </section>
+          <BlogShare title={article.h1} url={absoluteUrl(articleUrl(article.slug))} />
           <RelatedArticles articles={related} />
         </div>
       </article>
@@ -282,6 +284,7 @@ function renderLinks(text: string, currentSlug: BlogSlug) {
     ["Kew's Plants of the World Online", "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A605422-1/general-information"],
     ["Makhana is produced from the seeds of Euryale ferox", "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A605350-1/general-information"],
     ["proper sleep", "https://www.cdc.gov/sleep/about/"],
+    ["CDC guidance on balancing food, activity and portion size", "https://www.cdc.gov/healthy-weight-growth/about/tips-for-balancing-food-activity.html"],
     ["FSSAI's Eat Right India workplace snacking guidance", "https://eatrightindia.gov.in/EatRightCampus/media/pdf/orangeBook_2.pdf"],
     ["office-snacks guide", "/office-snacks"],
     ["best healthy snacks to keep in your office drawer in India", "/office-snacks"],

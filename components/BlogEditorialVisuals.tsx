@@ -364,6 +364,220 @@ export function BlogEditorialVisual({ slug, sectionHeading }: { slug: BlogSlug; 
     }
   }
 
+  if (slug === "makhana-weight-loss") {
+    if (sectionHeading === "Roasted Makhana Calories by Portion") {
+      return (
+        <BlogMetricCards
+          kicker="Portion awareness"
+          title="The serving changes the calorie total"
+          metrics={[
+            { value: "25 g", label: "~113 kcal" },
+            { value: "30 g", label: "~135 kcal" },
+            { value: "35 g", label: "~158 kcal" },
+            { value: "50 g", label: "225 kcal" }
+          ]}
+          note="Khao Better Classic Roasted label-based values, calculated from 450 kcal per 100 g and rounded where shown."
+        />
+      );
+    }
+    if (sectionHeading === "Why Portion Size Matters") {
+      return (
+        <BlogComparisonGrid
+          kicker="Myth vs reality"
+          title="Makhana is a snack, not a weight-loss shortcut"
+          items={[
+            { title: "MYTH", points: ["“Makhana itself causes weight loss.”"], tone: "red" },
+            { title: "REALITY", points: ["Weight management depends on the overall eating plan", "Portion size and preparation still matter"], tone: "green" }
+          ]}
+        />
+      );
+    }
+    if (sectionHeading === "Common Portion Mistakes") {
+      return (
+        <BlogChecklistVisual
+          kicker="Smart snack check"
+          title="Plan the snack before opening the pack"
+          items={[
+            { title: "Check the serving size", detail: "Use the portion you will actually eat." },
+            { title: "Notice added fats and coatings", detail: "Oil, ghee, butter and sweet coatings can change calories." },
+            { title: "Read the seasoning context", detail: "Plain and heavily seasoned products are not interchangeable." },
+            { title: "Consider the whole day", detail: "A snack fits within meals, hunger, activity and overall intake." }
+          ]}
+        />
+      );
+    }
+  }
+
+  if (slug === "how-to-keep-roasted-makhana-crispy") {
+    if (sectionHeading === "Quick answer: how to keep roasted makhana crispy") {
+      return (
+        <BlogComparisonGrid
+          kicker="Storage do / don't"
+          title="Keep moisture out"
+          items={[
+            { title: "DO", points: ["Use a dry airtight container when needed", "Close the pack quickly", "Use dry hands and utensils", "Store somewhere cool and dry"], tone: "green" },
+            { title: "DON’T", points: ["Leave the packet open", "Expose it to steam or humidity", "Seal homemade makhana while warm", "Assume refrigeration is always better"], tone: "red" }
+          ]}
+        />
+      );
+    }
+    if (sectionHeading === "Why does roasted makhana become soft after opening?") {
+      return (
+        <BlogProcessSteps
+          kicker="How crunch is lost"
+          title="Exposure changes the texture"
+          steps={[
+            { title: "Open the pack", detail: "The dry snack meets the surrounding air." },
+            { title: "Moisture gets in", detail: "Humid air, steam or damp utensils increase exposure." },
+            { title: "Texture softens", detail: "The light crunch can become soft or chewy." },
+            { title: "Storage makes the difference", detail: "Quick resealing and dry storage help limit moisture." }
+          ]}
+        />
+      );
+    }
+    if (sectionHeading === "How to make soggy makhana crispy again") {
+      return (
+        <BlogComparisonGrid
+          kicker="Before re-crisping"
+          title="Soft, or showing spoilage signs?"
+          items={[
+            { title: "Soft but otherwise normal", points: ["Gently dry-roast on low heat", "Cool completely before storing again", "No extra oil is generally needed"], tone: "green" },
+            { title: "Spoilage signs", points: ["Visible mould", "Unusual smell or discoloration", "Do not re-roast to make it safe"], tone: "red" }
+          ]}
+        />
+      );
+    }
+  }
+
+  if (slug === "best-study-snacks-long-study-sessions-india") {
+    if (sectionHeading === "What makes a good study snack?") {
+      return (
+        <BlogChecklistVisual
+          kicker="Study-snack criteria"
+          title="Practical beats magical"
+          items={[
+            { title: "Easy to portion", detail: "Decide the amount before sitting down." },
+            { title: "Low mess", detail: "Keep books, notes and laptops practical." },
+            { title: "Storage-aware", detail: "Choose for the fridge and facilities actually available." },
+            { title: "Convenient", detail: "Preparation should not become a long distraction." },
+            { title: "Enjoyable and satisfying", detail: "The snack should deal with real hunger and suit you." }
+          ]}
+        />
+      );
+    }
+    if (sectionHeading === "What are the best no-fridge study snacks?") {
+      return (
+        <BlogComparisonGrid
+          kicker="Choose for the setting"
+          title="Useful study options, different practical roles"
+          items={[
+            { title: "Roasted chana", points: ["No preparation", "Travels well", "Easy to pre-portion"], tone: "orange" },
+            { title: "Makhana", points: ["Crunchy and desk-friendly", "No refrigeration", "Check the actual product label"], tone: "yellow" },
+            { title: "Fruit + nuts", points: ["Little preparation", "Portable options include banana or apple", "Portion the nuts first"], tone: "green" },
+            { title: "Curd + fruit", points: ["Simple when refrigeration is available", "Less practical without reliable chilling"], tone: "red" }
+          ]}
+        />
+      );
+    }
+    if (sectionHeading === "Build a simple study-snack kit") {
+      return (
+        <BlogProcessSteps
+          kicker="Desk setup"
+          title="Prepare once, then study"
+          steps={[
+            { title: "Fill a water bottle", detail: "Keep hydration within reach." },
+            { title: "Choose one dry snack", detail: "Chana or makhana can work when storage is limited." },
+            { title: "Add whole fruit if useful", detail: "A banana or apple travels easily." },
+            { title: "Pre-portion it", detail: "Keep the main packet away from the desk." }
+          ]}
+        />
+      );
+    }
+  }
+
+  if (slug === "best-work-from-home-snacks-india") {
+    if (sectionHeading === "Why is working-from-home snacking different from office snacking?") {
+      return (
+        <BlogChecklistVisual
+          kicker="Desk-snack criteria"
+          title="Make the home kitchen work for your routine"
+          items={[
+            { title: "Portionable", detail: "Bring one serving to the desk, not the full packet." },
+            { title: "Low mess", detail: "Choose something practical around a laptop." },
+            { title: "Easy to store", detail: "Use the refrigerator when needed and keep dry snacks sealed." },
+            { title: "Quick to prepare", detail: "The snack should fit between meetings and main meals." },
+            { title: "Deliberate", detail: "Snack for hunger, not only because the kitchen is nearby." }
+          ]}
+        />
+      );
+    }
+    if (sectionHeading === "What should you eat during the 4–6 PM WFH slump?") {
+      return (
+        <BlogComparisonGrid
+          kicker="Workday options"
+          title="Match the snack to the break"
+          items={[
+            { title: "Dry and crunchy", points: ["Roasted chana", "Makhana", "Lightly seasoned popcorn"], tone: "orange" },
+            { title: "Fruit-based", points: ["Whole fruit", "Fruit with a small portion of nuts"], tone: "green" },
+            { title: "Fridge available", points: ["Plain curd with fruit", "Boiled eggs"], tone: "yellow" },
+            { title: "Short kitchen break", points: ["Sprouts chaat", "Poha", "Dhokla"], tone: "red" }
+          ]}
+        />
+      );
+    }
+    if (sectionHeading === "The simplest WFH snacking rule") {
+      return (
+        <BlogProcessSteps
+          kicker="Simple decision flow"
+          title="Choose deliberately, then return to work"
+          steps={[
+            { title: "Check hunger", detail: "You do not need a snack simply because food is nearby." },
+            { title: "Choose one option", detail: "Match it to the gap, storage and preparation available." },
+            { title: "Portion it", detail: "Leave the main packet in the kitchen." },
+            { title: "Take a short break", detail: "Eat, then continue your workday." }
+          ]}
+        />
+      );
+    }
+  }
+
+  if (slug === "plain-vs-flavoured-makhana") {
+    if (sectionHeading === "What stays the same?") {
+      return (
+        <BlogComparisonGrid
+          kicker="Plain vs flavoured"
+          title="The finished labels matter more than the names"
+          items={[
+            { title: "PLAIN / CLASSIC", points: ["May use makhana alone or include oil and salt", "The name does not reveal the full recipe", "Read its own serving size and panel"], tone: "orange" },
+            { title: "FLAVOURED", points: ["Seasoning may add ingredients or allergens", "Oil, sodium, sugar and calories depend on formulation", "Not automatically nutritionally worse"], tone: "green" }
+          ]}
+        />
+      );
+    }
+    if (sectionHeading === "How to compare two makhana packets fairly") {
+      return (
+        <BlogChecklistVisual
+          kicker="Label-reading visual"
+          title="Compare the same quantity first"
+          items={[
+            { title: "Serving size", detail: "Use per 100 g or the same gram portion." },
+            { title: "Ingredients and allergens", detail: "Read the complete declarations for each variant." },
+            { title: "Total and saturated fat", detail: "Compare the finished formulations." },
+            { title: "Sodium", detail: "Use the panel rather than judging by taste." },
+            { title: "Total and added sugar", detail: "They answer different label questions." }
+          ]}
+        />
+      );
+    }
+    if (sectionHeading === "Plain vs flavoured: which is healthier?") {
+      return (
+        <BlogInsightCard kicker="Choose the actual packet" title="Plain or flavoured? The label decides more than the name." tone="yellow">
+          <p>Choose using taste, serving size, ingredients, nutrition information and personal preference—not a moral ranking of flavour names.</p>
+        </BlogInsightCard>
+      );
+    }
+  }
+
   return null;
 }
 

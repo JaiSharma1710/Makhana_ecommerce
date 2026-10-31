@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { BlogArticleContent } from "@/components/BlogContent";
 import { blogIndex } from "@/data/blog";
 import { StorefrontShell } from "@/components/Storefront";
-import { absoluteUrl } from "@/lib/site";
+import { absoluteUrl, defaultOpenGraphImages } from "@/lib/site";
 
 const article = blogIndex["best-work-from-home-snacks-india"];
 
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     canonical: absoluteUrl("/blog/best-work-from-home-snacks-india")
   },
   openGraph: {
+    images: defaultOpenGraphImages,
     title: article.title,
     description: article.description,
     url: absoluteUrl("/blog/best-work-from-home-snacks-india")
