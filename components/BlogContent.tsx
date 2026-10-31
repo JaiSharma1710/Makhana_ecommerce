@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { BlogEditorialVisual } from "@/components/BlogEditorialVisuals";
 import { BlogArticle } from "@/data/blog";
 import {
   articleUrl,
@@ -171,6 +172,7 @@ export function BlogArticleContent({ article }: { article: BlogArticle }) {
                   {subsection.afterList?.map((paragraph) => <p key={paragraph}>{renderLinks(paragraph, article.slug)}</p>)}
                 </div>
               ))}
+              <BlogEditorialVisual slug={article.slug} sectionHeading={section.heading} />
             </section>
           ))}
           <section>
